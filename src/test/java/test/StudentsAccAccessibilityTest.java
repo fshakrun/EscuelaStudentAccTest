@@ -107,7 +107,7 @@ public class StudentsAccAccessibilityTest {
         chatPage.chatSectionClick();
         Thread.sleep(11000);
         String URL = driver.getCurrentUrl();
-        assertEquals(URL, "https://escuela-stage.web.app/student/chat");
+        assertEquals(URL, "https://escuela-stage.web.app/student/chaat");
         Thread.sleep(11000);
 
     }
