@@ -49,7 +49,7 @@ public class StudentsAccAccessibilityTest {
 
     @BeforeAll
     public static void setup() throws Exception {
-        hromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
