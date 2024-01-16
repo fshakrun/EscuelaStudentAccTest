@@ -8,7 +8,6 @@ branches:
 
 build: off
 
-
 build_script:
   - chmod +x gradlew
-  - ./gradlew clean test --info
+  - ./gradlew test
