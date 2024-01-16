@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pages.ConfProperties;
 import pages.ChatPage;
 import pages.DictionaryPage;
@@ -48,8 +49,10 @@ public class StudentsAccAccessibilityTest {
 
     @BeforeAll
     public static void setup() throws Exception {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
         chatPage = new ChatPage(driver);
         dictionaryPage = new DictionaryPage(driver);
@@ -85,7 +88,7 @@ public class StudentsAccAccessibilityTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-        Thread.sleep(11000);
+        Thread.sleep(12000);
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student");
         Thread.sleep(11000);
