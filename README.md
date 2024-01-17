@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/nnx5qrng1y7n141m?svg=true)](https://ci.appveyor.com/project/fshakrun/escuelastudentacctest)
+
+
 ## Запуск проекта:
 
 1. Для запуска тестов необходимо ввести в терминале команду ```./gradlew clean test```
