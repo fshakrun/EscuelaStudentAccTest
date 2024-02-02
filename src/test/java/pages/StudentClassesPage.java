@@ -18,6 +18,9 @@ public class StudentClassesPage {
     @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[2]")
     public WebElement classesSection;
 
+    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]")
+    public WebElement currentCourse;
+
     public void classesSectionClick(){
         classesSection.click();
     }

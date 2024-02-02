@@ -1,29 +1,44 @@
 package pages;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.*;
+import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 
 public class LoginPage {
     public WebDriver driver;
+
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver = driver; }
+        this.driver = driver;
+    }
 
-    @FindBy(xpath = "//*[@id='app']/form/label[1]/span[2]/input" )
-    private WebElement emailField;
-    @FindBy (xpath = "//*[@id='app']/form/label[2]/span[2]/input")
+    @FindBy(xpath = "//*[@id='app']/form/label[1]/span[2]/input")
+    public WebElement emailField;
+    @FindBy(xpath = "//*[@id='app']/form/label[2]/span[2]/input")
     private WebElement passwordField;
 
-    @FindBy (css = "[type=submit]" )
+    @FindBy(css = "[type=submit]")
     private WebElement enterButton;
 
-    public void emailEnter(String email){
+
+    public void emailEnter(String email) {
         emailField.sendKeys(email);
     }
 
     public void passwordEnter(String password) {
+
         passwordField.sendKeys(password);
     }
 
@@ -31,4 +46,6 @@ public class LoginPage {
         enterButton.click();
 
     }
+
+
 }

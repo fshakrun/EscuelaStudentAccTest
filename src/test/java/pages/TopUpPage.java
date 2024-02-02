@@ -18,6 +18,9 @@ public class TopUpPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[3]/div[3]/a/button/div")
     public WebElement topUpSection;
 
+    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/p")
+    public WebElement topUpSectionTitle;
+
     public void topUpSectionClick(){
         topUpSection.click();
     }

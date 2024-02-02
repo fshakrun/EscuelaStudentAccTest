@@ -14,8 +14,12 @@ public class NotesPage {
     }
 
 
-    @FindBy(css = "#app > div.sc-fAMvPz.dGDqTo > div.sc-bvLVNa.fqgbQw > div.sc-iwCbjw.fauYpK > div.sc-jwExjx.lmFjuz > div:nth-child(3) > a:nth-child(2)")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[2]/a[2]")
     public WebElement notesSection;
+
+    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
+    public WebElement notesPageLogo;
+
 
     public void notesSectionClick(){notesSection.click();}
 

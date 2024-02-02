@@ -17,6 +17,9 @@ public class MiniCoursesPage {
     @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[2]/a[3]")
     public WebElement minicoursesSection;
 
+    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/h1")
+    public WebElement practicamosTitle;
+
     public void minicoursesSectionClick(){
         minicoursesSection.click();
     }

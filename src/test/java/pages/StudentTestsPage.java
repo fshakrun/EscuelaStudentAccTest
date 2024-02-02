@@ -17,6 +17,9 @@ public class StudentTestsPage {
     @FindBy (xpath ="//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/a[4]")
     public WebElement testSection;
 
+    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
+    public WebElement testSectionLogo;
+
     public void testSectionClick(){
         testSection.click();
     }

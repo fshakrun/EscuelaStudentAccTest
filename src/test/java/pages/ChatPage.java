@@ -12,7 +12,7 @@ public class ChatPage {
         PageFactory.initElements(driver, this);
         this.driver = driver; }
 
-    @FindBy(css= "#app > div.sc-fAMvPz.dGDqTo > div.sc-bvLVNa.fqgbQw > div.sc-iwCbjw.fauYpK > div.sc-jwExjx.lmFjuz > div:nth-child(2) > a:nth-child(4)")
+    @FindBy(xpath= "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[4]")
     public WebElement chatSection;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/span")
@@ -21,6 +21,9 @@ public class ChatPage {
     public void chatSectionClick(){
         chatSection.click();
     }
+
+    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/input")
+    public WebElement searchField;
 
 
 

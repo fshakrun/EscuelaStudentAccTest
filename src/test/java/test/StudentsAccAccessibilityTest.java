@@ -5,6 +5,8 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ConfProperties;
 import pages.ChatPage;
 import pages.DictionaryPage;
@@ -17,6 +19,9 @@ import pages.StudentsAccountPage;
 import pages.StudentsProfilePage;
 import pages.StudentTestsPage;
 import pages.TopUpPage;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
@@ -45,14 +50,16 @@ public class StudentsAccAccessibilityTest {
     public static TopUpPage topUpPage;
 
     public static WebDriver driver;
+    public static WebDriverWait wait;
 
 
     @BeforeAll
-    public static void setup() throws Exception {
+    public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         loginPage = new LoginPage(driver);
         chatPage = new ChatPage(driver);
         dictionaryPage = new DictionaryPage(driver);
@@ -62,11 +69,10 @@ public class StudentsAccAccessibilityTest {
         studentsHomeworkPage = new StudentsHomeworkPage(driver);
         studentsAccountPage = new StudentsAccountPage(driver);
         studentsProfilePage = new StudentsProfilePage(driver);
-        studentTestsPage =new StudentTestsPage(driver);
+        studentTestsPage = new StudentTestsPage(driver);
         topUpPage = new TopUpPage(driver);
-        driver.manage().timeouts();
         driver.get(ConfProperties.getProperty("loginpage"));
-        Thread.sleep(11000);
+
     }
 
 
@@ -75,9 +81,10 @@ public class StudentsAccAccessibilityTest {
     public void loginPageTest() throws InterruptedException {
 
         driver.get(ConfProperties.getProperty("loginpage"));
+        // ожидание появления элемента — поля для ввода мейла
+        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         String title = driver.getTitle();
         assertThat(title).contains("Web-Escuela");
-        Thread.sleep(11000);
 
     }
 
@@ -85,13 +92,14 @@ public class StudentsAccAccessibilityTest {
     @DisplayName("1. Valid Credential Authentification Passed Test")
     public void enterAccountTest() throws InterruptedException {
 
+        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-        Thread.sleep(12000);
+        // ожидание появления элемента — расписание
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student");
-        Thread.sleep(11000);
 
 
     }
@@ -103,21 +111,21 @@ public class StudentsAccAccessibilityTest {
 //        loginPage.emailEnter(ConfProperties.getProperty("email"));
 //        loginPage.passwordEnter(ConfProperties.getProperty("password"));
 //        loginPage.enterClick();
-        Thread.sleep(11000);
+
         chatPage.chatSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(chatPage.searchField));
         String URL = driver.getCurrentUrl();
-        assertEquals(URL, "https://escuela-stage.web.app/student/chaat");
-        Thread.sleep(11000);
+        assertEquals(URL, "https://escuela-stage.web.app/student/chat");
+
 
     }
 
     @Test
     @DisplayName("3. Dictionary Page Access")
     public void shouldOpenDictPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         dictionaryPage.dictSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(dictionaryPage.dailyWords));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/dict");
 
@@ -126,9 +134,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("4. Notes Page Access")
     public void shouldOpeNotesPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         notesPage.notesSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(notesPage.notesPageLogo));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/notes");
 
@@ -137,9 +145,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("5. Mini-courses Page Access")
     public void shouldOpeMinicoursesPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         miniCoursesPage.minicoursesSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.practicamosTitle));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/minicourses");
 
@@ -148,9 +156,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("6. Classes Page Access")
     public void shouldOpeClassesPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         studentClassesPage.classesSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(studentClassesPage.currentCourse));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/classes");
 
@@ -160,9 +168,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("7. Homework Page Access")
     public void shouldOpeHomeworkPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         studentsHomeworkPage.homeworkSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(studentsHomeworkPage.logoPicture));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/homework");
 
@@ -172,9 +180,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("8. Student Account Page Access")
     public void shouldOpeAccountPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         studentsAccountPage.studentsAccountClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student");
 
@@ -184,9 +192,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("9. Student Profile Page Access")
     public void shouldOpeProfilePage() throws InterruptedException {
-        Thread.sleep(11000);
+
         studentsProfilePage.studentsProfileClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentFirstNameField));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/profile");
 
@@ -196,9 +204,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("10. Tests Page Access")
     public void shouldOpeTestsPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         studentTestsPage.testSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(studentTestsPage.testSectionLogo));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/tests");
 
@@ -208,9 +216,9 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("11. Top Up Page Access")
     public void shouldOpeTopUpPage() throws InterruptedException {
-        Thread.sleep(11000);
+
         topUpPage.topUpSectionClick();
-        Thread.sleep(11000);
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.topUpSectionTitle));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/buy");
     }

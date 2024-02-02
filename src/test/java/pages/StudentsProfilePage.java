@@ -47,13 +47,6 @@ public class StudentsProfilePage {
 
 
 
-//*[@id="input-first-name-helper-text"]
-//    public String firstNameValue() {
-//        studentFirstNameField.getText();
-//        return firstNameValue();
-//    }
-
-
 }
 
 

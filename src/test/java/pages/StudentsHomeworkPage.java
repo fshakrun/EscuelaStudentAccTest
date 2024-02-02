@@ -16,6 +16,9 @@ public class StudentsHomeworkPage {
     @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[3]")
     public WebElement homeworkSection;
 
+    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
+    public WebElement logoPicture;
+
     public void homeworkSectionClick(){
         homeworkSection.click();
     }

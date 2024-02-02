@@ -12,8 +12,11 @@ public class DictionaryPage {
         this.driver = driver;
     }
 
-    @FindBy(css= "#app > div.sc-fAMvPz.dGDqTo > div.sc-bvLVNa.fqgbQw > div > div.sc-jwExjx.lmFjuz > div:nth-child(3) > a:nth-child(1)")
+    @FindBy(xpath= "//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]")
     public WebElement dictSection;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div/div[1]/div[1]")
+    public WebElement dailyWords;
 
     public void dictSectionClick() {dictSection.click();
     }
