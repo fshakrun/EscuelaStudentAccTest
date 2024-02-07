@@ -142,16 +142,16 @@ public class StudentsAccAccessibilityTest {
 
     }
 
-    // @Test
-    // @DisplayName("5. Mini-courses Page Access")
-    // public void shouldOpeMinicoursesPage() throws InterruptedException {
+    @Test
+    @DisplayName("5. Mini-courses Page Access")
+    public void shouldOpeMinicoursesPage() throws InterruptedException {
 
-    //     miniCoursesPage.minicoursesSectionClick();
-    //     wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.practicamosTitle));
-    //     String URL = driver.getCurrentUrl();
-    //     assertEquals(URL, "https://escuela-stage.web.app/student/minicourses");
+        miniCoursesPage.minicoursesSectionClick();
+        wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.practicamosTitle));
+        String URL = driver.getCurrentUrl();
+        assertEquals(URL, "https://escuela-stage.web.app/student/minicourses");
 
-    // }
+    }
 
     @Test
     @DisplayName("6. Classes Page Access")
@@ -201,17 +201,17 @@ public class StudentsAccAccessibilityTest {
 
     }
 
-    // @Test
-    // @DisplayName("10. Tests Page Access")
-    // public void shouldOpeTestsPage() throws InterruptedException {
+    @Test
+    @DisplayName("10. Tests Page Access")
+    public void shouldOpeTestsPage() throws InterruptedException {
 
-    //     studentTestsPage.testSectionClick();
-    //     wait.until(ExpectedConditions.visibilityOf(studentTestsPage.testSectionLogo));
-    //     String URL = driver.getCurrentUrl();
-    //     assertEquals(URL, "https://escuela-stage.web.app/student/tests");
+        studentTestsPage.testSectionClick();
+        wait.until(ExpectedConditions.visibilityOf(studentTestsPage.testSectionLogo));
+        String URL = driver.getCurrentUrl();
+        assertEquals(URL, "https://escuela-stage.web.app/student/tests");
 
 
-    // }
+    }
 
     @Test
     @DisplayName("11. Top Up Page Access")
