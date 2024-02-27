@@ -26,26 +26,58 @@ public class StudentsProfilePage {
     @FindBy(css = "#input-first-name")
     public WebElement studentFirstNameField;
 
+    @FindBy(name = "lastName")
+    public WebElement studentLastNameField;
+    @FindBy(name = "birthDate")
+    public WebElement studentBirthDateField;
 
-    public void clearFirstName(){
-    studentFirstNameField.click();
-    studentFirstNameField.sendKeys(Keys.CONTROL + "A");
-    studentFirstNameField.sendKeys(Keys.BACK_SPACE);
-    }
+    @FindBy(xpath = "//*[@id='input-skype']")
+    public WebElement studentSkypeField;
+
+    @FindBy(xpath ="//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/div[2]/div[3]/div[1]/div[2]/div/div/div/input")
+    public WebElement studentPhoneField;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/button")
     public WebElement saveButton;
+    @FindBy(xpath = "//*[@id='input-first-name-helper-text']")
+    public WebElement firstNameNotification;
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/p")
+    public WebElement lastNameNotification;
 
-    public void saveButtonProfile(){
+
+    public void clearFirstName() {
+        studentFirstNameField.click();
+        studentFirstNameField.sendKeys(Keys.CONTROL + "A");
+        studentFirstNameField.sendKeys(Keys.BACK_SPACE);
+    }
+
+    public void saveButtonProfile() {
         saveButton.click();
     }
 
-    @FindBy(xpath = "//*[@id='input-first-name-helper-text']")
-    public WebElement firstNameNotification;
+    public void clearLastName() {
+        studentLastNameField.click();
+        studentLastNameField.sendKeys(Keys.CONTROL + "A");
+        studentLastNameField.sendKeys(Keys.BACK_SPACE);
+    }
 
+    public void clearBirthDate() {
+        studentBirthDateField.click();
+        studentBirthDateField.sendKeys(Keys.CONTROL + "A");
+        studentBirthDateField.sendKeys(Keys.BACK_SPACE);
+    }
 
+    public void clearSkypeField() {
+        studentSkypeField.click();
+        studentSkypeField.sendKeys(Keys.CONTROL + "A");
+        studentSkypeField.sendKeys(Keys.BACK_SPACE);
+    }
 
-
+    public void clearPhoneField() {
+        studentPhoneField.click();
+        studentPhoneField.sendKeys(Keys.CONTROL + "A");
+        studentPhoneField.sendKeys(Keys.BACK_SPACE);
+    }
 
 }
 
