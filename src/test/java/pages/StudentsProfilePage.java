@@ -44,6 +44,9 @@ public class StudentsProfilePage {
     @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/p")
     public WebElement lastNameNotification;
 
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/button")
+    public WebElement logOutButton;
+
 
     public void clearFirstName() {
         studentFirstNameField.click();

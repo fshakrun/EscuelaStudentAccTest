@@ -27,10 +27,17 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id='app']/form/label[1]/span[2]/input")
     public WebElement emailField;
     @FindBy(xpath = "//*[@id='app']/form/label[2]/span[2]/input")
-    private WebElement passwordField;
+    public WebElement passwordField;
+
+    @FindBy(xpath = "//*[@id='app']/form/p[2]")
+    public WebElement invalidCredentialsNotification;
+
+    @FindBy(xpath = "//*[@id='app']/form/div[3]/span/a[1]")
+    public WebElement recoveryPasswordButton;
 
     @FindBy(css = "[type=submit]")
     private WebElement enterButton;
+
 
 
     public void emailEnter(String email) {

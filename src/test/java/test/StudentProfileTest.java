@@ -29,7 +29,7 @@ public class StudentProfileTest {
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
         // для headless режима добавить аргумент "--headless",
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().clearDriverCache().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
