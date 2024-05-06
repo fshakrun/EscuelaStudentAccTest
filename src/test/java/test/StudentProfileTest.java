@@ -2,6 +2,7 @@ package test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,9 +15,10 @@ import pages.StudentsProfilePage;
 
 import java.time.Duration;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 
-@TestMethodOrder(MethodOrderer.DisplayName.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class StudentProfileTest {
 
     public static LoginPage loginPage;
@@ -28,19 +30,19 @@ public class StudentProfileTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        // для headless режима добавить аргумент "--headless",
-        options.addArguments("--headless","--window-size=1920,1080");
-        WebDriverManager.chromedriver().clearDriverCache().setup();
+        options.addArguments("--headless", "--window-size=1920,1080");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(120));
         loginPage = new LoginPage(driver);
         studentsProfilePage = new StudentsProfilePage(driver);
         studentsAccountPage = new StudentsAccountPage(driver);
         driver.get(ConfProperties.getProperty("loginpage"));
-
+        driver.manage().window().maximize();
     }
 
     @Test
+    @Order(1)
     @DisplayName("0. Enter Students Profile Test")
     public void enterProfile() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
@@ -57,6 +59,7 @@ public class StudentProfileTest {
 
     // Редактирование имени ученика и сохранение изменений
     @Test
+    @Order(2)
     @DisplayName("1. Enter Cyrillic First Name")
     public void enterCyrillicFirstName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentFirstNameField));
@@ -68,32 +71,37 @@ public class StudentProfileTest {
     }
 
     @Test
+    @Order(3)
     @DisplayName("2. Enter Too Long Cyrillic First Name")
     public void enterLongCyrillicFirstName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentFirstNameField));
         studentsProfilePage.clearFirstName();
         studentsProfilePage.studentFirstNameField.click();
         studentsProfilePage.studentFirstNameField.sendKeys("ИринаПопоноваИвановаСебастьяновнаПерепелкинаКовшикова");
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.saveButton));
         studentsProfilePage.saveButtonProfile();
-        assert (studentsProfilePage.firstNameNotification.isDisplayed());
+        assert (studentsProfilePage.nameNotification.isDisplayed());
 
     }
 
     @Test
+    @Order(4)
     @DisplayName("3. Enter Too Short Cyrillic First Name")
     public void enterShortCyrillicFirstName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentFirstNameField));
         studentsProfilePage.clearFirstName();
         studentsProfilePage.studentFirstNameField.click();
         studentsProfilePage.studentFirstNameField.sendKeys("И");
-        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.saveButton));
-        studentsProfilePage.saveButtonProfile();
-        assert (studentsProfilePage.firstNameNotification.isDisplayed());
+        wait.until((ExpectedConditions.visibilityOf((studentsProfilePage.nameNotification))));
+        assert (studentsProfilePage.nameNotification.isDisplayed());
 
     }
 
     @Test
+    @Order(5)
     @DisplayName("4. Enter Cyrillic First Name With Hyphen")
     public void enterHyphenCyrillicFirstName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentFirstNameField));
         studentsProfilePage.clearFirstName();
         studentsProfilePage.studentFirstNameField.click();
         studentsProfilePage.studentFirstNameField.sendKeys("Анна-Мария");
@@ -119,20 +127,22 @@ public class StudentProfileTest {
 //    }
 
     @Test
-    @DisplayName("6. Enter Space In First Name Field")
+    @Order(6)
+    @DisplayName("5. Enter Space In First Name Field")
     public void enterSpaceFirstName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentFirstNameField));
         studentsProfilePage.clearFirstName();
         studentsProfilePage.studentFirstNameField.click();
         studentsProfilePage.studentFirstNameField.sendKeys(" ");
-        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.saveButton));
-        studentsProfilePage.saveButtonProfile();
-        assert (studentsProfilePage.firstNameNotification.isDisplayed());
+        assert (studentsProfilePage.nameNotification.isDisplayed());
 
     }
 
     @Test
-    @DisplayName("7. Enter Romain Letters First Name")
+    @Order(7)
+    @DisplayName("6. Enter Romain Letters First Name")
     public void enterRomainLettersFirstName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentFirstNameField));
         studentsProfilePage.clearFirstName();
         studentsProfilePage.studentFirstNameField.click();
         studentsProfilePage.studentFirstNameField.sendKeys("Anna");
@@ -145,7 +155,8 @@ public class StudentProfileTest {
 
     // Редактирование фамилии ученика и сохранение изменений
     @Test
-    @DisplayName("8. Enter Cyrillic Last Name")
+    @Order(8)
+    @DisplayName("7. Enter Cyrillic Last Name")
     public void enterCyrillicLastName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentLastNameField));
         studentsProfilePage.clearLastName();
@@ -157,31 +168,31 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("9. Enter Long Cyrillic Last Name")
+    @Order(9)
+    @DisplayName("8. Enter Long Cyrillic Last Name")
     public void enterLongLastName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentLastNameField));
         studentsProfilePage.clearLastName();
         studentsProfilePage.studentLastNameField.click();
         studentsProfilePage.studentLastNameField.sendKeys("ИринаПопоноваИвановаСебастьяновнаПерепелкинаКовшикова");
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.saveButton));
-        studentsProfilePage.saveButtonProfile();
-        assert (studentsProfilePage.lastNameNotification.isDisplayed());
+        assert (studentsProfilePage.nameNotification.isDisplayed());
     }
 
     @Test
-    @DisplayName("10. Enter Short Cyrillic Last Name")
+    @Order(10)
+    @DisplayName("9. Enter Short Cyrillic Last Name")
     public void enterShortLastName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentLastNameField));
         studentsProfilePage.clearLastName();
         studentsProfilePage.studentLastNameField.click();
         studentsProfilePage.studentLastNameField.sendKeys("И");
-        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.saveButton));
-        studentsProfilePage.saveButtonProfile();
-        assert (studentsProfilePage.lastNameNotification.isDisplayed());
+        assert (studentsProfilePage.nameNotification.isDisplayed());
     }
 
     @Test
-    @DisplayName("11. Enter Cyrillic Last Name With Hyphen")
+    @Order(11)
+    @DisplayName("10. Enter Cyrillic Last Name With Hyphen")
     public void enterHyphenCyrillicLastName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentLastNameField));
         studentsProfilePage.clearLastName();
@@ -192,32 +203,34 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("12. Enter Space In Last Name")
+    @Order(12)
+    @DisplayName("11. Enter Space In Last Name")
     public void enterSpaceLastName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentLastNameField));
         studentsProfilePage.clearLastName();
         studentsProfilePage.studentLastNameField.click();
         studentsProfilePage.studentLastNameField.sendKeys(" ");
-        studentsProfilePage.saveButtonProfile();
-        assert (studentsProfilePage.lastNameNotification.isDisplayed());
+        assert (studentsProfilePage.nameNotification.isDisplayed());
 
     }
 
     @Test
-    @DisplayName("13. Enter Romain Letters Last Name")
+    @Order(13)
+    @DisplayName("12. Enter Romain Letters Last Name")
     public void enterRomainLettersLastName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentLastNameField));
         studentsProfilePage.clearLastName();
         studentsProfilePage.studentLastNameField.click();
         studentsProfilePage.studentLastNameField.sendKeys("Anna");
-        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.saveButton));
+        studentsProfilePage.saveButtonProfile();
         String lastName = studentsProfilePage.studentLastNameField.getAttribute("value");
         assertEquals(lastName, "Anna");
     }
 
     // Редактирование даты рождения ученика и сохранение изменений
     @Test
-    @DisplayName("14. Enter Correct Birth Date")
+    @Order(14)
+    @DisplayName("13. Enter Correct Birth Date")
     public void enterCorrectBirthDate() throws InterruptedException {
         studentsProfilePage.clearBirthDate();
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentBirthDateField));
@@ -238,7 +251,8 @@ public class StudentProfileTest {
 //    }
 
     @Test
-    @DisplayName("15. Enter Long Number In Birth Date")
+    @Order(15)
+    @DisplayName("14. Enter Long Number In Birth Date")
     public void enterLongBirthDate() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentBirthDateField));
         studentsProfilePage.clearBirthDate();
@@ -249,7 +263,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("16. Enter Very Long Number In Birth Date")
+    @Order(16)
+    @DisplayName("15. Enter Very Long Number In Birth Date")
     public void enterVeryLongBirthDate() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentBirthDateField));
         studentsProfilePage.clearBirthDate();
@@ -260,7 +275,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("17. Enter Cyrillic In Birth Date")
+    @Order(17)
+    @DisplayName("16. Enter Cyrillic In Birth Date")
     public void enterCyrillicBirthDate() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentBirthDateField));
         studentsProfilePage.clearBirthDate();
@@ -271,7 +287,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("18. Enter Romain Letters In Birth Date")
+    @Order(18)
+    @DisplayName("17. Enter Romain Letters In Birth Date")
     public void enterRomainLetterBirthDate() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentBirthDateField));
         studentsProfilePage.clearBirthDate();
@@ -282,7 +299,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("19. Enter Special Symbols In Birth Date")
+    @Order(19)
+    @DisplayName("18. Enter Special Symbols In Birth Date")
     public void enterSpecialSymbolsBirthDate() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentBirthDateField));
         studentsProfilePage.clearBirthDate();
@@ -293,7 +311,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("20. Enter Symbols In Birth Date")
+    @Order(20)
+    @DisplayName("19. Enter Symbols In Birth Date")
     public void enterSymbolsBirthDate() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentBirthDateField));
         studentsProfilePage.clearBirthDate();
@@ -303,9 +322,10 @@ public class StudentProfileTest {
         assertEquals(birthDate, "");
     }
 
-    // Редактирование поля Скайп № 21 - 27 -- большинство тест-кейсов фейлятся. Создал задачи на фикс
+
     @Test
-    @DisplayName("21. Enter Correct Skype Name")
+    @Order(21)
+    @DisplayName("20. Enter Correct Skype Name")
     public void enterCorrectSkypeName() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentSkypeField));
         studentsProfilePage.clearSkypeField();
@@ -315,8 +335,49 @@ public class StudentProfileTest {
         String skypeName = studentsProfilePage.studentSkypeField.getAttribute("value");
         assertEquals(skypeName, "super");
     }
+
     @Test
-    @DisplayName("28. Enter Correct Phone Number")
+    @Order(22)
+    @DisplayName("21. Enter Cyrillic Skype Name")
+    public void enterCyrillicSkypeName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentSkypeField));
+        studentsProfilePage.clearSkypeField();
+        studentsProfilePage.studentSkypeField.click();
+        studentsProfilePage.studentSkypeField.sendKeys("супер");
+        studentsProfilePage.saveButtonProfile();
+        String skypeIncorrectName = studentsProfilePage.skypeNotification.getText();
+        assertThat(skypeIncorrectName).contains("Only alphabets are allowed for this field");
+    }
+
+    @Test
+    @Order(23)
+    @DisplayName("22. Enter Long Correct Skype Name")
+    public void enterLongCorrectSkypeName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentSkypeField));
+        studentsProfilePage.clearSkypeField();
+        studentsProfilePage.studentSkypeField.click();
+        studentsProfilePage.studentSkypeField.sendKeys("live:.cid.11111aaabbc111");
+        studentsProfilePage.saveButtonProfile();
+        String skypeName = studentsProfilePage.studentSkypeField.getAttribute("value");
+        assertEquals(skypeName, "live:.cid.11111aaabbc111");
+    }
+
+
+    @Test
+    @Order(24)
+    @DisplayName("23. Enter Space Skype Name")
+    public void enterSpaceSkypeName() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentSkypeField));
+        studentsProfilePage.clearSkypeField();
+        studentsProfilePage.studentSkypeField.click();
+        studentsProfilePage.studentSkypeField.sendKeys(" ");
+        studentsProfilePage.saveButtonProfile();
+        String skypeName = studentsProfilePage.studentSkypeField.getAttribute("value");
+        assertEquals(skypeName, "");
+    }
+    @Test
+    @Order(25)
+    @DisplayName("24. Enter Correct Phone Number")
     public void enterCorrectPhoneNumber() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentPhoneField));
         studentsProfilePage.clearPhoneField();
@@ -328,7 +389,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("29. Enter Short Phone Number")
+    @Order(26)
+    @DisplayName("25. Enter Short Phone Number")
     public void enterShortPhoneNumber() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentPhoneField));
         studentsProfilePage.clearPhoneField();
@@ -338,7 +400,8 @@ public class StudentProfileTest {
         assertEquals(phoneNumber, "+7 (99)");
     }
     @Test
-    @DisplayName("30. Enter Cyrillic In Phone Number Field")
+    @Order(27)
+    @DisplayName("26. Enter Cyrillic In Phone Number Field")
     public void enterCyrillicPhoneNumber() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentPhoneField));
         studentsProfilePage.clearPhoneField();
@@ -349,7 +412,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("31. Enter Romain Letters In Phone Number Field")
+    @Order(28)
+    @DisplayName("27. Enter Romain Letters In Phone Number Field")
     public void enterRomainPhoneNumber() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentPhoneField));
         studentsProfilePage.clearPhoneField();
@@ -360,7 +424,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("32. Enter Special Symbols In Phone Number Field")
+    @Order(29)
+    @DisplayName("28. Enter Special Symbols In Phone Number Field")
     public void enterSpecialSymbolsPhoneNumber() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentPhoneField));
         studentsProfilePage.clearPhoneField();
@@ -371,7 +436,8 @@ public class StudentProfileTest {
     }
 
     @Test
-    @DisplayName("33. Enter Space In Phone Number Field")
+    @Order(30)
+    @DisplayName("29. Enter Space In Phone Number Field")
     public void enterSpacePhoneNumber() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentPhoneField));
         studentsProfilePage.clearPhoneField();
@@ -381,7 +447,8 @@ public class StudentProfileTest {
         assertEquals(phoneNumber, "+");
     }
     @Test
-    @DisplayName("34. Changing Country In Phone Number Field")
+    @Order(31)
+    @DisplayName("30. Changing Country In Phone Number Field")
     public void changingCountryPhoneNumber() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.studentPhoneField));
         studentsProfilePage.clearPhoneField();
@@ -390,5 +457,23 @@ public class StudentProfileTest {
         String phoneNumber = studentsProfilePage.studentPhoneField.getAttribute("value");
         assertEquals(phoneNumber, "+222 22");
     }
+
+    @Test
+    @Order(32)
+    @DisplayName("31. Changing Language In Profile To Russian")
+    public void changingLanguageToRussian() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.interfaceLang));
+        studentsProfilePage.interfaceLang.click();
+        studentsProfilePage.russianInterface.click();
+        studentsProfilePage.saveButtonProfile();
+        driver.navigate().refresh();
+        wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.scheduleTitle));
+        String schedule = studentsProfilePage.scheduleTitle.getText();
+        assertThat(schedule).contains("Расписание");
+    }
+
+
+
+
 }
 

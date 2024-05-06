@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.StudentTopUpTest" tests="20" skipped="0" failures="2" errors="0" timestamp="2024-05-06T11:40:40" hostname="DESKTOP-84P9B6H" time="174.328">
+  <properties/>
+  <testcase name="0. Enter Top Up Section Test" classname="test.StudentTopUpTest" time="8.354"/>
+  <testcase name="1. Share My Promocode Pop Up Appearence Test" classname="test.StudentTopUpTest" time="0.696"/>
+  <testcase name="2. Send Promocode To Telegram" classname="test.StudentTopUpTest" time="1.143"/>
+  <testcase name="3. Changing Currency To Euro" classname="test.StudentTopUpTest" time="0.288">
+    <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(2)&quot;}&#10;  (Session info: chrome-headless-shell=124.0.6367.119)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.19.1', revision: 'abe0ee07dc'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [9d16f273b92706335f0df014312c812c, findElement {value=#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(2), using=css selector}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61219/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9d16f273b92706335f0df014312c812c" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(2)&quot;}
+  (Session info: chrome-headless-shell=124.0.6367.119)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d16f273b92706335f0df014312c812c, findElement {value=#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(2), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61219/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d16f273b92706335f0df014312c812c
+	at jdk.internal.reflect.GeneratedConstructorAccessor23.newInstance(Unknown Source)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.15/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldChangeEuroCurrency(StudentTopUpTest.java:99)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="4. Changing Currency To Rub" classname="test.StudentTopUpTest" time="0.424">
+    <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(1)&quot;}&#10;  (Session info: chrome-headless-shell=124.0.6367.119)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.19.1', revision: 'abe0ee07dc'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [9d16f273b92706335f0df014312c812c, findElement {value=#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(1), using=css selector}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61219/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9d16f273b92706335f0df014312c812c" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(1)&quot;}
+  (Session info: chrome-headless-shell=124.0.6367.119)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d16f273b92706335f0df014312c812c, findElement {value=#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(1), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61219/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d16f273b92706335f0df014312c812c
+	at jdk.internal.reflect.GeneratedConstructorAccessor23.newInstance(Unknown Source)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.15/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldChangeRubCurrency(StudentTopUpTest.java:114)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="5. Changing Package To Familial" classname="test.StudentTopUpTest" time="0.369"/>
+  <testcase name="7. 4 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="25.399"/>
+  <testcase name="8. 8 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="19.072"/>
+  <testcase name="9. 16 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="11.32"/>
+  <testcase name="10. 32 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="12.518"/>
+  <testcase name="11. Changing Package To Spanish-speaking teacher" classname="test.StudentTopUpTest" time="5.796"/>
+  <testcase name="12. 4 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="5.167"/>
+  <testcase name="13. 8 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="13.677"/>
+  <testcase name="14. 16 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="14.275"/>
+  <testcase name="15. 32 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="11.579"/>
+  <testcase name="16. Changing Package To Ordinary Teacher" classname="test.StudentTopUpTest" time="5.811"/>
+  <testcase name="17. 4 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="8.346"/>
+  <testcase name="18. 8 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="9.857"/>
+  <testcase name="19. 16 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="9.842"/>
+  <testcase name="20. 32 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="9.354"/>
+  <system-out><![CDATA[14:40:17.119 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
+14:40:17.137 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=124 in cache (valid until 15:33:11 06/05/2024 MSK)
+14:40:17.138 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome124=124.0.6367.91 in cache (valid until 14:33:11 07/05/2024 MSK)
+14:40:17.138 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 124.0.6367.91 (resolved driver for Chrome 124)
+14:40:17.153 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 124.0.6367.91 found in cache
+14:40:17.154 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe
+]]></system-out>
+  <system-err><![CDATA[мая 06, 2024 2:40:29 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 124, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 124
+]]></system-err>
+</testsuite>
