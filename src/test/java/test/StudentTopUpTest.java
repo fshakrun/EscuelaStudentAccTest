@@ -41,8 +41,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(0)
-    @DisplayName("0. Enter Top Up Section Test")
+    @Order(1)
+    @DisplayName("1. Enter Top Up Section Test")
     public void enterTopUpSection() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
@@ -55,8 +55,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(1)
-    @DisplayName("1. Share My Promocode Pop Up Appearence Test")
+    @Order(2)
+    @DisplayName("2. Share My Promocode Pop Up Appearence Test")
     public void openMyPromoCodePopUp() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
         studentsAccountPage.topUpSectionButton.click();
@@ -67,10 +67,10 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(2)
-    @DisplayName("2. Send Promocode To Telegram")
+    @Order(3)
+    @DisplayName("3. Send Promocode To Telegram")
     public void shouldSendPromocodeToTelegram() throws InterruptedException {
-            wait.until(ExpectedConditions.visibilityOf(topUpPage.sendToTelegramButton));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.sendToTelegramButton));
         String originalWindow = driver.getWindowHandle();
         assert driver.getWindowHandles().size() == 1;
         topUpPage.sendToTelegramButton.click();
@@ -87,22 +87,9 @@ public class StudentTopUpTest {
         topUpPage.closeShareMyPromocodePopUp.click();
     }
 
+
+
     // Смена валюты
-    @Test
-    @Order(3)
-    @DisplayName("3. Changing Currency To Euro")
-    public void shouldChangeEuroCurrency() {
-        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
-        studentsAccountPage.topUpSectionButton.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
-        topUpPage.currencyChoice.click();
-        topUpPage.euroCurrencyChoice.click();
-        String firstPackagePrice = topUpPage.firstPackagePrice.getText();
-        assert (firstPackagePrice).contains("€");
-
-    }
-
-    // Переключение между типами пакетов уроков: Обычный, Семейный, С носителем
     @Test
     @Order(4)
     @DisplayName("4. Changing Currency To Rub")
@@ -117,6 +104,7 @@ public class StudentTopUpTest {
 
     }
 
+    // Переключение между типами пакетов уроков: Обычный, Семейный, С носителем
     @Test
     @Order(5)
     @DisplayName("5. Changing Package To Familial")
@@ -131,8 +119,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(7)
-    @DisplayName("7. 4 Lessons Familial Package Payment Page")
+    @Order(6)
+    @DisplayName("6. 4 Lessons Familial Package Payment Page")
 
     public void shouldProceedToPayment4FamilialLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -147,8 +135,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(8)
-    @DisplayName("8. 8 Lessons Familial Package Payment Page")
+    @Order(7)
+    @DisplayName("7. 8 Lessons Familial Package Payment Page")
 
     public void shouldProceedToPayment8FamilialLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -162,8 +150,8 @@ public class StudentTopUpTest {
 
     }
     @Test
-    @Order(9)
-    @DisplayName("9. 16 Lessons Familial Package Payment Page")
+    @Order(8)
+    @DisplayName("8. 16 Lessons Familial Package Payment Page")
 
     public void shouldProceedToPayment16FamilialLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -178,8 +166,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(10)
-    @DisplayName("10. 32 Lessons Familial Package Payment Page")
+    @Order(9)
+    @DisplayName("9. 32 Lessons Familial Package Payment Page")
 
     public void shouldProceedToPayment32FamilialLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -194,8 +182,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(11)
-    @DisplayName("11. Changing Package To Spanish-speaking teacher")
+    @Order(10)
+    @DisplayName("10. Changing Package To Spanish-speaking teacher")
     public void shouldChangeToNativePackage() {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
         studentsAccountPage.topUpSectionButton.click();
@@ -208,8 +196,8 @@ public class StudentTopUpTest {
 
 
     @Test
-    @Order(12)
-    @DisplayName("12. 4 Lessons Native Package Payment Page")
+    @Order(11)
+    @DisplayName("11. 4 Lessons Native Package Payment Page")
 
     public void shouldProceedToPayment4NativelLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -225,8 +213,8 @@ public class StudentTopUpTest {
 
 
     @Test
-    @Order(13)
-    @DisplayName("13. 8 Lessons Native Package Payment Page")
+    @Order(12)
+    @DisplayName("12. 8 Lessons Native Package Payment Page")
 
     public void shouldProceedToPayment8NativelLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -241,8 +229,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(14)
-    @DisplayName("14. 16 Lessons Native Package Payment Page")
+    @Order(13)
+    @DisplayName("13. 16 Lessons Native Package Payment Page")
 
     public void shouldProceedToPayment16NativelLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -257,8 +245,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(15)
-    @DisplayName("15. 32 Lessons Native Package Payment Page")
+    @Order(14)
+    @DisplayName("14. 32 Lessons Native Package Payment Page")
 
     public void shouldProceedToPayment32NativelLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -273,8 +261,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(16)
-    @DisplayName("16. Changing Package To Ordinary Teacher")
+    @Order(15)
+    @DisplayName("15. Changing Package To Ordinary Teacher")
     public void shouldChangeToOrdinaryPackage() {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
         studentsAccountPage.topUpSectionButton.click();
@@ -286,8 +274,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(17)
-    @DisplayName("17. 4 Lessons Ordinary Package Payment Page")
+    @Order(16)
+    @DisplayName("16. 4 Lessons Ordinary Package Payment Page")
 
     public void shouldProceedToPayment4OrdinarylLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -302,8 +290,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(18)
-    @DisplayName("18. 8 Lessons Ordinary Package Payment Page")
+    @Order(17)
+    @DisplayName("17. 8 Lessons Ordinary Package Payment Page")
 
     public void shouldProceedToPayment8OrdinarylLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -318,8 +306,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(19)
-    @DisplayName("19. 16 Lessons Ordinary Package Payment Page")
+    @Order(18)
+    @DisplayName("18. 16 Lessons Ordinary Package Payment Page")
 
     public void shouldProceedToPayment16OrdinarylLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -334,8 +322,8 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(20)
-    @DisplayName("20. 32 Lessons Ordinary Package Payment Page")
+    @Order(19)
+    @DisplayName("19. 32 Lessons Ordinary Package Payment Page")
 
     public void shouldProceedToPayment32OrdinarylLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -346,6 +334,32 @@ public class StudentTopUpTest {
         String URL = driver.getCurrentUrl();
         assert (URL).contains("https://yoomoney.ru/");
         driver.get(ConfProperties.getProperty("loginpage"));
+    }
+
+    @Test
+    @Order(20)
+    @DisplayName("20. Changing Currency To Euro")
+    public void shouldChangeEuroCurrency() {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        String firstPackagePrice = topUpPage.firstPackagePrice.getText();
+        assert (firstPackagePrice).contains("€");
+
+    }
+
+    @Test
+    @Order(5)
+    @DisplayName("21. Changing Package To Familial In Euro")
+    public void shouldChangeToFamilyPackageEuro() {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        String firstPackagePrice = topUpPage.numberLessonFirstPackage.getText();
+        assert (firstPackagePrice).contains("4");
 
     }
 

@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m44.02s</div>
+<div class="counter">1m18.62s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">83%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,67 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="goToAppStore()"></a>
-<h3 class="failures">2. App Store Button Test</h3>
-<span class="code">
-<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a[2]/svg' (tried for 60 second(s) with 500 milliseconds interval)
-	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at app//test.StudentMainPageTest.goToAppStore(StudentMainPageTest.java:93)
-	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a[2]/svg&quot;}
-  (Session info: chrome-headless-shell=124.0.6367.119)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28d978e964cb7b2ad997e77bedef5350, findElement {value=//*[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a[2]/svg, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60969}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60969/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 28d978e964cb7b2ad997e77bedef5350
-	at jdk.internal.reflect.GeneratedConstructorAccessor23.newInstance(Unknown Source)
-	at java.base@11.0.15/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@11.0.15/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
-	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 4 more
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -135,58 +84,58 @@ Session ID: 28d978e964cb7b2ad997e77bedef5350
 <tr>
 <td class="success">0. Valid Credential Account Log In Test</td>
 <td class="success">enterAccWithValidCredTest()</td>
-<td class="success">10.413s</td>
+<td class="success">12.992s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">2. App Store Button Test</td>
-<td class="failures">goToAppStore()</td>
-<td class="failures">1m0.11s</td>
-<td class="failures">failed</td>
+<td class="success">2. App Store Button Test</td>
+<td class="success">goToAppStore()</td>
+<td class="success">25.326s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">4. Facebook Button Test</td>
+<td class="success">5. Facebook Button Test</td>
 <td class="success">goToFacebook()</td>
-<td class="success">0.334s</td>
+<td class="success">0.484s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">1. Google Play Button Test</td>
 <td class="success">goToGooglePlay()</td>
-<td class="success">0.814s</td>
+<td class="success">1.120s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">4. Instagram Button Test</td>
 <td class="success">goToInstagram()</td>
-<td class="success">21.293s</td>
+<td class="success">21.681s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">3. VK Button Test</td>
 <td class="success">goToVk()</td>
-<td class="success">11.048s</td>
+<td class="success">17.021s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:36:13.431 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
-14:36:13.449 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=124 in cache (valid until 15:33:11 06/05/2024 MSK)
-14:36:13.450 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome124=124.0.6367.91 in cache (valid until 14:33:11 07/05/2024 MSK)
-14:36:13.450 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 124.0.6367.91 (resolved driver for Chrome 124)
-14:36:13.461 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 124.0.6367.91 found in cache
-14:36:13.461 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe
+<pre>17:13:56.118 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
+17:13:56.143 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=125 in cache (valid until 17:32:40 20/05/2024 MSK)
+17:13:56.149 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome125=125.0.6422.60 in cache (valid until 11:26:06 21/05/2024 MSK)
+17:13:56.150 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 125.0.6422.60 (resolved driver for Chrome 125)
+17:13:56.179 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 125.0.6422.60 found in cache
+17:13:56.182 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\125.0.6422.60\chromedriver.exe
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>мая 06, 2024 2:36:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 124, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 124
+<pre>мая 20, 2024 5:14:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 125, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 125
 </pre>
 </span>
 </div>
@@ -198,7 +147,7 @@ WARNING: Unable to find an exact match for CDP version 124, returning the closes
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 6 мая 2024 г., 14:44:24</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 20 мая 2024 г., 17:32:10</p>
 </div>
 </div>
 </body>

@@ -41,15 +41,13 @@ public class TopUpPage {
     @FindBy(xpath = "/html/body/div[7]/div/div/div/div/div/div[1]/a")
     public WebElement sendToTelegramButton;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[1]")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div")
     public WebElement currencyChoice;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]")
-    public WebElement particularCurrencyChoice;
 
-    @FindBy(css = "#app > div.sc-fAMvPz.hYmqKs > div.sc-bvLVNa.emKVs > div > div.sc-jcpbFC.jrZGnu > div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ > div.sc-humkjy.iIVYAb > div > div.sc-ZgWHV.eunnxU > div:nth-child(1)")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]")
     public WebElement rubCurrencyChoice;
 
-    @FindBy(css = "#app > div.sc-fAMvPz.hYmqKs > div.sc-bvLVNa.emKVs > div > div.sc-jcpbFC.jrZGnu > div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ > div.sc-humkjy.iIVYAb > div > div.sc-ZgWHV.eunnxU > div:nth-child(2)")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[2]")
     public WebElement euroCurrencyChoice;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[6]/div/div[1]/span[3]/span")

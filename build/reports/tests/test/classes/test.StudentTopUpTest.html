@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">20</div>
+<div class="counter">21</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">2</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2m53.29s</div>
+<div class="counter">10m18.78s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">90%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,96 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="shouldChangeEuroCurrency()"></a>
-<h3 class="failures">3. Changing Currency To Euro</h3>
-<span class="code">
-<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(2)&quot;}
-  (Session info: chrome-headless-shell=124.0.6367.119)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9d16f273b92706335f0df014312c812c, findElement {value=#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(2), using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61219/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9d16f273b92706335f0df014312c812c
-	at jdk.internal.reflect.GeneratedConstructorAccessor23.newInstance(Unknown Source)
-	at java.base@11.0.15/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@11.0.15/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
-	at app//test.StudentTopUpTest.shouldChangeEuroCurrency(StudentTopUpTest.java:99)
-	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="shouldChangeRubCurrency()"></a>
-<h3 class="failures">4. Changing Currency To Rub</h3>
-<span class="code">
-<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(1)&quot;}
-  (Session info: chrome-headless-shell=124.0.6367.119)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9d16f273b92706335f0df014312c812c, findElement {value=#app &gt; div.sc-fAMvPz.hYmqKs &gt; div.sc-bvLVNa.emKVs &gt; div &gt; div.sc-jcpbFC.jrZGnu &gt; div.sc-kcrxFD.sc-kgDXlb.yMFRh.iweMUZ &gt; div.sc-humkjy.iIVYAb &gt; div &gt; div.sc-ZgWHV.eunnxU &gt; div:nth-child(1), using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61219/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9d16f273b92706335f0df014312c812c
-	at jdk.internal.reflect.GeneratedConstructorAccessor23.newInstance(Unknown Source)
-	at java.base@11.0.15/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@11.0.15/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
-	at app//test.StudentTopUpTest.shouldChangeRubCurrency(StudentTopUpTest.java:114)
-	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -162,144 +82,150 @@ Session ID: 9d16f273b92706335f0df014312c812c
 </tr>
 </thead>
 <tr>
-<td class="success">0. Enter Top Up Section Test</td>
+<td class="success">1. Enter Top Up Section Test</td>
 <td class="success">enterTopUpSection()</td>
-<td class="success">8.354s</td>
+<td class="success">18.168s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">1. Share My Promocode Pop Up Appearence Test</td>
+<td class="success">2. Share My Promocode Pop Up Appearence Test</td>
 <td class="success">openMyPromoCodePopUp()</td>
-<td class="success">0.696s</td>
+<td class="success">3.266s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">3. Changing Currency To Euro</td>
-<td class="failures">shouldChangeEuroCurrency()</td>
-<td class="failures">0.288s</td>
-<td class="failures">failed</td>
+<td class="success">20. Changing Currency To Euro</td>
+<td class="success">shouldChangeEuroCurrency()</td>
+<td class="success">11.074s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">4. Changing Currency To Rub</td>
-<td class="failures">shouldChangeRubCurrency()</td>
-<td class="failures">0.424s</td>
-<td class="failures">failed</td>
+<td class="success">4. Changing Currency To Rub</td>
+<td class="success">shouldChangeRubCurrency()</td>
+<td class="success">4.220s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">5. Changing Package To Familial</td>
 <td class="success">shouldChangeToFamilyPackage()</td>
-<td class="success">0.369s</td>
+<td class="success">0.684s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">11. Changing Package To Spanish-speaking teacher</td>
+<td class="success">21. Changing Package To Familial In Euro</td>
+<td class="success">shouldChangeToFamilyPackageEuro()</td>
+<td class="success">1.124s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">10. Changing Package To Spanish-speaking teacher</td>
 <td class="success">shouldChangeToNativePackage()</td>
-<td class="success">5.796s</td>
+<td class="success">9.593s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">16. Changing Package To Ordinary Teacher</td>
+<td class="success">15. Changing Package To Ordinary Teacher</td>
 <td class="success">shouldChangeToOrdinaryPackage()</td>
-<td class="success">5.811s</td>
+<td class="success">8.680s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">9. 16 Lessons Familial Package Payment Page</td>
+<td class="success">8. 16 Lessons Familial Package Payment Page</td>
 <td class="success">shouldProceedToPayment16FamilialLessons()</td>
-<td class="success">11.320s</td>
+<td class="success">35.401s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">14. 16 Lessons Native Package Payment Page</td>
+<td class="success">13. 16 Lessons Native Package Payment Page</td>
 <td class="success">shouldProceedToPayment16NativelLessons()</td>
-<td class="success">14.275s</td>
+<td class="success">46.063s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">19. 16 Lessons Ordinary Package Payment Page</td>
+<td class="success">18. 16 Lessons Ordinary Package Payment Page</td>
 <td class="success">shouldProceedToPayment16OrdinarylLessons()</td>
-<td class="success">9.842s</td>
+<td class="success">49.914s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">10. 32 Lessons Familial Package Payment Page</td>
+<td class="success">9. 32 Lessons Familial Package Payment Page</td>
 <td class="success">shouldProceedToPayment32FamilialLessons()</td>
-<td class="success">12.518s</td>
+<td class="success">30.395s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">15. 32 Lessons Native Package Payment Page</td>
+<td class="success">14. 32 Lessons Native Package Payment Page</td>
 <td class="success">shouldProceedToPayment32NativelLessons()</td>
-<td class="success">11.579s</td>
+<td class="success">45.830s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">20. 32 Lessons Ordinary Package Payment Page</td>
+<td class="success">19. 32 Lessons Ordinary Package Payment Page</td>
 <td class="success">shouldProceedToPayment32OrdinarylLessons()</td>
-<td class="success">9.354s</td>
+<td class="success">47.942s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">7. 4 Lessons Familial Package Payment Page</td>
+<td class="success">6. 4 Lessons Familial Package Payment Page</td>
 <td class="success">shouldProceedToPayment4FamilialLessons()</td>
-<td class="success">25.399s</td>
+<td class="success">51.133s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">12. 4 Lessons Native Package Payment Page</td>
+<td class="success">11. 4 Lessons Native Package Payment Page</td>
 <td class="success">shouldProceedToPayment4NativelLessons()</td>
-<td class="success">5.167s</td>
+<td class="success">9.905s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">17. 4 Lessons Ordinary Package Payment Page</td>
+<td class="success">16. 4 Lessons Ordinary Package Payment Page</td>
 <td class="success">shouldProceedToPayment4OrdinarylLessons()</td>
-<td class="success">8.346s</td>
+<td class="success">1m21.44s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">8. 8 Lessons Familial Package Payment Page</td>
+<td class="success">7. 8 Lessons Familial Package Payment Page</td>
 <td class="success">shouldProceedToPayment8FamilialLessons()</td>
-<td class="success">19.072s</td>
+<td class="success">37.303s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">13. 8 Lessons Native Package Payment Page</td>
+<td class="success">12. 8 Lessons Native Package Payment Page</td>
 <td class="success">shouldProceedToPayment8NativelLessons()</td>
-<td class="success">13.677s</td>
+<td class="success">26.338s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">18. 8 Lessons Ordinary Package Payment Page</td>
+<td class="success">17. 8 Lessons Ordinary Package Payment Page</td>
 <td class="success">shouldProceedToPayment8OrdinarylLessons()</td>
-<td class="success">9.857s</td>
+<td class="success">1m21.38s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">2. Send Promocode To Telegram</td>
+<td class="success">3. Send Promocode To Telegram</td>
 <td class="success">shouldSendPromocodeToTelegram()</td>
-<td class="success">1.143s</td>
+<td class="success">18.928s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:40:17.119 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
-14:40:17.137 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=124 in cache (valid until 15:33:11 06/05/2024 MSK)
-14:40:17.138 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome124=124.0.6367.91 in cache (valid until 14:33:11 07/05/2024 MSK)
-14:40:17.138 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 124.0.6367.91 (resolved driver for Chrome 124)
-14:40:17.153 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 124.0.6367.91 found in cache
-14:40:17.154 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe
+<pre>17:17:54.646 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
+17:17:54.666 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=125 in cache (valid until 17:32:40 20/05/2024 MSK)
+17:17:54.678 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome125=125.0.6422.60 in cache (valid until 11:26:06 21/05/2024 MSK)
+17:17:54.681 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 125.0.6422.60 (resolved driver for Chrome 125)
+17:17:54.730 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 125.0.6422.60 found in cache
+17:17:54.732 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\125.0.6422.60\chromedriver.exe
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>мая 06, 2024 2:40:29 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 124, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 124
+<pre>мая 20, 2024 5:18:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 125, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 125
 </pre>
 </span>
 </div>
@@ -311,7 +237,7 @@ WARNING: Unable to find an exact match for CDP version 124, returning the closes
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 6 мая 2024 г., 14:44:24</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 20 мая 2024 г., 17:32:09</p>
 </div>
 </div>
 </body>
