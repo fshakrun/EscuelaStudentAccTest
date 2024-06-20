@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentAccLoginTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-05-20T14:13:20" hostname="DESKTOP-84P9B6H" time="35.534">
+<testsuite name="test.StudentAccLoginTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-06-20T07:06:31" hostname="DESKTOP-84P9B6H" time="11.529">
   <properties/>
-  <testcase name="0. Valid Credential Account Log In Log Out Test" classname="test.StudentAccLoginTest" time="32.517"/>
-  <testcase name="1. Invalid Login Valid Password Test" classname="test.StudentAccLoginTest" time="1.192"/>
-  <testcase name="2. Valid Login Invalid Password Test" classname="test.StudentAccLoginTest" time="0.859"/>
-  <testcase name="3. Password Recovery Page Accessibility Test" classname="test.StudentAccLoginTest" time="0.187"/>
-  <system-out><![CDATA[17:11:57.334 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
-17:12:00.642 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=125 in cache (valid until 17:32:40 20/05/2024 MSK)
-17:12:00.649 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome125=125.0.6422.60 in cache (valid until 11:26:06 21/05/2024 MSK)
-17:12:00.652 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 125.0.6422.60 (resolved driver for Chrome 125)
-17:12:00.748 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 125.0.6422.60 found in cache
-17:12:00.751 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\125.0.6422.60\chromedriver.exe
+  <testcase name="0. Valid Credential Account Log In Log Out Test" classname="test.StudentAccLoginTest" time="9.602"/>
+  <testcase name="1. Invalid Login Valid Password Test" classname="test.StudentAccLoginTest" time="0.524"/>
+  <testcase name="2. Valid Login Invalid Password Test" classname="test.StudentAccLoginTest" time="0.497"/>
+  <testcase name="3. Password Recovery Page Accessibility Test" classname="test.StudentAccLoginTest" time="0.104"/>
+  <testcase name="4. Valid Login Enter Test" classname="test.StudentAccLoginTest" time="0.735"/>
+  <system-out><![CDATA[10:06:22.823 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
+10:06:22.862 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 11:00:41 20/06/2024 MSK)
+10:06:22.863 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.62 in cache (valid until 10:00:41 21/06/2024 MSK)
+10:06:22.863 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.62 (resolved driver for Chrome 126)
+10:06:22.894 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.62 found in cache
+10:06:22.896 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.62\chromedriver.exe
 ]]></system-out>
-  <system-err><![CDATA[мая 20, 2024 5:12:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 125, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 125
+  <system-err><![CDATA[июн. 20, 2024 10:06:27 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 126, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 126
 ]]></system-err>
 </testsuite>

@@ -50,6 +50,10 @@ public class TopUpPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[2]")
     public WebElement euroCurrencyChoice;
 
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[3]")
+    public WebElement tengeCurrencyChoice;
+
+
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[6]/div/div[1]/span[3]/span")
     public WebElement firstPackagePrice;
 
@@ -76,6 +80,12 @@ public class TopUpPage {
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[6]/div/div[4]/button/span")
     public WebElement thirtytwoLessonBtn;
+
+    @FindBy (xpath = "//*[@id='ProductSummary-totalAmount']/span")
+    public WebElement stripeAmount;
+
+    @FindBy(xpath = "//*[@id='modal-body']/span/div/div[4]/div/p")
+    public  WebElement paySelectionAmount;
 
     public void topUpSectionClick(){
         topUpSection.click();

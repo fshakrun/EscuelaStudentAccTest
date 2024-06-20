@@ -29,7 +29,7 @@ public class StudentTopUpTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--window-size=1920,1080");
+        options.addArguments( "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));
@@ -107,7 +107,7 @@ public class StudentTopUpTest {
     // Переключение между типами пакетов уроков: Обычный, Семейный, С носителем
     @Test
     @Order(5)
-    @DisplayName("5. Changing Package To Familial")
+    @DisplayName("5. Changing Package To Rub Familial")
     public void shouldChangeToFamilyPackage() {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
         studentsAccountPage.topUpSectionButton.click();
@@ -120,7 +120,7 @@ public class StudentTopUpTest {
 
     @Test
     @Order(6)
-    @DisplayName("6. 4 Lessons Familial Package Payment Page")
+    @DisplayName("6. 4 Lessons Rub Familial Package Payment Page")
 
     public void shouldProceedToPayment4FamilialLessons() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
@@ -351,17 +351,516 @@ public class StudentTopUpTest {
     }
 
     @Test
-    @Order(5)
-    @DisplayName("21. Changing Package To Familial In Euro")
-    public void shouldChangeToFamilyPackageEuro() {
+    @Order(21)
+    @DisplayName("21. Change Package To Familial In Euro")
+    public void shouldChangeToEuroFamilyPack() {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
         studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.familyPackages.click();
         String firstPackagePrice = topUpPage.numberLessonFirstPackage.getText();
         assert (firstPackagePrice).contains("4");
 
     }
+
+    @Test
+    @Order(22)
+    @DisplayName("22. 4 Lessons Euro Familial Package Payment Page")
+
+    public void shouldProceedToEuroPayment4FamilialLessons() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.fourLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(23)
+    @DisplayName("23. 8 Lessons Euro Familial Package Payment Page")
+
+    public void shouldProceedToEuroPayment8FamilialLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.eightLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(24)
+    @DisplayName("24. 16 Lessons Euro Familial Package Payment Page")
+
+    public void shouldProceedToEuroPayment16FamilialLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.sixteenLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(25)
+    @DisplayName("25. 32 Lessons Euro Familial Package Payment Page")
+
+    public void shouldProceedToEuroPayment32FamilialLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.thirtytwoLessonBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(26)
+    @DisplayName("26. 4 Lessons Euro Native Package Payment Page")
+
+    public void shouldProceedToEuroPayment4NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.fourLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(27)
+    @DisplayName("27. 8 Lessons Euro Native Package Payment Page")
+
+    public void shouldProceedToEuroPayment8NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.eightLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(28)
+    @DisplayName("28. 16 Lessons Euro Native Package Payment Page")
+
+    public void shouldProceedToEuroPayment16NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.sixteenLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(29)
+    @DisplayName("29. 32 Lessons Euro Native Package Payment Page")
+
+    public void shouldProceedToEuroPayment32NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.thirtytwoLessonBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(30)
+    @DisplayName("30. 4 Lessons Euro Ordinary Package Payment Page")
+
+    public void shouldProceedToEuroPayment4OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.fourLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(31)
+    @DisplayName("31. 8 Lessons Euro Ordinary Package Payment Page")
+
+    public void shouldProceedToEuroPayment8OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.eightLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+    @Test
+    @Order(32)
+    @DisplayName("32. 16 Lessons Euro Ordinary Package Payment Page")
+
+    public void shouldProceedToEuroPayment16OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.sixteenLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(33)
+    @DisplayName("33. 32 Lessons Euro Ordinary Package Payment Page")
+
+    public void shouldProceedToEuroPayment32OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.euroCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.thirtytwoLessonBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("stripe.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+//    @Test
+//    @Order(34)
+//    @DisplayName("34. Changing Currency To Tenge")
+//    public void shouldChangeTengeCurrency() {
+//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+//        studentsAccountPage.topUpSectionButton.click();
+//        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+//        topUpPage.currencyChoice.click();
+//        topUpPage.euroCurrencyChoice.click();
+//        String firstPackagePrice = topUpPage.firstPackagePrice.getText();
+//        assert (firstPackagePrice).contains("8,750");
+//
+//    }
+
+    @Test
+    @Order(35)
+    @DisplayName("35. 4 Lessons Tenge Ordinary Package Payment Page")
+
+    public void shouldProceedToTengePayment4OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.fourLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(36)
+    @DisplayName("36. 8 Lessons Tenge Ordinary Package Payment Page")
+
+    public void shouldProceedToTengePayment8OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.eightLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(37)
+    @DisplayName("37. 16 Lessons Tenge Ordinary Package Payment Page")
+
+    public void shouldProceedToTengePayment16OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.sixteenLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(37)
+    @DisplayName("38. 32 Lessons Tenge Ordinary Package Payment Page")
+
+    public void shouldProceedToTengePayment32OrdinaryLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.ordinaryPackages.click();
+        topUpPage.thirtytwoLessonBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+    @Test
+    @Order(38)
+    @DisplayName("39. 4 Lessons Tenge Family Package Payment Page")
+
+    public void shouldProceedToTengePayment4FamilyLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.fourLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(39)
+    @DisplayName("40. 8 Lessons Tenge Family Package Payment Page")
+
+    public void shouldProceedToTengePayment8FamilyLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.eightLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(40)
+    @DisplayName("41. 16 Lessons Tenge Family Package Payment Page")
+
+    public void shouldProceedToTengePayment16FamilyLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.sixteenLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(41)
+    @DisplayName("42. 32 Lessons Tenge Family Package Payment Page")
+
+    public void shouldProceedToTengePayment32FamilyLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.familyPackages.click();
+        topUpPage.thirtytwoLessonBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+
+    @Test
+    @Order(42)
+    @DisplayName("43. 4 Lessons Tenge Native Package Payment Page")
+
+    public void shouldProceedToTengePayment4NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.fourLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+    @Test
+    @Order(43)
+    @DisplayName("44. 8 Lessons Tenge Native Package Payment Page")
+
+    public void shouldProceedToTengePayment8NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.eightLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(44)
+    @DisplayName("45. 16 Lessons Tenge Native Package Payment Page")
+
+    public void shouldProceedToTengePayment16NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.sixteenLessonsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+    @Test
+    @Order(45)
+    @DisplayName("46. 32 Lessons Tenge Native Package Payment Page")
+
+    public void shouldProceedToTengePayment32NativeLessons() throws AWTException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+        studentsAccountPage.topUpSectionButton.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+        topUpPage.currencyChoice.click();
+        topUpPage.tengeCurrencyChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
+        topUpPage.nativeSpeakerPackages.click();
+        topUpPage.thirtytwoLessonBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("payselection.com");
+        driver.get(ConfProperties.getProperty("loginpage"));
+
+    }
+
+
+
+
 
 
 }

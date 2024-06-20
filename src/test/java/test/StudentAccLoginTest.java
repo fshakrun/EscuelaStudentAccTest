@@ -102,4 +102,16 @@ public class StudentAccLoginTest {
         assertEquals(URL, "https://escuela-stage.web.app/restore");
 
     }
+
+    @Test
+    @DisplayName("4. Valid Login Enter Test")
+    public void enterValidEmailTest() throws InterruptedException {
+
+        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
+        loginPage.emailField.sendKeys("checktimezonete11st@gmail.com");
+        String Email =  loginPage.emailField.getAttribute("value");
+        assertEquals(Email, "checktimezonete11st@gmail.com");
+    }
+
+
 }

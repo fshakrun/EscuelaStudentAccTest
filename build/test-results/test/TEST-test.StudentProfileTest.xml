@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentProfileTest" tests="32" skipped="0" failures="0" errors="0" timestamp="2024-05-20T14:16:11" hostname="DESKTOP-84P9B6H" time="102.953">
+<testsuite name="test.StudentProfileTest" tests="32" skipped="0" failures="0" errors="0" timestamp="2024-06-20T07:07:34" hostname="DESKTOP-84P9B6H" time="50.201">
   <properties/>
-  <testcase name="0. Enter Students Profile Test" classname="test.StudentProfileTest" time="14.579"/>
-  <testcase name="1. Enter Cyrillic First Name" classname="test.StudentProfileTest" time="7.832"/>
-  <testcase name="2. Enter Too Long Cyrillic First Name" classname="test.StudentProfileTest" time="6.739"/>
-  <testcase name="3. Enter Too Short Cyrillic First Name" classname="test.StudentProfileTest" time="0.924"/>
-  <testcase name="4. Enter Cyrillic First Name With Hyphen" classname="test.StudentProfileTest" time="2.184"/>
-  <testcase name="5. Enter Space In First Name Field" classname="test.StudentProfileTest" time="2.57"/>
-  <testcase name="6. Enter Romain Letters First Name" classname="test.StudentProfileTest" time="2.068"/>
-  <testcase name="7. Enter Cyrillic Last Name" classname="test.StudentProfileTest" time="2.131"/>
-  <testcase name="8. Enter Long Cyrillic Last Name" classname="test.StudentProfileTest" time="6.87"/>
-  <testcase name="9. Enter Short Cyrillic Last Name" classname="test.StudentProfileTest" time="0.913"/>
-  <testcase name="10. Enter Cyrillic Last Name With Hyphen" classname="test.StudentProfileTest" time="1.758"/>
-  <testcase name="11. Enter Space In Last Name" classname="test.StudentProfileTest" time="0.812"/>
-  <testcase name="12. Enter Romain Letters Last Name" classname="test.StudentProfileTest" time="1.531"/>
-  <testcase name="13. Enter Correct Birth Date" classname="test.StudentProfileTest" time="2.296"/>
-  <testcase name="14. Enter Long Number In Birth Date" classname="test.StudentProfileTest" time="1.566"/>
-  <testcase name="15. Enter Very Long Number In Birth Date" classname="test.StudentProfileTest" time="2.791"/>
-  <testcase name="16. Enter Cyrillic In Birth Date" classname="test.StudentProfileTest" time="0.909"/>
-  <testcase name="17. Enter Romain Letters In Birth Date" classname="test.StudentProfileTest" time="0.979"/>
-  <testcase name="18. Enter Special Symbols In Birth Date" classname="test.StudentProfileTest" time="0.871"/>
-  <testcase name="19. Enter Symbols In Birth Date" classname="test.StudentProfileTest" time="0.857"/>
-  <testcase name="20. Enter Correct Skype Name" classname="test.StudentProfileTest" time="1.394"/>
-  <testcase name="21. Enter Cyrillic Skype Name" classname="test.StudentProfileTest" time="8.108"/>
-  <testcase name="22. Enter Long Correct Skype Name" classname="test.StudentProfileTest" time="3.82"/>
-  <testcase name="23. Enter Space Skype Name" classname="test.StudentProfileTest" time="1.332"/>
-  <testcase name="24. Enter Correct Phone Number" classname="test.StudentProfileTest" time="3.303"/>
-  <testcase name="25. Enter Short Phone Number" classname="test.StudentProfileTest" time="1.472"/>
-  <testcase name="26. Enter Cyrillic In Phone Number Field" classname="test.StudentProfileTest" time="0.974"/>
-  <testcase name="27. Enter Romain Letters In Phone Number Field" classname="test.StudentProfileTest" time="1.067"/>
-  <testcase name="28. Enter Special Symbols In Phone Number Field" classname="test.StudentProfileTest" time="1.117"/>
-  <testcase name="29. Enter Space In Phone Number Field" classname="test.StudentProfileTest" time="0.605"/>
-  <testcase name="30. Changing Country In Phone Number Field" classname="test.StudentProfileTest" time="1.096"/>
-  <testcase name="31. Changing Language In Profile To Russian" classname="test.StudentProfileTest" time="13.616"/>
-  <system-out><![CDATA[17:15:47.002 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
-17:15:47.040 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=125 in cache (valid until 17:32:40 20/05/2024 MSK)
-17:15:47.045 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome125=125.0.6422.60 in cache (valid until 11:26:06 21/05/2024 MSK)
-17:15:47.046 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 125.0.6422.60 (resolved driver for Chrome 125)
-17:15:47.065 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 125.0.6422.60 found in cache
-17:15:47.068 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\125.0.6422.60\chromedriver.exe
+  <testcase name="0. Enter Students Profile Test" classname="test.StudentProfileTest" time="8.328"/>
+  <testcase name="1. Enter Cyrillic First Name" classname="test.StudentProfileTest" time="1.691"/>
+  <testcase name="2. Enter Too Long Cyrillic First Name" classname="test.StudentProfileTest" time="4.014"/>
+  <testcase name="3. Enter Too Short Cyrillic First Name" classname="test.StudentProfileTest" time="0.62"/>
+  <testcase name="4. Enter Cyrillic First Name With Hyphen" classname="test.StudentProfileTest" time="1.651"/>
+  <testcase name="5. Enter Space In First Name Field" classname="test.StudentProfileTest" time="0.853"/>
+  <testcase name="6. Enter Romain Letters First Name" classname="test.StudentProfileTest" time="0.963"/>
+  <testcase name="7. Enter Cyrillic Last Name" classname="test.StudentProfileTest" time="1.313"/>
+  <testcase name="8. Enter Long Cyrillic Last Name" classname="test.StudentProfileTest" time="3.874"/>
+  <testcase name="9. Enter Short Cyrillic Last Name" classname="test.StudentProfileTest" time="0.496"/>
+  <testcase name="10. Enter Cyrillic Last Name With Hyphen" classname="test.StudentProfileTest" time="1.157"/>
+  <testcase name="11. Enter Space In Last Name" classname="test.StudentProfileTest" time="0.681"/>
+  <testcase name="12. Enter Romain Letters Last Name" classname="test.StudentProfileTest" time="0.996"/>
+  <testcase name="13. Enter Correct Birth Date" classname="test.StudentProfileTest" time="1.099"/>
+  <testcase name="14. Enter Long Number In Birth Date" classname="test.StudentProfileTest" time="0.968"/>
+  <testcase name="15. Enter Very Long Number In Birth Date" classname="test.StudentProfileTest" time="1.716"/>
+  <testcase name="16. Enter Cyrillic In Birth Date" classname="test.StudentProfileTest" time="0.67"/>
+  <testcase name="17. Enter Romain Letters In Birth Date" classname="test.StudentProfileTest" time="0.682"/>
+  <testcase name="18. Enter Special Symbols In Birth Date" classname="test.StudentProfileTest" time="0.659"/>
+  <testcase name="19. Enter Symbols In Birth Date" classname="test.StudentProfileTest" time="0.622"/>
+  <testcase name="20. Enter Correct Skype Name" classname="test.StudentProfileTest" time="0.846"/>
+  <testcase name="21. Enter Cyrillic Skype Name" classname="test.StudentProfileTest" time="1.284"/>
+  <testcase name="22. Enter Long Correct Skype Name" classname="test.StudentProfileTest" time="1.949"/>
+  <testcase name="23. Enter Space Skype Name" classname="test.StudentProfileTest" time="0.856"/>
+  <testcase name="24. Enter Correct Phone Number" classname="test.StudentProfileTest" time="1.592"/>
+  <testcase name="25. Enter Short Phone Number" classname="test.StudentProfileTest" time="0.878"/>
+  <testcase name="26. Enter Cyrillic In Phone Number Field" classname="test.StudentProfileTest" time="0.633"/>
+  <testcase name="27. Enter Romain Letters In Phone Number Field" classname="test.StudentProfileTest" time="0.801"/>
+  <testcase name="28. Enter Special Symbols In Phone Number Field" classname="test.StudentProfileTest" time="0.809"/>
+  <testcase name="29. Enter Space In Phone Number Field" classname="test.StudentProfileTest" time="0.43"/>
+  <testcase name="30. Changing Country In Phone Number Field" classname="test.StudentProfileTest" time="0.684"/>
+  <testcase name="31. Changing Language In Profile To Russian" classname="test.StudentProfileTest" time="6.006"/>
+  <system-out><![CDATA[10:07:30.957 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.8.0
+10:07:30.970 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 11:00:41 20/06/2024 MSK)
+10:07:30.971 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.62 in cache (valid until 10:00:41 21/06/2024 MSK)
+10:07:30.971 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.62 (resolved driver for Chrome 126)
+10:07:30.998 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.62 found in cache
+10:07:30.999 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.62\chromedriver.exe
 ]]></system-out>
-  <system-err><![CDATA[мая 20, 2024 5:15:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 125, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 125
+  <system-err><![CDATA[июн. 20, 2024 10:07:32 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 126, returning the closest version; found: 123; Please update to a Selenium version that supports CDP version 126
 ]]></system-err>
 </testsuite>
