@@ -46,6 +46,12 @@ public class StudentsAccountPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[3]")
     public WebElement fbButton;
 
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/button")
+    public WebElement joinLessonBtn;
+
+    @FindBy(xpath = "/html/body/div[11]/div/div/div/div")
+    public WebElement friendspromoBanner;
+
 
     public void studentsAccountClick() {
         studentsAccount.click();
