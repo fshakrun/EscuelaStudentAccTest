@@ -30,7 +30,11 @@ public class LessonStartTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
+<<<<<<< HEAD
         options.addArguments("--headless","--window-size=1920,1080");
+=======
+        options.addArguments("--headless", "--window-size=1920,1080");
+>>>>>>> 1ec9b6dd3676d8390b44afa3a69ad23d4d673abd
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));
