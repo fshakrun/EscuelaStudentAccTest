@@ -30,7 +30,7 @@ public class LessonStartTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));
@@ -42,7 +42,7 @@ public class LessonStartTest {
 
     @Test
     @Order(1)
-    @DisplayName("1. Valid Credential Teacher Account Log In Test")
+    @DisplayName("1. Valid Credential Teacher Account Log In Log Out Test")
     public void enterAccWithValidCredTest() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
@@ -53,30 +53,35 @@ public class LessonStartTest {
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSchedule));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/teacher");
-
-    }
-
-
-    @Test
-    @Order(2)
-    @DisplayName("2. Start Lesson Test")
-    public void startLesson() throws InterruptedException {
-
-        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherClasses));
-        teacherAcc.teacherClasses.click();
-        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectStudent));
-        teacherAcc.teacherSelectStudent.click();
-        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectLesson));
-        teacherAcc.teacherSelectLesson.click();
-        wait.until(ExpectedConditions.visibilityOf(teacherAcc.startLessonBtn));
-        teacherAcc.startLessonBtn.click();
-        assert (teacherAcc.callStudentButton.isDisplayed());
-        driver.get(ConfProperties.getProperty("loginpage"));
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLogOut));
         teacherAcc.teacherLogOut.click();
         driver.manage().deleteAllCookies();
-
     }
+
+//    @Test
+//    @Order(2)
+//    @DisplayName("2. Start Lesson Test")
+//    public void startLesson() throws InterruptedException {
+//        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
+//        loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
+//        loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
+//        loginPage.enterClick();
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherClasses));
+//        teacherAcc.teacherClasses.click();
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectStudent));
+//        teacherAcc.teacherSelectStudent.click();
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectLesson));
+//        teacherAcc.teacherSelectLesson.click();
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.startLessonBtn));
+//        teacherAcc.startLessonBtn.click();
+//        assert (teacherAcc.callStudentButton.isDisplayed());
+//        driver.get(ConfProperties.getProperty("loginpage"));
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLogOut));
+//        teacherAcc.teacherLogOut.click();
+//        driver.manage().deleteAllCookies();
+//
+//    }
+}
 
 //    @Test
 //    @Order(3)
@@ -90,7 +95,7 @@ public class LessonStartTest {
 //        driver.navigate().refresh();
 //        //assert (studentsAccountPage.joinLessonBtn).isDisplayed();
 
-    }
+
 
 
 

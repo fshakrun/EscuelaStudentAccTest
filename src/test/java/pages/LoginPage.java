@@ -38,6 +38,9 @@ public class LoginPage {
     @FindBy(css = "[type=submit]")
     private WebElement enterButton;
 
+    @FindBy(xpath = "/html/body/div[7]/div/div/div/div/img[1]")
+    public WebElement friendPromoBanner;
+
 
 
     public void emailEnter(String email) {

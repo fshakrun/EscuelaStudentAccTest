@@ -1,0 +1,1 @@
+{"uuid":"377b804e-20b5-47da-9384-4341956a20ad","name":"LessonStartTest","children":["9a680609-48d1-4a54-aee4-17fd7f9659cb","915fed31-4944-445e-923a-ebf01eb50c9d"],"befores":[{"name":"setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1719842005871,"stop":1719842042398}],"afters":[],"start":1719842005719,"stop":1719842173870}

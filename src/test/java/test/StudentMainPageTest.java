@@ -54,6 +54,8 @@ public class StudentMainPageTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();

@@ -35,7 +35,7 @@ public class StudentAccLoginTest {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-
+//"--headless",
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
@@ -59,6 +59,8 @@ public class StudentAccLoginTest {
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
         // ожидание появления элемента — расписание
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         studentsProfilePage.studentsProfileClick();
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.logOutButton));

@@ -48,6 +48,8 @@ public class StudentTopUpTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
         studentsAccountPage.topUpSectionButton.click();
         String URL = driver.getCurrentUrl();
