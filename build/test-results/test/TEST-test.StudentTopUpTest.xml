@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentTopUpTest" tests="45" skipped="0" failures="0" errors="0" timestamp="2024-07-17T11:34:08" hostname="DESKTOP-84P9B6H" time="432.933">
+<testsuite name="test.StudentTopUpTest" tests="45" skipped="0" failures="0" errors="0" timestamp="2024-07-18T13:12:20" hostname="DESKTOP-84P9B6H" time="493.13">
   <properties/>
-  <testcase name="1. Enter Top Up Section Test" classname="test.StudentTopUpTest" time="9.538"/>
-  <testcase name="2. Share My Promocode Pop Up Appearence Test" classname="test.StudentTopUpTest" time="0.942"/>
-  <testcase name="3. Send Promocode To Telegram" classname="test.StudentTopUpTest" time="0.867"/>
-  <testcase name="4. Changing Currency To Rub" classname="test.StudentTopUpTest" time="0.623"/>
-  <testcase name="5. Changing Package To Rub Familial" classname="test.StudentTopUpTest" time="0.477"/>
-  <testcase name="6. 4 Lessons Rub Familial Package Payment Page" classname="test.StudentTopUpTest" time="11.612"/>
-  <testcase name="7. 8 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="17.626"/>
-  <testcase name="8. 16 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="10.788"/>
-  <testcase name="9. 32 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="11.069"/>
-  <testcase name="10. Changing Package To Spanish-speaking teacher" classname="test.StudentTopUpTest" time="6.408"/>
-  <testcase name="11. 4 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="5.505"/>
-  <testcase name="12. 8 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="9.785"/>
-  <testcase name="13. 16 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="12.443"/>
-  <testcase name="14. 32 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="10.49"/>
-  <testcase name="15. Changing Package To Ordinary Teacher" classname="test.StudentTopUpTest" time="6.266"/>
-  <testcase name="16. 4 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="5.15"/>
-  <testcase name="17. 8 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="10.38"/>
-  <testcase name="18. 16 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="10.309"/>
-  <testcase name="19. 32 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="11.09"/>
-  <testcase name="20. Changing Currency To Euro" classname="test.StudentTopUpTest" time="6.354"/>
-  <testcase name="21. Change Package To Familial In Euro" classname="test.StudentTopUpTest" time="0.648"/>
-  <testcase name="22. 4 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="13.09"/>
-  <testcase name="23. 8 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="13.157"/>
-  <testcase name="24. 16 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="12.211"/>
-  <testcase name="25. 32 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="11.809"/>
-  <testcase name="26. 4 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="11.695"/>
-  <testcase name="27. 8 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="11.978"/>
-  <testcase name="28. 16 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="11.544"/>
-  <testcase name="29. 32 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="11.952"/>
-  <testcase name="30. 4 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="11.223"/>
-  <testcase name="31. 8 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="11.549"/>
-  <testcase name="32. 16 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="11.264"/>
-  <testcase name="33. 32 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="12.048"/>
-  <testcase name="35. 4 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="16.012"/>
-  <testcase name="36. 8 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="10.382"/>
-  <testcase name="37. 16 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="10.429"/>
-  <testcase name="38. 32 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="13.238"/>
-  <testcase name="39. 4 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="10.423"/>
-  <testcase name="40. 8 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="9.901"/>
-  <testcase name="41. 16 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="9.88"/>
-  <testcase name="42. 32 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="10.42"/>
-  <testcase name="43. 4 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="9.342"/>
-  <testcase name="44. 8 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="9.196"/>
-  <testcase name="45. 16 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="10.104"/>
-  <testcase name="46. 32 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="10.106"/>
-  <system-out><![CDATA[14:34:00.932 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-14:34:00.956 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 15:31:01 17/07/2024 MSK)
-14:34:00.958 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.182 in cache (valid until 14:31:01 18/07/2024 MSK)
-14:34:00.958 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.182 (resolved driver for Chrome 126)
-14:34:00.981 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.182 found in cache
-14:34:00.983 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.182\chromedriver.exe
+  <testcase name="1. Enter Top Up Section Test" classname="test.StudentTopUpTest" time="9.582"/>
+  <testcase name="2. Share My Promocode Pop Up Appearence Test" classname="test.StudentTopUpTest" time="0.874"/>
+  <testcase name="3. Send Promocode To Telegram" classname="test.StudentTopUpTest" time="1.159"/>
+  <testcase name="4. Changing Currency To Rub" classname="test.StudentTopUpTest" time="0.76"/>
+  <testcase name="5. Changing Package To Rub Familial" classname="test.StudentTopUpTest" time="0.676"/>
+  <testcase name="6. 4 Lessons Rub Familial Package Payment Page" classname="test.StudentTopUpTest" time="12.816"/>
+  <testcase name="7. 8 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="14.092"/>
+  <testcase name="8. 16 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="12.326"/>
+  <testcase name="9. 32 Lessons Familial Package Payment Page" classname="test.StudentTopUpTest" time="12.611"/>
+  <testcase name="10. Changing Package To Spanish-speaking teacher" classname="test.StudentTopUpTest" time="6.903"/>
+  <testcase name="11. 4 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="6.01"/>
+  <testcase name="12. 8 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="12.522"/>
+  <testcase name="13. 16 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="12.107"/>
+  <testcase name="14. 32 Lessons Native Package Payment Page" classname="test.StudentTopUpTest" time="12.327"/>
+  <testcase name="15. Changing Package To Ordinary Teacher" classname="test.StudentTopUpTest" time="6.606"/>
+  <testcase name="16. 4 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="6.276"/>
+  <testcase name="17. 8 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="12.169"/>
+  <testcase name="18. 16 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="12.099"/>
+  <testcase name="19. 32 Lessons Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="12.936"/>
+  <testcase name="20. Changing Currency To Euro" classname="test.StudentTopUpTest" time="6.14"/>
+  <testcase name="21. Change Package To Familial In Euro" classname="test.StudentTopUpTest" time="0.678"/>
+  <testcase name="22. 4 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="16.117"/>
+  <testcase name="23. 8 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="13.578"/>
+  <testcase name="24. 16 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="13.739"/>
+  <testcase name="25. 32 Lessons Euro Familial Package Payment Page" classname="test.StudentTopUpTest" time="16.506"/>
+  <testcase name="26. 4 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="14.587"/>
+  <testcase name="27. 8 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="14.545"/>
+  <testcase name="28. 16 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="12.087"/>
+  <testcase name="29. 32 Lessons Euro Native Package Payment Page" classname="test.StudentTopUpTest" time="15.731"/>
+  <testcase name="30. 4 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="13.936"/>
+  <testcase name="31. 8 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="14.945"/>
+  <testcase name="32. 16 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="15.04"/>
+  <testcase name="33. 32 Lessons Euro Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="13.287"/>
+  <testcase name="35. 4 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="15.414"/>
+  <testcase name="36. 8 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="12.053"/>
+  <testcase name="37. 16 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="14.888"/>
+  <testcase name="38. 32 Lessons Tenge Ordinary Package Payment Page" classname="test.StudentTopUpTest" time="12.041"/>
+  <testcase name="39. 4 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="10.846"/>
+  <testcase name="40. 8 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="10.925"/>
+  <testcase name="41. 16 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="10.75"/>
+  <testcase name="42. 32 Lessons Tenge Family Package Payment Page" classname="test.StudentTopUpTest" time="11.604"/>
+  <testcase name="43. 4 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="11.533"/>
+  <testcase name="44. 8 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="12.096"/>
+  <testcase name="45. 16 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="11.523"/>
+  <testcase name="46. 32 Lessons Tenge Native Package Payment Page" classname="test.StudentTopUpTest" time="11.577"/>
+  <system-out><![CDATA[16:12:13.100 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+16:12:13.121 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 16:55:24 18/07/2024 MSK)
+16:12:13.122 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.182 in cache (valid until 14:49:11 19/07/2024 MSK)
+16:12:13.122 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.182 (resolved driver for Chrome 126)
+16:12:13.143 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.182 found in cache
+16:12:13.153 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.182\chromedriver.exe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

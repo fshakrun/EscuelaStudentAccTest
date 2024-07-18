@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentMainPageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-07-17T11:32:32" hostname="DESKTOP-84P9B6H" time="19.896">
+<testsuite name="test.StudentMainPageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-07-18T13:10:26" hostname="DESKTOP-84P9B6H" time="31.797">
   <properties/>
-  <testcase name="0. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="8.908"/>
-  <testcase name="1. Google Play Button Test" classname="test.StudentMainPageTest" time="0.457"/>
-  <testcase name="2. App Store Button Test" classname="test.StudentMainPageTest" time="3.134"/>
-  <testcase name="3. VK Button Test" classname="test.StudentMainPageTest" time="7.332"/>
-  <system-out><![CDATA[14:32:26.363 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-14:32:26.381 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 15:31:01 17/07/2024 MSK)
-14:32:26.382 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.182 in cache (valid until 14:31:01 18/07/2024 MSK)
-14:32:26.382 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.182 (resolved driver for Chrome 126)
-14:32:26.413 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.182 found in cache
-14:32:26.414 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.182\chromedriver.exe
+  <testcase name="0. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="13.447"/>
+  <testcase name="1. Google Play Button Test" classname="test.StudentMainPageTest" time="1.192"/>
+  <testcase name="2. App Store Button Test" classname="test.StudentMainPageTest" time="6.161"/>
+  <testcase name="3. VK Button Test" classname="test.StudentMainPageTest" time="10.837"/>
+  <system-out><![CDATA[16:10:21.949 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+16:10:21.983 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 16:55:24 18/07/2024 MSK)
+16:10:21.985 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.182 in cache (valid until 14:49:11 19/07/2024 MSK)
+16:10:21.986 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.182 (resolved driver for Chrome 126)
+16:10:22.033 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.182 found in cache
+16:10:22.035 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.182\chromedriver.exe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
