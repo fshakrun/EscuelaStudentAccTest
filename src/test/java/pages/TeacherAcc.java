@@ -17,20 +17,32 @@ public class TeacherAcc {
 
     @FindBy (xpath = "//*[@id='swJTVlm93MR5rt9BJtZ7dCm0g3y1']/span")
     public WebElement teacherSchedule;
-
-    @FindBy(xpath = "//*[@id='app']/div[1]/nav/div/a[4]")
+    @FindBy(xpath = "//a[@href='/teacher/classes']")
     public WebElement teacherClasses;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/main/div[1]/div/div[4]/text()[1]")
+    @FindBy(xpath = "//*[text() = 'Anna']")
+    public WebElement particularStudentChoice;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/main/div[2]/button/span[1]")
+    public WebElement teacherCreateNewClass;
+
+    @FindBy(xpath = "//*[@id='react-select-5-input']")
     public WebElement teacherSelectStudent;
 
-    @FindBy(id = "0s6R2dnuoB7J1ASWJIKb")
-    public WebElement teacherSelectLesson;
+    @FindBy(xpath = "/html/body/div[6]/div/div/div/div/div/div[3]/div[1]/div/input")
+    public WebElement lessonName;
+
+    @FindBy(xpath = "//*[text() = 'Save']")
+    public WebElement saveLessonBtn;
+
+    @FindBy(xpath = "//*[text() = 'Autotestclasses']")
+    public WebElement teacherSelectExistingLesson;
+
 
     @FindBy(xpath = "//*[@id='remoteVideoStreamId']/div[3]/div[2]/button[3]")
     public WebElement startLessonBtn;
 
-    @FindBy (xpath = "//*[@id='remoteVideoStreamId']/div[1]/button")
+    @FindBy (xpath = "//*[text() = ' Call']")
     public WebElement callStudentButton;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/nav/div/div/a[2]")

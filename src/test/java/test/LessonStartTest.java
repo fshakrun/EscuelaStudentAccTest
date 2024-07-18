@@ -11,6 +11,8 @@ import pages.ConfProperties;
 import pages.LoginPage;
 import pages.TeacherAcc;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
@@ -28,7 +30,7 @@ public class LessonStartTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments("--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));
@@ -56,30 +58,54 @@ public class LessonStartTest {
         driver.manage().deleteAllCookies();
     }
 
+    @Test
+    @Order(2)
+    @DisplayName("2. Teacher Starts Lesson")
+    public void startLesson() throws InterruptedException, AWTException {
+        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
+        loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
+        loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
+        loginPage.enterClick();
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherClasses));
+        driver.get("https://escuela-stage.web.app/teacher/classes");
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.particularStudentChoice));
+        teacherAcc.particularStudentChoice.click();
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectExistingLesson));
+        teacherAcc.teacherSelectExistingLesson.click();
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.startLessonBtn));
+        teacherAcc.startLessonBtn.click();
+        assert (teacherAcc.callStudentButton.isDisplayed());
+//        driver.get(ConfProperties.getProperty("loginpage"));
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLogOut));
+//        teacherAcc.teacherLogOut.click();
+//        driver.manage().deleteAllCookies();
+
+
 //    @Test
 //    @Order(2)
-//    @DisplayName("2. Start Lesson Test")
-//    public void startLesson() throws InterruptedException {
+//    @DisplayName("2. Creating New Lesson Test")
+//    public void startLesson() throws InterruptedException, AWTException {
 //        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
 //        loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
 //        loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
 //        loginPage.enterClick();
 //        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherClasses));
 //        teacherAcc.teacherClasses.click();
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherCreateNewClass));
+//        teacherAcc.teacherCreateNewClass.click();
 //        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectStudent));
 //        teacherAcc.teacherSelectStudent.click();
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectLesson));
-//        teacherAcc.teacherSelectLesson.click();
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.startLessonBtn));
-//        teacherAcc.startLessonBtn.click();
-//        assert (teacherAcc.callStudentButton.isDisplayed());
-//        driver.get(ConfProperties.getProperty("loginpage"));
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLogOut));
-//        teacherAcc.teacherLogOut.click();
-//        driver.manage().deleteAllCookies();
+//        teacherAcc.teacherSelectStudent.sendKeys("firstlessonnotifiq@escuela.pro");
+//        Robot selectStudent = new Robot();
+//        selectStudent.keyPress(KeyEvent.VK_ENTER);
+//        selectStudent.keyRelease(KeyEvent.VK_ENTER);
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.lessonName));
+//        teacherAcc.lessonName.sendKeys("firstlessonnotifiq@escuela.pro");
+//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.saveLessonBtn));
+//        teacherAcc.saveLessonBtn.click();
 //
 //    }
-}
+
 
 //    @Test
 //    @Order(3)
@@ -92,8 +118,8 @@ public class LessonStartTest {
 //        loginPage.enterClick();
 //        driver.navigate().refresh();
 //        //assert (studentsAccountPage.joinLessonBtn).isDisplayed();
+    }
 
 
-
-
+}
 
