@@ -13,9 +13,11 @@ import pages.TeacherAcc;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
+import static test.StudentAccLoginTest.studentsAccountPage;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LessonStartTest {
@@ -25,6 +27,7 @@ public class LessonStartTest {
     public static WebDriver driver;
 
     public static TeacherAcc teacherAcc;
+
     public static WebDriverWait wait;
 
     @BeforeAll
@@ -59,8 +62,8 @@ public class LessonStartTest {
     }
 
     @Test
-    @Order(2)
-    @DisplayName("2. Teacher Starts Lesson")
+    @Order(3)
+    @DisplayName("3. Teacher Starts Lesson")
     public void startLesson() throws InterruptedException, AWTException {
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
@@ -74,52 +77,53 @@ public class LessonStartTest {
         teacherAcc.teacherSelectExistingLesson.click();
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.startLessonBtn));
         teacherAcc.startLessonBtn.click();
-        assert (teacherAcc.callStudentButton.isDisplayed());
-//        driver.get(ConfProperties.getProperty("loginpage"));
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLogOut));
-//        teacherAcc.teacherLogOut.click();
-//        driver.manage().deleteAllCookies();
+        assert (teacherAcc.studentLessonBalance).isDisplayed();
+        driver.get(ConfProperties.getProperty("loginpage"));
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLogOut));
+        teacherAcc.teacherLogOut.click();
+        driver.manage().deleteAllCookies();
+    }
 
+    @Test
+    @Order(2)
+    @DisplayName("2. Creating New Lesson Test")
+    public void creatingNewLesson() throws InterruptedException, AWTException {
+        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
+        loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
+        loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
+        loginPage.enterClick();
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherClasses));
+        teacherAcc.teacherClasses.click();
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherCreateNewClass));
+        teacherAcc.teacherCreateNewClass.click();
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectStudent));
+        teacherAcc.teacherSelectStudent.click();
+        teacherAcc.teacherSelectStudent.sendKeys("firstlessonnotifiq@escuela.pro");
+        Robot selectStudent = new Robot();
+        selectStudent.keyPress(KeyEvent.VK_ENTER);
+        selectStudent.keyRelease(KeyEvent.VK_ENTER);
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.lessonName));
+        teacherAcc.lessonName.sendKeys("firstlessonnotifiq@escuela.pro");
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.saveLessonBtn));
+        teacherAcc.saveLessonBtn.click();
 
-//    @Test
-//    @Order(2)
-//    @DisplayName("2. Creating New Lesson Test")
-//    public void startLesson() throws InterruptedException, AWTException {
-//        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
-//        loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
-//        loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
-//        loginPage.enterClick();
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherClasses));
-//        teacherAcc.teacherClasses.click();
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherCreateNewClass));
-//        teacherAcc.teacherCreateNewClass.click();
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherSelectStudent));
-//        teacherAcc.teacherSelectStudent.click();
-//        teacherAcc.teacherSelectStudent.sendKeys("firstlessonnotifiq@escuela.pro");
-//        Robot selectStudent = new Robot();
-//        selectStudent.keyPress(KeyEvent.VK_ENTER);
-//        selectStudent.keyRelease(KeyEvent.VK_ENTER);
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.lessonName));
-//        teacherAcc.lessonName.sendKeys("firstlessonnotifiq@escuela.pro");
-//        wait.until(ExpectedConditions.visibilityOf(teacherAcc.saveLessonBtn));
-//        teacherAcc.saveLessonBtn.click();
-//
-//    }
-
-
-//    @Test
-//    @Order(3)
-//    @DisplayName("3. Student Joins Started Lesson")
-//    public void studentJoinsLesson() throws IOException, InterruptedException {
-//
-//        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
-//        loginPage.emailEnter(ConfProperties.getProperty("email"));
-//        loginPage.passwordEnter(ConfProperties.getProperty("password"));
-//        loginPage.enterClick();
-//        driver.navigate().refresh();
-//        //assert (studentsAccountPage.joinLessonBtn).isDisplayed();
     }
 
 
+    @Test
+    @Order(4)
+    @DisplayName("4. Student Joins Started Lesson")
+    public void studentJoinsLesson() throws IOException, InterruptedException {
+
+        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
+        loginPage.emailEnter(ConfProperties.getProperty("email"));
+        loginPage.passwordEnter(ConfProperties.getProperty("password"));
+        loginPage.enterClick();
+        driver.navigate().refresh();
+        assert (studentsAccountPage.joinLessonBtn).isDisplayed();
+    }
 }
+
+
+
 

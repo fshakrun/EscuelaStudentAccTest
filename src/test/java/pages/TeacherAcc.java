@@ -42,6 +42,9 @@ public class TeacherAcc {
     @FindBy(xpath = "//*[@id='remoteVideoStreamId']/div[3]/div[2]/button[3]")
     public WebElement startLessonBtn;
 
+    @FindBy(xpath = "//*[@id='remoteVideoStreamId']/div[1]/div[2]")
+    public WebElement studentLessonBalance;
+
     @FindBy (xpath = "//*[text() = ' Call']")
     public WebElement callStudentButton;
 
