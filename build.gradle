@@ -18,14 +18,13 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.22.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.23.0'
     implementation 'org.seleniumhq.selenium:selenium-api:4.19.1'
     implementation 'org.seleniumhq.selenium:selenium-server:4.0.0-alpha-1'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.22.0'
-    implementation 'org.seleniumhq.selenium:selenium-firefox-driver:4.19.1'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.22.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.23.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.23.0'
     implementation 'org.seleniumhq.selenium:selenium-support:4.19.1'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.22.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.23.0'
 
 
     implementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
