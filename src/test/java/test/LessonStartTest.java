@@ -106,6 +106,11 @@ public class LessonStartTest {
         teacherAcc.lessonName.sendKeys("firstlessonnotifiq@escuela.pro");
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.saveLessonBtn));
         teacherAcc.saveLessonBtn.click();
+        assert (teacherAcc.studentLessonBalance).isDisplayed();
+        driver.get(ConfProperties.getProperty("loginpage"));
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLogOut));
+        teacherAcc.teacherLogOut.click();
+        driver.manage().deleteAllCookies();
 
     }
 
