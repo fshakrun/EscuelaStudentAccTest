@@ -20,7 +20,24 @@ public class NotesPage {
     @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
     public WebElement notesPageLogo;
 
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]")
+    public WebElement oneParticularNote;
+
+    @FindBy(xpath = "//*[text() = 'Сгенерировать историю']")
+    public WebElement storyGenerateButton;
+
+    @FindBy(xpath = "//*[text() = 'Как озвучивать заметки']")
+    public WebElement notesVoiceoverPopup;
+
+    @FindBy(xpath = "//*[text() = 'Объясняем про заметки тут']" )
+    public WebElement voiceoverPopupText;
+
+
+    @FindBy(xpath = "/html/body/div[7]/div/div/div/div/div/div[2]")
+    public WebElement closeVoiceoverPopup;
+
 
     public void notesSectionClick(){notesSection.click();}
 
+    public void closeVoiceoverPopup(){closeVoiceoverPopup.click();}
 }

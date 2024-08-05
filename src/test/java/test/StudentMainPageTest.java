@@ -34,7 +34,7 @@ public class StudentMainPageTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -136,51 +136,71 @@ public class StudentMainPageTest {
 
     }
 
-    // @Test
-    // @Order(5)
-    // @DisplayName("4. Instagram Button Test")
-    // public void goToInstagram() throws InterruptedException {
+    @Test
+    @Order(5)
+    @DisplayName("4. Tuesday Regular Lesson Checking")
+    public void shouldCheckTuesdayRegularLesson () throws InterruptedException{
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
+        String TuesdayLesson = (studentsAccountPage.calendarTime).getText();
+        assertThat(TuesdayLesson).contains("03:00\n" +
+                "Testov Anton.");
+    }
 
-    //     wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.instButton));
-    //     String originalWindow = driver.getWindowHandle();
-    //     assert driver.getWindowHandles().size() == 1;
-    //     studentsAccountPage.instButton.click();
-    //     wait.until(numberOfWindowsToBe(2));
-    //     for (String windowHandle : driver.getWindowHandles()) {
-    //         if(!originalWindow.contentEquals(windowHandle)) {
-    //             driver.switchTo().window(windowHandle);
-    //             break;
-    //         }
-    //     }
-    //     String URL = driver.getCurrentUrl();
-    //     assertEquals(URL, "https://www.instagram.com/escuela.pro");
-    //     driver.close();
-    //     driver.switchTo().window(originalWindow);
+    @Test
+    @Order(6)
+    @DisplayName("5. Next Lesson Notification Checking")
+    public void shouldCheckNextLessonNotification () throws InterruptedException{
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.nextLessonNotification));
+        String NextLesson = (studentsAccountPage.nextLessonNotification).getText();
+        assertThat(NextLesson ).contains("Вторник");
+    }
 
-    // }
 
-    // @Test
-    // @Order(6)
-    // @DisplayName("5. Facebook Button Test")
-    // public void goToFacebook() throws InterruptedException {
+     @Test
+     @Order(7)
+     @DisplayName("6. Instagram Button Test")
+     public void goToInstagram() throws InterruptedException {
 
-    //     wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.fbButton));
-    //     String originalWindow = driver.getWindowHandle();
-    //     assert driver.getWindowHandles().size() == 1;
-    //     studentsAccountPage.fbButton.click();
-    //     wait.until(numberOfWindowsToBe(2));
-    //     for (String windowHandle : driver.getWindowHandles()) {
-    //         if(!originalWindow.contentEquals(windowHandle)) {
-    //             driver.switchTo().window(windowHandle);
-    //             break;
-    //         }
-    //     }
-    //     String URL = driver.getCurrentUrl();
-    //     assertEquals(URL, "https://www.facebook.com/esp.escuela/");
-    //     driver.close();
-    //     driver.switchTo().window(originalWindow);
+         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.instButton));
+         String originalWindow = driver.getWindowHandle();
+         assert driver.getWindowHandles().size() == 1;
+         studentsAccountPage.instButton.click();
+         wait.until(numberOfWindowsToBe(2));
+         for (String windowHandle : driver.getWindowHandles()) {
+             if(!originalWindow.contentEquals(windowHandle)) {
+                 driver.switchTo().window(windowHandle);
+                 break;
+             }
+         }
+         String URL = driver.getCurrentUrl();
+         assertEquals(URL, "https://www.instagram.com/escuela.pro");
+         driver.close();
+         driver.switchTo().window(originalWindow);
 
-    // }
+     }
+
+     @Test
+     @Order(8)
+     @DisplayName("7. Facebook Button Test")
+     public void goToFacebook() throws InterruptedException {
+
+         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.fbButton));
+         String originalWindow = driver.getWindowHandle();
+         assert driver.getWindowHandles().size() == 1;
+         studentsAccountPage.fbButton.click();
+         wait.until(numberOfWindowsToBe(2));
+         for (String windowHandle : driver.getWindowHandles()) {
+             if(!originalWindow.contentEquals(windowHandle)) {
+                 driver.switchTo().window(windowHandle);
+                 break;
+             }
+         }
+         String URL = driver.getCurrentUrl();
+         assertEquals(URL, "https://www.facebook.com/esp.escuela/");
+         driver.close();
+         driver.switchTo().window(originalWindow);
+
+     }
 
 }
 

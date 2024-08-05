@@ -29,7 +29,7 @@ public class StudentTopUpTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));
@@ -375,15 +375,15 @@ public class StudentTopUpTest {
     public void shouldProceedToEuroPayment4FamilialLessons() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
         studentsAccountPage.topUpSectionButton.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
-        topUpPage.currencyChoice.click();
-        topUpPage.euroCurrencyChoice.click();
+//        wait.until(ExpectedConditions.visibilityOf(topUpPage.currencyChoice));
+//        topUpPage.currencyChoice.click();
+//        topUpPage.euroCurrencyChoice.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.familyPackages.click();
         topUpPage.fourLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -401,9 +401,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.familyPackages.click();
         topUpPage.eightLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -421,9 +421,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.familyPackages.click();
         topUpPage.sixteenLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -441,9 +441,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.familyPackages.click();
         topUpPage.thirtytwoLessonBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -461,9 +461,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.nativeSpeakerPackages.click();
         topUpPage.fourLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -481,9 +481,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.nativeSpeakerPackages.click();
         topUpPage.eightLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -501,9 +501,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.nativeSpeakerPackages.click();
         topUpPage.sixteenLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -521,9 +521,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.nativeSpeakerPackages.click();
         topUpPage.thirtytwoLessonBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -541,9 +541,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.ordinaryPackages.click();
         topUpPage.fourLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -561,9 +561,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.ordinaryPackages.click();
         topUpPage.eightLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -580,9 +580,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.ordinaryPackages.click();
         topUpPage.sixteenLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }
@@ -600,9 +600,9 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.visibilityOf(topUpPage.familyPackages));
         topUpPage.ordinaryPackages.click();
         topUpPage.thirtytwoLessonBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.stripeAmount));
+        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionAmount));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("stripe.com");
+        assert (URL).contains("payselection.com");
         driver.get(ConfProperties.getProperty("loginpage"));
 
     }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.StudentsNotesPageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-08-05T13:47:55" hostname="X542U" time="16.42">
+  <properties/>
+  <testcase name="1. Valid Credential Account Log In Test" classname="test.StudentsNotesPageTest" time="14.274"/>
+  <testcase name="2. Notes Page Access" classname="test.StudentsNotesPageTest" time="0.201"/>
+  <testcase name="3. Check If One Note Is Present" classname="test.StudentsNotesPageTest" time="1.369"/>
+  <testcase name="4. Notes Voiceover Instruction Pop-Up Checking" classname="test.StudentsNotesPageTest" time="0.555"/>
+  <system-out><![CDATA[16:47:50.324 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+16:47:50.354 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 17:47:20 05/08/2024 MSK)
+16:47:50.355 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.88 in cache (valid until 13:31:54 06/08/2024 MSK)
+16:47:50.355 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.88 (resolved driver for Chrome 127)
+16:47:50.371 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.88 found in cache
+16:47:50.375 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.88\chromedriver.exe
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

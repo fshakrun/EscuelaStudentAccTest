@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentMainPageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-07-18T13:10:26" hostname="DESKTOP-84P9B6H" time="31.797">
+<testsuite name="test.StudentMainPageTest" tests="8" skipped="0" failures="1" errors="0" timestamp="2024-08-05T13:39:05" hostname="X542U" time="44.508">
   <properties/>
-  <testcase name="0. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="13.447"/>
-  <testcase name="1. Google Play Button Test" classname="test.StudentMainPageTest" time="1.192"/>
-  <testcase name="2. App Store Button Test" classname="test.StudentMainPageTest" time="6.161"/>
-  <testcase name="3. VK Button Test" classname="test.StudentMainPageTest" time="10.837"/>
-  <system-out><![CDATA[16:10:21.949 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-16:10:21.983 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 16:55:24 18/07/2024 MSK)
-16:10:21.985 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.182 in cache (valid until 14:49:11 19/07/2024 MSK)
-16:10:21.986 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.182 (resolved driver for Chrome 126)
-16:10:22.033 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.182 found in cache
-16:10:22.035 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.182\chromedriver.exe
+  <testcase name="0. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="9.347"/>
+  <testcase name="1. Google Play Button Test" classname="test.StudentMainPageTest" time="1.193"/>
+  <testcase name="2. App Store Button Test" classname="test.StudentMainPageTest" time="3.619"/>
+  <testcase name="3. VK Button Test" classname="test.StudentMainPageTest" time="7.532"/>
+  <testcase name="4. Tuesday Regular Lesson Checking" classname="test.StudentMainPageTest" time="0.111"/>
+  <testcase name="5. Next Lesson Notification Checking" classname="test.StudentMainPageTest" time="0.115">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expecting actual:&#13;&#10;  &quot;Преподаватель уже ждёт в классе. Удачи!&quot;&#13;&#10;to contain:&#13;&#10;  &quot;Вторник&quot; " type="java.lang.AssertionError">java.lang.AssertionError: 
+Expecting actual:
+  &quot;Преподаватель уже ждёт в классе. Удачи!&quot;
+to contain:
+  &quot;Вторник&quot; 
+	at test.StudentMainPageTest.shouldCheckNextLessonNotification(StudentMainPageTest.java:155)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="6. Instagram Button Test" classname="test.StudentMainPageTest" time="21.55"/>
+  <testcase name="7. Facebook Button Test" classname="test.StudentMainPageTest" time="0.808"/>
+  <system-out><![CDATA[16:38:59.417 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+16:38:59.431 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:43:14 05/08/2024 MSK)
+16:38:59.433 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.88 in cache (valid until 13:31:54 06/08/2024 MSK)
+16:38:59.433 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.88 (resolved driver for Chrome 127)
+16:38:59.443 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.88 found in cache
+16:38:59.444 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.88\chromedriver.exe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

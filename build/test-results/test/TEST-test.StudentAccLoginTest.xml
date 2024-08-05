@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentAccLoginTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-18T13:10:05" hostname="DESKTOP-84P9B6H" time="16.886">
+<testsuite name="test.StudentAccLoginTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-08-05T13:38:47" hostname="X542U" time="12.064">
   <properties/>
-  <testcase name="0. Valid Credential Account Log In Log Out Test" classname="test.StudentAccLoginTest" time="14.535"/>
-  <testcase name="1. Invalid Login Valid Password Test" classname="test.StudentAccLoginTest" time="0.625"/>
-  <testcase name="2. Valid Login Invalid Password Test" classname="test.StudentAccLoginTest" time="0.659"/>
-  <testcase name="3. Password Recovery Page Accessibility Test" classname="test.StudentAccLoginTest" time="0.19"/>
-  <testcase name="4. Valid Login Enter Test" classname="test.StudentAccLoginTest" time="0.701"/>
-  <system-out><![CDATA[16:09:49.310 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-16:09:49.374 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=126 in cache (valid until 16:55:24 18/07/2024 MSK)
-16:09:49.375 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome126=126.0.6478.182 in cache (valid until 14:49:11 19/07/2024 MSK)
-16:09:49.375 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 126.0.6478.182 (resolved driver for Chrome 126)
-16:09:49.583 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 126.0.6478.182 found in cache
-16:09:49.586 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\asus\.cache\selenium\chromedriver\win64\126.0.6478.182\chromedriver.exe
+  <testcase name="0. Valid Credential Account Log In Log Out Test" classname="test.StudentAccLoginTest" time="10.089"/>
+  <testcase name="1. Invalid Login Valid Password Test" classname="test.StudentAccLoginTest" time="0.46"/>
+  <testcase name="2. Valid Login Invalid Password Test" classname="test.StudentAccLoginTest" time="0.498"/>
+  <testcase name="3. Password Recovery Page Accessibility Test" classname="test.StudentAccLoginTest" time="0.13"/>
+  <testcase name="4. Valid Login Enter Test" classname="test.StudentAccLoginTest" time="0.841"/>
+  <system-out><![CDATA[16:38:40.588 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+16:38:40.619 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:43:14 05/08/2024 MSK)
+16:38:40.619 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.88 in cache (valid until 13:31:54 06/08/2024 MSK)
+16:38:40.619 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.88 (resolved driver for Chrome 127)
+16:38:40.650 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.88 found in cache
+16:38:40.655 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.88\chromedriver.exe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

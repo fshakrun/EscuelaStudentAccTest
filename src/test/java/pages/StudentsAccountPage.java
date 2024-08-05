@@ -40,10 +40,10 @@ public class StudentsAccountPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[1]")
     public WebElement vkButton;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[2]")
+    @FindBy(xpath = "//a[@href='https://www.instagram.com/escuela.pro']")
     public WebElement instButton;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[3]")
+    @FindBy(xpath = "//a[@href='https://www.facebook.com/esp.escuela/']")
     public WebElement fbButton;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/button")
@@ -51,6 +51,12 @@ public class StudentsAccountPage {
 
     @FindBy(xpath = "/html/body/div[11]/div/div/div/div")
     public WebElement friendspromoBanner;
+
+    @FindBy(className = "calender-time")
+    public WebElement calendarTime;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]")
+    public WebElement nextLessonNotification;
 
 
     public void studentsAccountClick() {
