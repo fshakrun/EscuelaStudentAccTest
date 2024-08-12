@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentMainPageTest" tests="8" skipped="0" failures="1" errors="0" timestamp="2024-08-05T13:39:05" hostname="X542U" time="44.508">
+<testsuite name="test.StudentMainPageTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-08-11T08:55:00" hostname="X542U" time="52.236">
   <properties/>
-  <testcase name="0. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="9.347"/>
-  <testcase name="1. Google Play Button Test" classname="test.StudentMainPageTest" time="1.193"/>
-  <testcase name="2. App Store Button Test" classname="test.StudentMainPageTest" time="3.619"/>
-  <testcase name="3. VK Button Test" classname="test.StudentMainPageTest" time="7.532"/>
-  <testcase name="4. Tuesday Regular Lesson Checking" classname="test.StudentMainPageTest" time="0.111"/>
-  <testcase name="5. Next Lesson Notification Checking" classname="test.StudentMainPageTest" time="0.115">
-    <failure message="java.lang.AssertionError: &#13;&#10;Expecting actual:&#13;&#10;  &quot;Преподаватель уже ждёт в классе. Удачи!&quot;&#13;&#10;to contain:&#13;&#10;  &quot;Вторник&quot; " type="java.lang.AssertionError">java.lang.AssertionError: 
-Expecting actual:
-  &quot;Преподаватель уже ждёт в классе. Удачи!&quot;
-to contain:
-  &quot;Вторник&quot; 
-	at test.StudentMainPageTest.shouldCheckNextLessonNotification(StudentMainPageTest.java:155)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-</failure>
-  </testcase>
-  <testcase name="6. Instagram Button Test" classname="test.StudentMainPageTest" time="21.55"/>
-  <testcase name="7. Facebook Button Test" classname="test.StudentMainPageTest" time="0.808"/>
-  <system-out><![CDATA[16:38:59.417 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-16:38:59.431 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:43:14 05/08/2024 MSK)
-16:38:59.433 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.88 in cache (valid until 13:31:54 06/08/2024 MSK)
-16:38:59.433 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.88 (resolved driver for Chrome 127)
-16:38:59.443 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.88 found in cache
-16:38:59.444 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.88\chromedriver.exe
+  <testcase name="0. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="10.386"/>
+  <testcase name="1. Google Play Button Test" classname="test.StudentMainPageTest" time="1.104"/>
+  <testcase name="2. App Store Button Test" classname="test.StudentMainPageTest" time="5.558"/>
+  <testcase name="3. VK Button Test" classname="test.StudentMainPageTest" time="10.466"/>
+  <testcase name="4. Tuesday Regular Lesson Checking" classname="test.StudentMainPageTest" time="0.323"/>
+  <testcase name="5. Next Lesson Notification Checking" classname="test.StudentMainPageTest" time="0.059"/>
+  <testcase name="6. Instagram Button Test" classname="test.StudentMainPageTest" time="21.519"/>
+  <testcase name="7. Facebook Button Test" classname="test.StudentMainPageTest" time="0.928"/>
+  <testcase name="8. Tech Support Help Test" classname="test.StudentMainPageTest" time="1.756"/>
+  <system-out><![CDATA[11:54:56.612 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+11:54:56.633 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 12:11:00 11/08/2024 MSK)
+11:54:56.636 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.99 in cache (valid until 11:11:00 12/08/2024 MSK)
+11:54:56.637 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.99 (resolved driver for Chrome 127)
+11:54:56.646 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.99 found in cache
+11:54:56.648 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.99\chromedriver.exe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

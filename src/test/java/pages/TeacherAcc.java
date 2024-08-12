@@ -15,7 +15,7 @@ public class TeacherAcc {
         this.driver = driver;
     }
 
-    @FindBy (xpath = "//*[@id='swJTVlm93MR5rt9BJtZ7dCm0g3y1']/span")
+    @FindBy(xpath = "//*[@id='swJTVlm93MR5rt9BJtZ7dCm0g3y1']/span")
     public WebElement teacherSchedule;
     @FindBy(xpath = "//a[@href='/teacher/classes']")
     public WebElement teacherClasses;
@@ -45,7 +45,7 @@ public class TeacherAcc {
     @FindBy(xpath = "//*[@id='remoteVideoStreamId']/div[1]/div[2]")
     public WebElement studentLessonBalance;
 
-    @FindBy (xpath = "//*[text() = ' Call']")
+    @FindBy(xpath = "//*[text() = ' Call']")
     public WebElement callStudentButton;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/nav/div/div/a[2]")

@@ -18,10 +18,10 @@ public class TopUpPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[3]/div[3]/a/button/div")
     public WebElement topUpSection;
 
-    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/p")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/p")
     public WebElement topUpSectionTitle;
-    
-    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[3]/div/button")
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[3]/div/button")
     public WebElement getMyGiftButton;
 
     @FindBy(xpath = "/html/body/div[7]/div/div/div/div")
@@ -60,7 +60,7 @@ public class TopUpPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[2]/div")
     public WebElement familyPackages;
 
-    @FindBy(xpath ="//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[3]/div")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[3]/div")
     public WebElement nativeSpeakerPackages;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[1]/div")
@@ -81,13 +81,16 @@ public class TopUpPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[6]/div/div[4]/button/span")
     public WebElement thirtytwoLessonBtn;
 
-    @FindBy (xpath = "//*[@id='ProductSummary-totalAmount']/span")
+    @FindBy(xpath = "//*[@id='ProductSummary-totalAmount']/span")
     public WebElement stripeAmount;
 
     @FindBy(xpath = "//*[@id='modal-body']/span/div/div[4]/div/p")
-    public  WebElement paySelectionAmount;
+    public WebElement paySelectionAmount;
 
-    public void topUpSectionClick(){
+    @FindBy(xpath = "//*[@id='root']/div/div[2]")
+    public WebElement paySelectionPopUp;
+
+    public void topUpSectionClick() {
         topUpSection.click();
     }
 

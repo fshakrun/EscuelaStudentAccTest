@@ -8,22 +8,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ConfProperties;
-import pages.ChatPage;
-import pages.DictionaryPage;
 import pages.LoginPage;
-import pages.NotesPage;
-import pages.MiniCoursesPage;
-import pages.StudentClassesPage;
-import pages.StudentsHomeworkPage;
 import pages.StudentsAccountPage;
 import pages.StudentsProfilePage;
-import pages.StudentTestsPage;
-import pages.TopUpPage;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 
 @TestMethodOrder(MethodOrderer.DisplayName.class)
@@ -35,7 +25,7 @@ public class StudentAccLoginTest {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-//"--headless",
+    //"--headless",
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
@@ -82,6 +72,7 @@ public class StudentAccLoginTest {
         assert (loginPage.invalidCredentialsNotification.isDisplayed());
 
     }
+
     @Test
     @DisplayName("2. Valid Login Invalid Password Test")
     public void enterValidLoginInvalidTest() throws InterruptedException {
@@ -111,7 +102,7 @@ public class StudentAccLoginTest {
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailField.sendKeys("checktimezonete11st@gmail.com");
-        String Email =  loginPage.emailField.getAttribute("value");
+        String Email = loginPage.emailField.getAttribute("value");
         assertEquals(Email, "checktimezonete11st@gmail.com");
     }
 

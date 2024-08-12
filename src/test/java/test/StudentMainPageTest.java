@@ -2,9 +2,7 @@ package test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,7 +13,6 @@ import pages.StudentsAccountPage;
 import pages.StudentsProfilePage;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -34,7 +31,7 @@ public class StudentMainPageTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments("--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -75,7 +72,7 @@ public class StudentMainPageTest {
         studentsAccountPage.googlePlayButton.click();
         wait.until(numberOfWindowsToBe(2));
         for (String windowHandle : driver.getWindowHandles()) {
-            if(!originalWindow.contentEquals(windowHandle)) {
+            if (!originalWindow.contentEquals(windowHandle)) {
                 driver.switchTo().window(windowHandle);
                 break;
             }
@@ -100,7 +97,7 @@ public class StudentMainPageTest {
         studentsAccountPage.appStoreButton.click();
         wait.until(numberOfWindowsToBe(2));
         for (String windowHandle : driver.getWindowHandles()) {
-            if(!originalWindow.contentEquals(windowHandle)) {
+            if (!originalWindow.contentEquals(windowHandle)) {
                 driver.switchTo().window(windowHandle);
                 break;
             }
@@ -123,7 +120,7 @@ public class StudentMainPageTest {
         studentsAccountPage.vkButton.click();
         wait.until(numberOfWindowsToBe(2));
         for (String windowHandle : driver.getWindowHandles()) {
-            if(!originalWindow.contentEquals(windowHandle)) {
+            if (!originalWindow.contentEquals(windowHandle)) {
                 driver.switchTo().window(windowHandle);
                 break;
             }
@@ -139,7 +136,7 @@ public class StudentMainPageTest {
     @Test
     @Order(5)
     @DisplayName("4. Tuesday Regular Lesson Checking")
-    public void shouldCheckTuesdayRegularLesson () throws InterruptedException{
+    public void shouldCheckTuesdayRegularLesson() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String TuesdayLesson = (studentsAccountPage.calendarTime).getText();
         assertThat(TuesdayLesson).contains("03:00\n" +
@@ -149,58 +146,92 @@ public class StudentMainPageTest {
     @Test
     @Order(6)
     @DisplayName("5. Next Lesson Notification Checking")
-    public void shouldCheckNextLessonNotification () throws InterruptedException{
+    public void shouldCheckNextLessonNotification() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.nextLessonNotification));
         String NextLesson = (studentsAccountPage.nextLessonNotification).getText();
-        assertThat(NextLesson ).contains("Вторник");
+        assertThat(NextLesson).contains("Вторник");
     }
 
 
-     @Test
-     @Order(7)
-     @DisplayName("6. Instagram Button Test")
-     public void goToInstagram() throws InterruptedException {
+    @Test
+    @Order(7)
+    @DisplayName("6. Instagram Button Test")
+    public void goToInstagram() throws InterruptedException {
 
-         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.instButton));
-         String originalWindow = driver.getWindowHandle();
-         assert driver.getWindowHandles().size() == 1;
-         studentsAccountPage.instButton.click();
-         wait.until(numberOfWindowsToBe(2));
-         for (String windowHandle : driver.getWindowHandles()) {
-             if(!originalWindow.contentEquals(windowHandle)) {
-                 driver.switchTo().window(windowHandle);
-                 break;
-             }
-         }
-         String URL = driver.getCurrentUrl();
-         assertEquals(URL, "https://www.instagram.com/escuela.pro");
-         driver.close();
-         driver.switchTo().window(originalWindow);
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.instButton));
+        String originalWindow = driver.getWindowHandle();
+        assert driver.getWindowHandles().size() == 1;
+        studentsAccountPage.instButton.click();
+        wait.until(numberOfWindowsToBe(2));
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!originalWindow.contentEquals(windowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
+        String URL = driver.getCurrentUrl();
+        assertEquals(URL, "https://www.instagram.com/escuela.pro");
+        driver.close();
+        driver.switchTo().window(originalWindow);
 
-     }
+    }
 
-     @Test
-     @Order(8)
-     @DisplayName("7. Facebook Button Test")
-     public void goToFacebook() throws InterruptedException {
+    @Test
+    @Order(8)
+    @DisplayName("7. Facebook Button Test")
+    public void goToFacebook() throws InterruptedException {
 
-         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.fbButton));
-         String originalWindow = driver.getWindowHandle();
-         assert driver.getWindowHandles().size() == 1;
-         studentsAccountPage.fbButton.click();
-         wait.until(numberOfWindowsToBe(2));
-         for (String windowHandle : driver.getWindowHandles()) {
-             if(!originalWindow.contentEquals(windowHandle)) {
-                 driver.switchTo().window(windowHandle);
-                 break;
-             }
-         }
-         String URL = driver.getCurrentUrl();
-         assertEquals(URL, "https://www.facebook.com/esp.escuela/");
-         driver.close();
-         driver.switchTo().window(originalWindow);
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.fbButton));
+        String originalWindow = driver.getWindowHandle();
+        assert driver.getWindowHandles().size() == 1;
+        studentsAccountPage.fbButton.click();
+        wait.until(numberOfWindowsToBe(2));
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!originalWindow.contentEquals(windowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
+        String URL = driver.getCurrentUrl();
+        assertEquals(URL, "https://www.facebook.com/esp.escuela/");
+        driver.close();
+        driver.switchTo().window(originalWindow);
 
-     }
+    }
+
+    @Test
+    @Order(9)
+    @DisplayName("8. Tech Support Help Test")
+    public void shouldSendMessageToSupport() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
+        studentsAccountPage.techSuppButton.click();
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
+        studentsAccountPage.sendMessageToTechSupp();
+        assert (studentsAccountPage.dialogBubble).isDisplayed();
+
+    }
+
+    @Test
+    @Order(9)
+    @DisplayName("8. Networking Bot Test")
+    public void shouldCheckNetworkingBot() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.networkingBanner));
+        String originalWindow = driver.getWindowHandle();
+        assert driver.getWindowHandles().size() == 1;
+        studentsAccountPage.networkingBanner.click();
+        wait.until(numberOfWindowsToBe(2));
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!originalWindow.contentEquals(windowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
+        String URL = driver.getCurrentUrl();
+        assertEquals(URL, "https://t.me/Escuela_Networking_Bot");
+        driver.close();
+        driver.switchTo().window(originalWindow);
+
+    }
 
 }
 

@@ -2,7 +2,6 @@ package test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -377,6 +376,7 @@ public class StudentProfileTest {
         String skypeName = studentsProfilePage.studentSkypeField.getAttribute("value");
         assertEquals(skypeName, "");
     }
+
     @Test
     @Order(25)
     @DisplayName("24. Enter Correct Phone Number")
@@ -401,6 +401,7 @@ public class StudentProfileTest {
         String phoneNumber = studentsProfilePage.studentPhoneField.getAttribute("value");
         assertEquals(phoneNumber, "+7 (99)");
     }
+
     @Test
     @Order(27)
     @DisplayName("26. Enter Cyrillic In Phone Number Field")
@@ -448,6 +449,7 @@ public class StudentProfileTest {
         String phoneNumber = studentsProfilePage.studentPhoneField.getAttribute("value");
         assertEquals(phoneNumber, "+");
     }
+
     @Test
     @Order(31)
     @DisplayName("30. Changing Country In Phone Number Field")
@@ -473,8 +475,6 @@ public class StudentProfileTest {
         String schedule = studentsProfilePage.scheduleTitle.getText();
         assertThat(schedule).contains("Расписание");
     }
-
-
 
 
 }

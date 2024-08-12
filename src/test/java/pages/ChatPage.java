@@ -9,25 +9,26 @@ import org.openqa.selenium.support.PageFactory;
 public class ChatPage {
 
     public WebDriver driver;
+
     public ChatPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver = driver; }
+        this.driver = driver;
+    }
 
-    @FindBy(xpath= "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[4]")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[4]")
     public WebElement chatSection;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/span")
     public WebElement chatNotSelected;
 
-    public void chatSectionClick(){
+    public void chatSectionClick() {
         chatSection.click();
     }
 
-    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/input")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/input")
     public WebElement searchField;
 
 
-
-    }
+}
 
 

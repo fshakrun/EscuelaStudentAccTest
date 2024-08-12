@@ -13,12 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ConfProperties;
 import pages.LoginPage;
 import pages.StudentsHomeworkPage;
-import pages.TeacherAcc;
 
 import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.testng.Assert.assertEquals;
 
 public class StudentHomeworkPageTest {
 
@@ -35,7 +33,7 @@ public class StudentHomeworkPageTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));

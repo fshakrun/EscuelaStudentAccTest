@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentHomeworkPageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-08-05T13:38:25" hostname="X542U" time="14.617">
+<testsuite name="test.StudentHomeworkPageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-08-11T08:54:44" hostname="X542U" time="12.501">
   <properties/>
-  <testcase name="1. Checking Interactive Homework Is Present" classname="test.StudentHomeworkPageTest" time="13.568"/>
-  <testcase name="2. Checking Homework First Internal Page Opened" classname="test.StudentHomeworkPageTest" time="1.032"/>
-  <system-out><![CDATA[16:38:18.867 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-16:38:18.886 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:43:14 05/08/2024 MSK)
-16:38:18.886 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.88 in cache (valid until 13:31:54 06/08/2024 MSK)
-16:38:18.886 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.88 (resolved driver for Chrome 127)
-16:38:18.901 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.88 found in cache
-16:38:18.909 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.88\chromedriver.exe
+  <testcase name="1. Checking Interactive Homework Is Present" classname="test.StudentHomeworkPageTest" time="11.711"/>
+  <testcase name="2. Checking Homework First Internal Page Opened" classname="test.StudentHomeworkPageTest" time="0.77"/>
+  <system-out><![CDATA[11:54:40.672 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+11:54:40.688 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 12:11:00 11/08/2024 MSK)
+11:54:40.691 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.99 in cache (valid until 11:11:00 12/08/2024 MSK)
+11:54:40.692 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.99 (resolved driver for Chrome 127)
+11:54:40.701 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.99 found in cache
+11:54:40.703 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.99\chromedriver.exe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -35,11 +35,11 @@ public class StudentsProfilePage {
     @FindBy(xpath = "//*[@id='input-skype']")
     public WebElement studentSkypeField;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[1]/div" )
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[1]/div")
     public WebElement interfaceLang;
 
 
-    @FindBy(xpath ="//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/div[2]/div[3]/div[1]/div[2]/div/div/div/input")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/div[2]/div[3]/div[1]/div[2]/div/div/div/input")
     public WebElement studentPhoneField;
 
     @FindBy(css = "#menu-lang > div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded > ul > li:nth-child(1)")
@@ -48,7 +48,7 @@ public class StudentsProfilePage {
     @FindBy(xpath = "//li[@data-value='en'")
     public WebElement englishInterface;
 
-    @FindBy(xpath= "//li[@data-value='es'")
+    @FindBy(xpath = "//li[@data-value='es'")
     public WebElement spanishInterface;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/div[3]")
@@ -66,20 +66,20 @@ public class StudentsProfilePage {
     public WebElement logOutButton;
 
 
-
     public void clearFirstName() {
         studentFirstNameField.click();
         studentFirstNameField.sendKeys(Keys.CONTROL + "A");
         studentFirstNameField.sendKeys(Keys.DELETE);
     }
 
-    public void coursorMouseLangMenu(){
+    public void coursorMouseLangMenu() {
         WebElement coursMouse = interfaceLang;
         new Actions(driver)
-                .moveToElement(coursMouse )
+                .moveToElement(coursMouse)
                 .perform();
     }
-    public void dropDownLangMenu(){
+
+    public void dropDownLangMenu() {
         interfaceLang.sendKeys(Keys.ARROW_DOWN);
         interfaceLang.sendKeys(Keys.ENTER);
     }

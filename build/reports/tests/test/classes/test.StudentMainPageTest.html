@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">8</div>
+<div class="counter">9</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">44.275s</div>
+<div class="counter">52.099s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">87%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,35 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="shouldCheckNextLessonNotification()"></a>
-<h3 class="failures">5. Next Lesson Notification Checking</h3>
-<span class="code">
-<pre>java.lang.AssertionError: 
-Expecting actual:
-  &quot;Преподаватель уже ждёт в классе. Удачи!&quot;
-to contain:
-  &quot;Вторник&quot; 
-	at test.StudentMainPageTest.shouldCheckNextLessonNotification(StudentMainPageTest.java:155)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -103,62 +81,68 @@ to contain:
 <tr>
 <td class="success">0. Valid Credential Account Log In Test</td>
 <td class="success">enterAccWithValidCredTest()</td>
-<td class="success">9.347s</td>
+<td class="success">10.386s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">2. App Store Button Test</td>
 <td class="success">goToAppStore()</td>
-<td class="success">3.619s</td>
+<td class="success">5.558s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">7. Facebook Button Test</td>
 <td class="success">goToFacebook()</td>
-<td class="success">0.808s</td>
+<td class="success">0.928s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">1. Google Play Button Test</td>
 <td class="success">goToGooglePlay()</td>
-<td class="success">1.193s</td>
+<td class="success">1.104s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">6. Instagram Button Test</td>
 <td class="success">goToInstagram()</td>
-<td class="success">21.550s</td>
+<td class="success">21.519s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">3. VK Button Test</td>
 <td class="success">goToVk()</td>
-<td class="success">7.532s</td>
+<td class="success">10.466s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">5. Next Lesson Notification Checking</td>
-<td class="failures">shouldCheckNextLessonNotification()</td>
-<td class="failures">0.115s</td>
-<td class="failures">failed</td>
+<td class="success">5. Next Lesson Notification Checking</td>
+<td class="success">shouldCheckNextLessonNotification()</td>
+<td class="success">0.059s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">4. Tuesday Regular Lesson Checking</td>
 <td class="success">shouldCheckTuesdayRegularLesson()</td>
-<td class="success">0.111s</td>
+<td class="success">0.323s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">8. Tech Support Help Test</td>
+<td class="success">shouldSendMessageToSupport()</td>
+<td class="success">1.756s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>16:38:59.417 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-16:38:59.431 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:43:14 05/08/2024 MSK)
-16:38:59.433 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.88 in cache (valid until 13:31:54 06/08/2024 MSK)
-16:38:59.433 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.88 (resolved driver for Chrome 127)
-16:38:59.443 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.88 found in cache
-16:38:59.444 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.88\chromedriver.exe
+<pre>11:54:56.612 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
+11:54:56.633 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 12:11:00 11/08/2024 MSK)
+11:54:56.636 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.99 in cache (valid until 11:11:00 12/08/2024 MSK)
+11:54:56.637 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.99 (resolved driver for Chrome 127)
+11:54:56.646 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.99 found in cache
+11:54:56.648 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.99\chromedriver.exe
 </pre>
 </span>
 </div>
@@ -170,7 +154,7 @@ to contain:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 5 авг. 2024 г., 16:48:12</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 11 авг. 2024 г., 12:48:54</p>
 </div>
 </div>
 </body>

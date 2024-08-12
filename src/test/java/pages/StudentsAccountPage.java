@@ -1,15 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 
 public class StudentsAccountPage {
@@ -58,9 +52,33 @@ public class StudentsAccountPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]")
     public WebElement nextLessonNotification;
 
+    @FindBy(xpath = "//*[text() = 'Помощь']")
+    public WebElement techSuppButton;
+
+    @FindBy(className = "arsf-message-list")
+    public WebElement supportWindow;
+
+    @FindBy(xpath = "//*[@id='apppopupmax']/div/div/div/div/div/div/div/div/div/div/div[2]/form/textarea")
+    public WebElement messageInputField;
+
+    @FindBy(xpath = "//*[@id='apppopupmax']/div/div/div/div/div/div/div/div/div/div/div[2]/form/div[2]/button")
+    public WebElement sendMessageButton;
+
+    @FindBy(className = "bubble")
+    public WebElement dialogBubble;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div/button/div")
+    public WebElement networkingBanner;
+
 
     public void studentsAccountClick() {
         studentsAccount.click();
+    }
+
+    public void sendMessageToTechSupp() {
+        messageInputField.click();
+        messageInputField.sendKeys("Тест отправки сообщения. Можно не отвечать.");
+        sendMessageButton.click();
     }
 
 }

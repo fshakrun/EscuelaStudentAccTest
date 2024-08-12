@@ -14,9 +14,7 @@ import pages.StudentsAccountPage;
 
 import java.time.Duration;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
-import static test.StudentTopUpTest.studentsAccountPage;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class StudentsNotesPageTest {
@@ -30,7 +28,7 @@ public class StudentsNotesPageTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -74,20 +72,20 @@ public class StudentsNotesPageTest {
     @Test
     @Order(3)
     @DisplayName("3. Check If One Note Is Present")
-    public void shouldCheckIfNoteExist() throws InterruptedException{
+    public void shouldCheckIfNoteExist() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(notesPage.oneParticularNote));
         notesPage.oneParticularNote.click();
-        assert(notesPage.storyGenerateButton).isDisplayed();
+        assert (notesPage.storyGenerateButton).isDisplayed();
 
     }
 
     @Test
     @Order(4)
     @DisplayName("4. Notes Voiceover Instruction Pop-Up Checking")
-    public void shouldCheckNotesVoiceoverPopupExist() throws InterruptedException{
+    public void shouldCheckNotesVoiceoverPopupExist() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(notesPage.notesVoiceoverPopup));
         notesPage.notesVoiceoverPopup.click();
-        assert(notesPage.voiceoverPopupText).isDisplayed();
+        assert (notesPage.voiceoverPopupText).isDisplayed();
         notesPage.closeVoiceoverPopup();
     }
 }

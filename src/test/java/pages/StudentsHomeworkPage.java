@@ -13,22 +13,22 @@ public class StudentsHomeworkPage {
         this.driver = driver;
     }
 
-    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[3]")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[3]")
     public WebElement homeworkSection;
 
-    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
     public WebElement logoPicture;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div")
     public WebElement interactiveHomework;
 
-    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/button")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/button")
     public WebElement proceedToInteractiveHomework;
 
     @FindBy(xpath = "//*[@id='6_0']/div/div/h3[1]/span")
     public WebElement firstExercicePageTitle;
 
-    public void homeworkSectionClick(){
+    public void homeworkSectionClick() {
         homeworkSection.click();
     }
 

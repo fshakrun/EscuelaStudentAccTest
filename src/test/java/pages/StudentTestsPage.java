@@ -1,4 +1,5 @@
 package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,13 +15,13 @@ public class StudentTestsPage {
 
     }
 
-    @FindBy (xpath ="//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/a[4]")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/a[4]")
     public WebElement testSection;
 
-    @FindBy (xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
     public WebElement testSectionLogo;
 
-    public void testSectionClick(){
+    public void testSectionClick() {
         testSection.click();
     }
 }

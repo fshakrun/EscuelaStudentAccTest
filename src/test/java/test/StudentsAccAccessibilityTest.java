@@ -7,21 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.ConfProperties;
-import pages.ChatPage;
-import pages.DictionaryPage;
-import pages.LoginPage;
-import pages.NotesPage;
-import pages.MiniCoursesPage;
-import pages.StudentClassesPage;
-import pages.StudentsHomeworkPage;
-import pages.StudentsAccountPage;
-import pages.StudentsProfilePage;
-import pages.StudentTestsPage;
-import pages.TopUpPage;
+import pages.*;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;

@@ -1,4 +1,5 @@
 package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,12 +13,13 @@ public class DictionaryPage {
         this.driver = driver;
     }
 
-    @FindBy(xpath= "//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]")
     public WebElement dictSection;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div/div[1]/div[1]")
     public WebElement dailyWords;
 
-    public void dictSectionClick() {dictSection.click();
+    public void dictSectionClick() {
+        dictSection.click();
     }
 }
