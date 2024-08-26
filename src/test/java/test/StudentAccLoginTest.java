@@ -49,8 +49,8 @@ public class StudentAccLoginTest {
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
         // ожидание появления элемента — расписание
-        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-        loginPage.friendPromoBanner.click();
+        // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        // loginPage.friendPromoBanner.click();
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         studentsProfilePage.studentsProfileClick();
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.logOutButton));
