@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 
 // Для запуска тестов согласно названию
-@TestMethodOrder(MethodOrderer.DisplayName.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class StudentsAccAccessibilityTest {
     public static LoginPage loginPage;
 
@@ -79,7 +79,6 @@ public class StudentsAccAccessibilityTest {
     @Test
     @DisplayName("1. Valid Credential Authentification Passed Test")
     public void enterAccountTest() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));

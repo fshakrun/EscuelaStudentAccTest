@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -28,8 +29,11 @@ public class LoginPage {
     @FindBy(css = "[type=submit]")
     private WebElement enterButton;
 
-    @FindBy(xpath = "/html/body/div[7]/div/div/div/div/img[1]")
+    @FindBy(xpath = "/html/body/div[8]/div/div/div/div/img[1]")
     public WebElement friendPromoBanner;
+
+    @FindBy(xpath = "/html/body/div[10]/div/div/div/div/div[2]")
+    public WebElement lessonsGiftPopup;
 
 
     public void emailEnter(String email) {
@@ -44,6 +48,12 @@ public class LoginPage {
     public void enterClick() {
         enterButton.click();
 
+    }
+
+    public void lessonsGiftPopupClose(){
+        WebElement element = lessonsGiftPopup;
+        Actions action = new Actions(driver);
+        action.moveToElement(element, 100, 100).click().build().perform();
     }
 
 

@@ -70,6 +70,9 @@ public class StudentsAccountPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div/button/div")
     public WebElement networkingBanner;
 
+    @FindBy(xpath ="//*[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/a")
+    public WebElement blogArticlesShow;
+
 
     public void studentsAccountClick() {
         studentsAccount.click();

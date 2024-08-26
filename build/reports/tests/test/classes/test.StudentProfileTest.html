@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">52.917s</div>
+<div class="counter">46.980s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">93%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,74 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="enterCyrillicLastName()"></a>
+<h3 class="failures">7. Enter Cyrillic Last Name</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected [Ирина] but found [Anna]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.StudentProfileTest.enterCyrillicLastName(StudentProfileTest.java:168)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="enterSpaceFirstName()"></a>
+<h3 class="failures">5. Enter Space In First Name Field</h3>
+<span class="code">
+<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#input-first-name-helper-text&quot;}
+  (Session info: chrome-headless-shell=127.0.6533.120)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d704ed15559ad02ffe1c4b6589093f6, findElement {value=#input-first-name-helper-text, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51875}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51875/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d704ed15559ad02ffe1c4b6589093f6
+	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)
+	at app//test.StudentProfileTest.enterSpaceFirstName(StudentProfileTest.java:138)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,206 +142,206 @@
 <tr>
 <td class="success">30. Changing Country In Phone Number Field</td>
 <td class="success">changingCountryPhoneNumber()</td>
-<td class="success">0.648s</td>
+<td class="success">0.650s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">31. Changing Language In Profile To Russian</td>
 <td class="success">changingLanguageToRussian()</td>
-<td class="success">6.699s</td>
+<td class="success">6.867s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">13. Enter Correct Birth Date</td>
 <td class="success">enterCorrectBirthDate()</td>
-<td class="success">1.084s</td>
+<td class="success">0.938s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">24. Enter Correct Phone Number</td>
 <td class="success">enterCorrectPhoneNumber()</td>
-<td class="success">1.478s</td>
+<td class="success">1.408s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">20. Enter Correct Skype Name</td>
 <td class="success">enterCorrectSkypeName()</td>
-<td class="success">0.733s</td>
+<td class="success">0.734s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">16. Enter Cyrillic In Birth Date</td>
 <td class="success">enterCyrillicBirthDate()</td>
-<td class="success">0.625s</td>
+<td class="success">0.561s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">1. Enter Cyrillic First Name</td>
 <td class="success">enterCyrillicFirstName()</td>
-<td class="success">1.792s</td>
+<td class="success">1.715s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">7. Enter Cyrillic Last Name</td>
-<td class="success">enterCyrillicLastName()</td>
-<td class="success">1.935s</td>
-<td class="success">passed</td>
+<td class="failures">7. Enter Cyrillic Last Name</td>
+<td class="failures">enterCyrillicLastName()</td>
+<td class="failures">1.130s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">26. Enter Cyrillic In Phone Number Field</td>
 <td class="success">enterCyrillicPhoneNumber()</td>
-<td class="success">0.598s</td>
+<td class="success">0.601s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">21. Enter Cyrillic Skype Name</td>
 <td class="success">enterCyrillicSkypeName()</td>
-<td class="success">1.086s</td>
+<td class="success">1.157s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">4. Enter Cyrillic First Name With Hyphen</td>
 <td class="success">enterHyphenCyrillicFirstName()</td>
-<td class="success">1.562s</td>
+<td class="success">1.122s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">10. Enter Cyrillic Last Name With Hyphen</td>
 <td class="success">enterHyphenCyrillicLastName()</td>
-<td class="success">0.972s</td>
+<td class="success">1.080s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">14. Enter Long Number In Birth Date</td>
 <td class="success">enterLongBirthDate()</td>
-<td class="success">0.866s</td>
+<td class="success">0.911s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">22. Enter Long Correct Skype Name</td>
 <td class="success">enterLongCorrectSkypeName()</td>
-<td class="success">1.780s</td>
+<td class="success">1.773s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">2. Enter Too Long Cyrillic First Name</td>
 <td class="success">enterLongCyrillicFirstName()</td>
-<td class="success">4.773s</td>
+<td class="success">3.617s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">8. Enter Long Cyrillic Last Name</td>
 <td class="success">enterLongLastName()</td>
-<td class="success">5.168s</td>
+<td class="success">3.456s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">0. Enter Students Profile Test</td>
 <td class="success">enterProfile()</td>
-<td class="success">9.335s</td>
+<td class="success">8.534s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">17. Enter Romain Letters In Birth Date</td>
 <td class="success">enterRomainLetterBirthDate()</td>
-<td class="success">0.634s</td>
+<td class="success">0.654s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">6. Enter Romain Letters First Name</td>
 <td class="success">enterRomainLettersFirstName()</td>
-<td class="success">1.467s</td>
+<td class="success">0.873s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">12. Enter Romain Letters Last Name</td>
 <td class="success">enterRomainLettersLastName()</td>
-<td class="success">0.781s</td>
+<td class="success">0.710s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">27. Enter Romain Letters In Phone Number Field</td>
 <td class="success">enterRomainPhoneNumber()</td>
-<td class="success">0.711s</td>
+<td class="success">0.685s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">3. Enter Too Short Cyrillic First Name</td>
 <td class="success">enterShortCyrillicFirstName()</td>
-<td class="success">0.734s</td>
+<td class="success">0.528s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">9. Enter Short Cyrillic Last Name</td>
 <td class="success">enterShortLastName()</td>
-<td class="success">0.438s</td>
+<td class="success">0.591s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">25. Enter Short Phone Number</td>
 <td class="success">enterShortPhoneNumber()</td>
-<td class="success">0.839s</td>
+<td class="success">0.853s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">5. Enter Space In First Name Field</td>
-<td class="success">enterSpaceFirstName()</td>
-<td class="success">0.953s</td>
-<td class="success">passed</td>
+<td class="failures">5. Enter Space In First Name Field</td>
+<td class="failures">enterSpaceFirstName()</td>
+<td class="failures">0.755s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">11. Enter Space In Last Name</td>
 <td class="success">enterSpaceLastName()</td>
-<td class="success">0.458s</td>
+<td class="success">0.534s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">29. Enter Space In Phone Number Field</td>
 <td class="success">enterSpacePhoneNumber()</td>
-<td class="success">0.449s</td>
+<td class="success">0.405s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">23. Enter Space Skype Name</td>
 <td class="success">enterSpaceSkypeName()</td>
-<td class="success">0.813s</td>
+<td class="success">0.745s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">18. Enter Special Symbols In Birth Date</td>
 <td class="success">enterSpecialSymbolsBirthDate()</td>
-<td class="success">0.544s</td>
+<td class="success">0.496s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">28. Enter Special Symbols In Phone Number Field</td>
 <td class="success">enterSpecialSymbolsPhoneNumber()</td>
-<td class="success">0.712s</td>
+<td class="success">0.737s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">19. Enter Symbols In Birth Date</td>
 <td class="success">enterSymbolsBirthDate()</td>
-<td class="success">0.577s</td>
+<td class="success">0.556s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">15. Enter Very Long Number In Birth Date</td>
 <td class="success">enterVeryLongBirthDate()</td>
-<td class="success">1.673s</td>
+<td class="success">1.604s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>11:55:53.118 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-11:55:53.149 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 12:11:00 11/08/2024 MSK)
-11:55:53.165 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.99 in cache (valid until 11:11:00 12/08/2024 MSK)
-11:55:53.165 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.99 (resolved driver for Chrome 127)
-11:55:53.181 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.99 found in cache
-11:55:53.181 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.99\chromedriver.exe
+<pre>16:10:47.319 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+16:10:47.351 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:45:57 20/08/2024 MSK)
+16:10:47.351 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.119 in cache (valid until 09:49:48 21/08/2024 MSK)
+16:10:47.366 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.119 (resolved driver for Chrome 127)
+16:10:47.366 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.119 found in cache
+16:10:47.382 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.119\chromedriver.exe
 </pre>
 </span>
 </div>
@@ -292,7 +353,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 11 авг. 2024 г., 12:48:54</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 20 авг. 2024 г., 16:12:47</p>
 </div>
 </div>
 </body>

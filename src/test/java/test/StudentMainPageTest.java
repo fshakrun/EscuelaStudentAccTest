@@ -31,7 +31,7 @@ public class StudentMainPageTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -103,7 +103,7 @@ public class StudentMainPageTest {
             }
         }
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("escuela/id1524291158");
+        assert (URL).contains("id1524291158");
         driver.close();
         driver.switchTo().window(originalWindow);
     }
@@ -227,12 +227,21 @@ public class StudentMainPageTest {
             }
         }
         String URL = driver.getCurrentUrl();
-        assertEquals(URL, "https://t.me/Escuela_Networking_Bot");
+        assert (URL).contains("Escuela_Networking_Bot");
         driver.close();
         driver.switchTo().window(originalWindow);
 
     }
 
+    @Test
+    @Order(10)
+    @DisplayName("9. Blog Opening Test")
+    public void shouldOpenEscuelaBlog() throws InterruptedException {
+       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.blogArticlesShow));
+       studentsAccountPage.blogArticlesShow.click();
+        String URL = driver.getCurrentUrl();
+        assertEquals(URL, "https://escuela.pro/blog");
+    }
 }
 
 

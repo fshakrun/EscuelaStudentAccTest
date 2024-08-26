@@ -21,6 +21,10 @@ public class StudentTestsPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[1]/div/img")
     public WebElement testSectionLogo;
 
+    @FindBy(xpath= "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div/div")
+    public WebElement firstStudentsTest;
+
+
     public void testSectionClick() {
         testSection.click();
     }

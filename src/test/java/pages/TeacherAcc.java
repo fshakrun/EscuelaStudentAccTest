@@ -15,10 +15,31 @@ public class TeacherAcc {
         this.driver = driver;
     }
 
+
+
     @FindBy(xpath = "//*[@id='swJTVlm93MR5rt9BJtZ7dCm0g3y1']/span")
     public WebElement teacherSchedule;
     @FindBy(xpath = "//a[@href='/teacher/classes']")
     public WebElement teacherClasses;
+
+    @FindBy(xpath = "//a[@href='/teacher/lesson/history']")
+    public WebElement teacherLessonsHistory;
+
+    @FindBy(xpath = "//a[@href='/teacher/exercise-factory']")
+    public WebElement teacherExerciceFactory;
+
+    @FindBy(xpath = "//a[@href='/teacher/homework']")
+    public WebElement teacherHomework;
+
+    @FindBy(xpath = "//a[@href='/teacher/chat']")
+    public WebElement teacherChat;
+
+    @FindBy(xpath = "//a[@href='/teacher/library']")
+    public WebElement teacherLibrary;
+
+    @FindBy(xpath = "//a[@href='/courses']")
+    public WebElement teacherCourseBuilder;
+
 
     @FindBy(xpath = "//*[text() = 'Anna']")
     public WebElement particularStudentChoice;

@@ -1,52 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentAccLoginTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2024-08-11T08:54:26" hostname="X542U" time="13.975">
+<testsuite name="test.StudentAccLoginTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-08-20T13:02:55" hostname="X542U" time="14.832">
   <properties/>
-  <testcase name="0. Valid Credential Account Log In Log Out Test" classname="test.StudentAccLoginTest" time="10.691"/>
-  <testcase name="1. Invalid Login Valid Password Test" classname="test.StudentAccLoginTest" time="0.644"/>
-  <testcase name="2. Valid Login Invalid Password Test" classname="test.StudentAccLoginTest" time="1.45">
-    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;button btn&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (949, 727). Other element would receive the click: &lt;form class=&quot;sc-evRYgP byqpGm&quot;&gt;...&lt;/form&gt;&#10;  (Session info: chrome-headless-shell=127.0.6533.100)&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [30fb72fda2900d466c4c8968bf91a1ba, clickElement {id=f.46C5F20A613A32645D817C8C3B777969.d.7FE531C64C964F0B81F3B176711AB452.e.176}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62513}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62513/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome-headless-shell on windows (30fb72fda2900d466c4c8968bf91a1ba)] -&gt; css selector: [type=submit]]&#10;Session ID: 30fb72fda2900d466c4c8968bf91a1ba" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;button btn&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (949, 727). Other element would receive the click: &lt;form class=&quot;sc-evRYgP byqpGm&quot;&gt;...&lt;/form&gt;
-  (Session info: chrome-headless-shell=127.0.6533.100)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [30fb72fda2900d466c4c8968bf91a1ba, clickElement {id=f.46C5F20A613A32645D817C8C3B777969.d.7FE531C64C964F0B81F3B176711AB452.e.176}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62513}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62513/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome-headless-shell on windows (30fb72fda2900d466c4c8968bf91a1ba)] -&gt; css selector: [type=submit]]
-Session ID: 30fb72fda2900d466c4c8968bf91a1ba
-	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base@11.0.24/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.24/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at app//com.sun.proxy.$Proxy18.click(Unknown Source)
-	at app//pages.LoginPage.enterClick(LoginPage.java:56)
-	at app//test.StudentAccLoginTest.enterValidLoginInvalidTest(StudentAccLoginTest.java:92)
-	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
-</failure>
-  </testcase>
-  <testcase name="3. Password Recovery Page Accessibility Test" classname="test.StudentAccLoginTest" time="0.191"/>
-  <testcase name="4. Valid Login Enter Test" classname="test.StudentAccLoginTest" time="0.757"/>
-  <system-out><![CDATA[11:54:20.445 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.1
-11:54:21.372 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 12:11:00 11/08/2024 MSK)
-11:54:21.372 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.99 in cache (valid until 11:11:00 12/08/2024 MSK)
-11:54:21.372 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.99 (resolved driver for Chrome 127)
-11:54:21.459 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.99 found in cache
-11:54:21.459 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.99\chromedriver.exe
+  <testcase name="0. Valid Credential Account Log In Log Out Test" classname="test.StudentAccLoginTest" time="12.385"/>
+  <testcase name="1. Invalid Login Valid Password Test" classname="test.StudentAccLoginTest" time="0.654"/>
+  <testcase name="2. Valid Login Invalid Password Test" classname="test.StudentAccLoginTest" time="0.451"/>
+  <testcase name="3. Password Recovery Page Accessibility Test" classname="test.StudentAccLoginTest" time="0.109"/>
+  <testcase name="4. Valid Login Enter Test" classname="test.StudentAccLoginTest" time="0.735"/>
+  <system-out><![CDATA[16:02:49.544 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+16:02:51.332 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:45:57 20/08/2024 MSK)
+16:02:51.334 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.119 in cache (valid until 09:49:48 21/08/2024 MSK)
+16:02:51.338 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.119 (resolved driver for Chrome 127)
+16:02:51.432 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.119 found in cache
+16:02:51.434 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.119\chromedriver.exe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

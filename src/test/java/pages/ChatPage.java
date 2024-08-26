@@ -28,6 +28,29 @@ public class ChatPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/input")
     public WebElement searchField;
 
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[2]/div")
+    public WebElement chatSearchResult;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[2]/textarea")
+    public WebElement messageField;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[2]/button")
+    public WebElement sendMessageButton;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[1]/div/span[4]/div/div")
+    public WebElement messageBubble;
+
+    public void searchForTeachersChat(){
+        searchField.click();
+        searchField.sendKeys("Ant");
+    }
+
+    public void sendAMessageToTeacher(){
+        messageField.click();
+        messageField.sendKeys("Тестовое ради проверки доступности");
+        sendMessageButton.click();
+    }
+
 
 }
 
