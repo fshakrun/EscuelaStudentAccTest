@@ -50,8 +50,8 @@ public class StudentHomeworkPageTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-        loginPage.friendPromoBanner.click();
+        // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        // loginPage.friendPromoBanner.click();
         wait.until(ExpectedConditions.visibilityOf(studentsHomeworkPage.homeworkSection));
         studentsHomeworkPage.homeworkSectionClick();
         wait.until(ExpectedConditions.visibilityOf(studentsHomeworkPage.interactiveHomework));
