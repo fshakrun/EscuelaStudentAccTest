@@ -83,8 +83,8 @@ public class StudentsAccAccessibilityTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-        loginPage.friendPromoBanner.click();
+//        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+//        loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();
@@ -114,7 +114,7 @@ public class StudentsAccAccessibilityTest {
     public void shouldOpenDictPage() throws InterruptedException {
 
         dictionaryPage.dictSectionClick();
-        wait.until(ExpectedConditions.visibilityOf(dictionaryPage.dailyWords));
+        wait.until(ExpectedConditions.visibilityOf(dictionaryPage.todaysWords));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/dict");
 

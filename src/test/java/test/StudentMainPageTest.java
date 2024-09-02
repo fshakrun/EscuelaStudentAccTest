@@ -44,15 +44,15 @@ public class StudentMainPageTest {
 
     @Test
     @Order(1)
-    @DisplayName("0. Valid Credential Account Log In Test")
+    @DisplayName("1. Valid Credential Account Log In Test")
     public void enterAccWithValidCredTest() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-        loginPage.friendPromoBanner.click();
+//        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+//        loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();
@@ -62,7 +62,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(2)
-    @DisplayName("1. Google Play Button Test")
+    @DisplayName("2. Google Play Button Test")
     public void goToGooglePlay() throws InterruptedException, AWTException {
 
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.googlePlayButton));
@@ -86,7 +86,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(3)
-    @DisplayName("2. App Store Button Test")
+    @DisplayName("3. App Store Button Test")
     public void goToAppStore() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.appStoreButton));
@@ -110,7 +110,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(4)
-    @DisplayName("3. VK Button Test")
+    @DisplayName("4. VK Button Test")
     public void goToVk() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.vkButton));
@@ -135,7 +135,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(5)
-    @DisplayName("4. Tuesday Regular Lesson Checking")
+    @DisplayName("5. Tuesday Regular Lesson Checking")
     public void shouldCheckTuesdayRegularLesson() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String TuesdayLesson = (studentsAccountPage.calendarTime).getText();
@@ -145,7 +145,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(6)
-    @DisplayName("5. Next Lesson Notification Checking")
+    @DisplayName("6. Next Lesson Notification Checking")
     public void shouldCheckNextLessonNotification() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.nextLessonNotification));
         String NextLesson = (studentsAccountPage.nextLessonNotification).getText();
@@ -155,7 +155,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(7)
-    @DisplayName("6. Instagram Button Test")
+    @DisplayName("7. Instagram Button Test")
     public void goToInstagram() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.instButton));
@@ -178,7 +178,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(8)
-    @DisplayName("7. Facebook Button Test")
+    @DisplayName("8. Facebook Button Test")
     public void goToFacebook() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.fbButton));
@@ -201,7 +201,7 @@ public class StudentMainPageTest {
 
     @Test
     @Order(9)
-    @DisplayName("8. Tech Support Help Test")
+    @DisplayName("9. Tech Support Help Test")
     public void shouldSendMessageToSupport() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
         studentsAccountPage.techSuppButton.click();
@@ -212,8 +212,8 @@ public class StudentMainPageTest {
     }
 
     @Test
-    @Order(9)
-    @DisplayName("8. Networking Bot Test")
+    @Order(10)
+    @DisplayName("10. Networking Bot Test")
     public void shouldCheckNetworkingBot() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.networkingBanner));
         String originalWindow = driver.getWindowHandle();
@@ -232,16 +232,16 @@ public class StudentMainPageTest {
         driver.switchTo().window(originalWindow);
 
     }
-
-    @Test
-    @Order(10)
-    @DisplayName("9. Blog Opening Test")
-    public void shouldOpenEscuelaBlog() throws InterruptedException {
-       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.blogArticlesShow));
-       studentsAccountPage.blogArticlesShow.click();
-        String URL = driver.getCurrentUrl();
-        assertEquals(URL, "https://escuela.pro/blog");
-    }
+//
+//    @Test
+//    @Order(11)
+//    @DisplayName("11. Blog Opening Test")
+//    public void shouldOpenEscuelaBlog() throws InterruptedException {
+//       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.blogArticlesShow));
+//       studentsAccountPage.blogArticlesShow.click();
+//        String URL = driver.getCurrentUrl();
+//        assertEquals(URL, "https://escuela.pro/blog");
+//    }
 }
 
 

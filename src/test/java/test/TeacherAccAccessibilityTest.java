@@ -43,8 +43,23 @@ public class TeacherAccAccessibilityTest {
     @Test
     @Order(1)
     @DisplayName("1. Valid Credential Teacher Account Log In Log Out Test")
-    public void enterAccWithValidCredTest() throws InterruptedException {
+    public void teacherAccLogInLogOut() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
+        loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
+        loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
+        loginPage.enterClick();
+        // ожидание появления элемента — расписание
+        wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLessonsHistory));
+        teacherAcc.teacherLessonsHistory.click();
+        teacherAcc.teacherLogOut.click();
+        String URL = driver.getCurrentUrl();
+        assertEquals(URL, "https://escuela-stage.web.app/login");
+    }
 
+    @Test
+    @Order(2)
+    @DisplayName("2. Valid Credential Teacher Account Log In")
+    public void enterAccWithValidCredTest() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
         loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
@@ -56,8 +71,8 @@ public class TeacherAccAccessibilityTest {
     }
 
     @Test
-    @Order(2)
-    @DisplayName("2. Lessons History Page Access")
+    @Order(3)
+    @DisplayName("3. Lessons History Page Access")
     public void shouldOpenLessonsHistoryPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLessonsHistory));
         teacherAcc.teacherLessonsHistory.click();
@@ -66,8 +81,8 @@ public class TeacherAccAccessibilityTest {
     }
 
     @Test
-    @Order(3)
-    @DisplayName("3. Exercise Factory Page Access")
+    @Order(4)
+    @DisplayName("4. Exercise Factory Page Access")
     public void shouldOpenExerciseFactoryPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherExerciceFactory));
         teacherAcc.teacherExerciceFactory.click();
@@ -76,8 +91,8 @@ public class TeacherAccAccessibilityTest {
     }
 
     @Test
-    @Order(4)
-    @DisplayName("4. Homework Page Access")
+    @Order(5)
+    @DisplayName("5. Homework Page Access")
     public void shouldOpenHomeworkPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherHomework));
         teacherAcc.teacherHomework.click();
@@ -86,8 +101,8 @@ public class TeacherAccAccessibilityTest {
     }
 
     @Test
-    @Order(5)
-    @DisplayName("5. Chat Page Access")
+    @Order(6)
+    @DisplayName("6. Chat Page Access")
     public void shouldOpenChatPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherChat));
         teacherAcc.teacherChat.click();
@@ -96,8 +111,8 @@ public class TeacherAccAccessibilityTest {
     }
 
     @Test
-    @Order(6)
-    @DisplayName("6. Library Page Access")
+    @Order(7)
+    @DisplayName("7. Library Page Access")
     public void shouldOpenLibraryPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherLibrary));
         teacherAcc.teacherLibrary.click();
@@ -106,8 +121,8 @@ public class TeacherAccAccessibilityTest {
     }
 
     @Test
-    @Order(7)
-    @DisplayName("7. Course Builder Page Access")
+    @Order(8)
+    @DisplayName("8. Course Builder Page Access")
     public void shouldOpenCourseBuilderPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherCourseBuilder));
         teacherAcc.teacherCourseBuilder.click();
