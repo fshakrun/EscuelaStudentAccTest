@@ -199,17 +199,17 @@ public class StudentMainPageTest {
 
     }
 
-//    @Test
-//    @Order(9)
-//    @DisplayName("9. Tech Support Help Test")
-//    public void shouldSendMessageToSupport() throws InterruptedException {
-//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
-//        studentsAccountPage.techSuppButton.click();
-//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
-//        studentsAccountPage.sendMessageToTechSupp();
-//        assert (studentsAccountPage.dialogBubble).isDisplayed();
-//
-//    }
+   @Test
+   @Order(9)
+   @DisplayName("9. Tech Support Help Test")
+   public void shouldSendMessageToSupport() throws InterruptedException {
+       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
+       studentsAccountPage.techSuppButton.click();
+       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
+       studentsAccountPage.sendMessageToTechSupp();
+       assert (studentsAccountPage.dialogBubble).isDisplayed();
+
+   }
 
     @Test
     @Order(10)
