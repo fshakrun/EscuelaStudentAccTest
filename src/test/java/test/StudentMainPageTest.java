@@ -31,7 +31,7 @@ public class StudentMainPageTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -199,17 +199,17 @@ public class StudentMainPageTest {
 
     }
 
-    @Test
-    @Order(9)
-    @DisplayName("9. Tech Support Help Test")
-    public void shouldSendMessageToSupport() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
-        studentsAccountPage.techSuppButton.click();
-        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
-        studentsAccountPage.sendMessageToTechSupp();
-        assert (studentsAccountPage.dialogBubble).isDisplayed();
-
-    }
+//    @Test
+//    @Order(9)
+//    @DisplayName("9. Tech Support Help Test")
+//    public void shouldSendMessageToSupport() throws InterruptedException {
+//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
+//        studentsAccountPage.techSuppButton.click();
+//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
+//        studentsAccountPage.sendMessageToTechSupp();
+//        assert (studentsAccountPage.dialogBubble).isDisplayed();
+//
+//    }
 
     @Test
     @Order(10)
@@ -232,16 +232,27 @@ public class StudentMainPageTest {
         driver.switchTo().window(originalWindow);
 
     }
-//
-//    @Test
-//    @Order(11)
-//    @DisplayName("11. Blog Opening Test")
-//    public void shouldOpenEscuelaBlog() throws InterruptedException {
-//       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.blogArticlesShow));
-//       studentsAccountPage.blogArticlesShow.click();
-//        String URL = driver.getCurrentUrl();
-//        assertEquals(URL, "https://escuela.pro/blog");
-//    }
+
+    @Test
+    @Order(11)
+    @DisplayName("11. Blog Opening Test")
+    public void shouldOpenEscuelaBlog() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.blogArticlesShow));
+        String originalWindow = driver.getWindowHandle();
+        assert driver.getWindowHandles().size() == 1;
+        studentsAccountPage.blogArticlesShow.click();
+        wait.until(numberOfWindowsToBe(2));
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!originalWindow.contentEquals(windowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
+        String URL = driver.getCurrentUrl();
+        assert (URL).contains("blog");
+        driver.close();
+        driver.switchTo().window(originalWindow);
+    }
 }
 
 

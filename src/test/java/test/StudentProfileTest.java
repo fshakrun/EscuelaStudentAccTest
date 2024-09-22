@@ -51,7 +51,6 @@ public class StudentProfileTest {
 
          // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
         // loginPage.friendPromoBanner.click();
-
         // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
         // loginPage.friendPromoBanner.click();
 

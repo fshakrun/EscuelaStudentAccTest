@@ -65,6 +65,16 @@ public class StudentsProfilePage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/button")
     public WebElement logOutButton;
 
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/form/div[11]/div/div")
+    public WebElement homeWorkDisplayingOptions;
+
+    @FindBy(xpath = "/html/body/div[8]/div[3]/ul/li[1]")
+    public WebElement showNewHomeWorkOption;
+
+    @FindBy(xpath = "/html/body/div[8]/div[3]/ul/li[2]")
+    public WebElement notShowNewHomeWorkOption;
+
+
 
     public void clearFirstName() {
         studentFirstNameField.click();

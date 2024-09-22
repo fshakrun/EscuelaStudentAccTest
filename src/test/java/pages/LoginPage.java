@@ -35,6 +35,27 @@ public class LoginPage {
     @FindBy(xpath = "/html/body/div[10]/div/div/div/div/div[2]")
     public WebElement lessonsGiftPopup;
 
+    @FindBy(xpath = "//*[@id='app']/form/div[2]/span")
+    public WebElement existingMailNotification;
+
+    //форма регистрации
+
+    @FindBy(xpath = "//*[@id='app']/form/label[1]/span/input")
+    public WebElement nameFieldSignUp;
+
+    @FindBy(xpath = "//*[@id='app']/form/label[2]/span/input")
+    public WebElement lastnameFieldSignUp;
+
+    @FindBy(xpath = "//*[@id='app']/form/label[3]/span/input")
+    public WebElement emailFieldSignUp;
+
+    @FindBy(xpath = "//*[@id='app']/form/label[4]/span/div/input")
+    public WebElement phonenumberFieldSignUp;
+
+    @FindBy(xpath = "//*[@id='app']/form/button[2]")
+    public WebElement signUpButton;
+
+
 
     public void emailEnter(String email) {
         emailField.sendKeys(email);
@@ -55,6 +76,18 @@ public class LoginPage {
         Actions action = new Actions(driver);
         action.moveToElement(element, 100, 100).click().build().perform();
     }
+
+    public void signingUpUsingExistingMail(){
+        driver.get("https://escuela-stage.web.app/register");
+        nameFieldSignUp.sendKeys("Test");
+        lastnameFieldSignUp.sendKeys("Test");
+        emailFieldSignUp.sendKeys("firstlessonnotifiq@escuela.pro");
+        phonenumberFieldSignUp.click();
+        phonenumberFieldSignUp.sendKeys("1");
+        signUpButton.click();
+
+    }
+
 
 
 }

@@ -28,7 +28,7 @@ public class StudentsTestPageTest {
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments("--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -55,6 +55,19 @@ public class StudentsTestPageTest {
         studentTestsPage.testSectionClick();
         wait.until(ExpectedConditions.visibilityOf(studentTestsPage.testSectionLogo));
         assert (studentTestsPage.firstStudentsTest).isDisplayed();
+    }
+
+    @Test
+    @Order(2)
+    @DisplayName("2. Checking Assigned Test Inner Content Presence")
+    public void shouldFCheckAssignedTestContent() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentTestsPage.firstStudentsTest));
+        studentTestsPage.passToTest();
+        wait.until(ExpectedConditions.visibilityOf(studentTestsPage.passToAssignedTest)).isDisplayed();
+        studentTestsPage.passToAssignedTest.click();
+        assert (studentTestsPage.testResultTab).isDisplayed();
 
     }
+
+
 }

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,24 +25,53 @@ public class MiniCoursesPage {
     @FindBy(xpath = "//*[text() = '09 november teachers cours']")
     public WebElement testPracticamosCourse;
 
-    @FindBy(xpath = "//*[text() = '16 may saving lessons test']")
+    @FindBy(xpath = "//a[@href='/student/minicourses']")
+    public WebElement allCourseButton;
+
+    @FindBy(xpath = "//*[text() = 'Кто то где-то']")
     public WebElement paidPracticamosCourse;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[2]/h4")
     public WebElement courseProgramTitle;
 
-    @FindBy(css = "#app > div.sc-jMakVo.kQxfEz > div.sc-iMTnTL.kzNFp > div > div.sc-jaXxmE.kyEfQS > div.sc-ibQAlb.sc-hqUaMi.fOjcKx.gZONyb > div:nth-child(2) > div.MuiPaper-root.MuiCard-root.sc-hHrewP.hiByWN.MuiPaper-elevation1.MuiPaper-rounded > button")
-    public WebElement minicourseCover;
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/button/div[2]/div[3]/div/button")
+    public WebElement buyPracticamosButton;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[3]/div/div")
-    public WebElement innerLessonOfTestCourse;
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/button/div[2]/div[3]/div/div")
+    public WebElement currencySelectButton;
 
-    @FindBy(xpath= "//*[text() = 'Купить курс за 102 руб']")
-    public WebElement buyPracticamosCourseButton;
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/button/div[2]/div[3]/div/div/div[2]/div[1]")
+    public WebElement rubCurrencySelect;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/button/div[2]/div[3]/div/div/div[2]/div[2]")
+    public WebElement euroCurrencySelect;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/button/div[2]/div[3]/div/div/div[2]/div[3]")
+    public WebElement tengeCurrencySelect;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input")
+    public WebElement practicamosPromocodeField;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/div/div")
+    public WebElement promocodeNotification;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[3]/div/div/img")
+    public WebElement checkingPromocodeNotification;
 
     public void minicoursesSectionClick() {
         minicoursesSection.click();
     }
+
+    public void sendValidPracticamosPromocode(String validPracticamosPromocode){
+        practicamosPromocodeField.click();
+        practicamosPromocodeField.sendKeys(validPracticamosPromocode);
+    }
+
+    public void sendInvalidPracticamosPromocode(String invalidPracticamosPromocode){
+        practicamosPromocodeField.click();
+        practicamosPromocodeField.sendKeys(invalidPracticamosPromocode);
+    }
+
 
 
 }

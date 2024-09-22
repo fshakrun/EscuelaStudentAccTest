@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class TeacherAcc {
 
     public WebDriver driver;
@@ -15,10 +18,18 @@ public class TeacherAcc {
         this.driver = driver;
     }
 
+    @FindBy(xpath = "/html/body/div[3]/div/div/div/div")
+    public WebElement haveToCheckHomeWorkPopUp;
 
+    @FindBy(xpath = "/html/body/div[3]/div/div/div/div/button[1]")
+    public WebElement proceedToCheckingHomeWorkButton;
 
     @FindBy(xpath = "//*[@id='swJTVlm93MR5rt9BJtZ7dCm0g3y1']/span")
     public WebElement teacherSchedule;
+
+    @FindBy (xpath = "//a[@href='/teacher']")
+    public WebElement teacherMainPage;
+
     @FindBy(xpath = "//a[@href='/teacher/classes']")
     public WebElement teacherClasses;
 
@@ -31,6 +42,24 @@ public class TeacherAcc {
     @FindBy(xpath = "//a[@href='/teacher/homework']")
     public WebElement teacherHomework;
 
+    @FindBy(xpath = "/html/body/div[1]/div[1]/main/div/div[1]/div/div[2]")
+    public WebElement particularStudentHomeworkTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/main/div/div[3]/div/div/div[5]/button")
+    public WebElement homeworkNotCheckedByTeacher;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/main/div/div[4]/div[2]")
+    public WebElement interactiveHomeworkInProgress;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/main/div/div[4]/div[1]")
+    public WebElement homeworkNotStarted;
+
+    @FindBy(xpath = "//*[@id='app']/div[1]/main/div/div[4]/div[2]/div")
+    public WebElement homeworkInProgress;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/main/div/div[5]/div[1]/div[2]/div")
+    public WebElement commentOfCheckedHomework;
+
     @FindBy(xpath = "//a[@href='/teacher/chat']")
     public WebElement teacherChat;
 
@@ -40,6 +69,11 @@ public class TeacherAcc {
     @FindBy(xpath = "//a[@href='/courses']")
     public WebElement teacherCourseBuilder;
 
+    @FindBy(xpath= "/html/body/div[1]/div[1]/main/div[1]/div[2]/div/div[2]/div/table/tbody/tr/td/div/div/div/div[2]/table/tbody/tr/td[5]/div/div[2]/div/a/div/div")
+    public WebElement particularRegulaLesson;
+
+    @FindBy(xpath = "/html/body/div[5]/div/div/div/form/header/div[2]/div/div/div[1]/div")
+    public WebElement particularRegularLessonTime;
 
     @FindBy(xpath = "//*[text() = 'Anna']")
     public WebElement particularStudentChoice;
@@ -59,7 +93,6 @@ public class TeacherAcc {
     @FindBy(xpath = "//*[text() = 'Autotestclasses']")
     public WebElement teacherSelectExistingLesson;
 
-
     @FindBy(xpath = "//*[@id='remoteVideoStreamId']/div[3]/div[2]/button[3]")
     public WebElement startLessonBtn;
 
@@ -71,4 +104,10 @@ public class TeacherAcc {
 
     @FindBy(xpath = "//*[@id='app']/div[1]/nav/div/div/a[2]")
     public WebElement teacherLogOut;
+
+    public void closeLessonPopup() throws AWTException {
+        Robot particularRegularLessonTime = new Robot();
+        particularRegularLessonTime.keyPress(KeyEvent.VK_ESCAPE);
+        particularRegularLessonTime.keyRelease(KeyEvent.VK_ESCAPE);
+    }
 }

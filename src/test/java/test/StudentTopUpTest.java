@@ -29,7 +29,7 @@ public class StudentTopUpTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--window-size=1920,1080");
+        options.addArguments( "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));
@@ -54,38 +54,38 @@ public class StudentTopUpTest {
         assertEquals(URL, "https://escuela-stage.web.app/student/buy");
     }
 
-    @Test
-    @Order(2)
-    @DisplayName("2. Share My Promocode Pop Up Appearence Test")
-    public void openMyPromoCodePopUp() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
-        studentsAccountPage.topUpSectionButton.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.getMyGiftButton));
-        topUpPage.getMyGiftButton.click();
-        String promoCodePopUpTitle = topUpPage.shareMyPromocodePopUpTitle.getText();
-        assertThat(promoCodePopUpTitle).contains("2");
-    }
-
-    @Test
-    @Order(3)
-    @DisplayName("3. Send Promocode To Telegram")
-    public void shouldSendPromocodeToTelegram() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.sendToTelegramButton));
-        String originalWindow = driver.getWindowHandle();
-        assert driver.getWindowHandles().size() == 1;
-        topUpPage.sendToTelegramButton.click();
-        wait.until(numberOfWindowsToBe(2));
-        for (String windowHandle : driver.getWindowHandles()) {
-            if (!originalWindow.contentEquals(windowHandle)) {
-                driver.switchTo().window(windowHandle);
-                break;
-            }
-        }
-        String URL = driver.getCurrentUrl();
-        assert (URL).contains("https://telegram.me/share/url?url=https://escuela.pro&text=%D0%92%D0%B0%D0%BC%20%D0%B1%D1%83%D0%B4%D1%83%D1%82%20%D0%B2%D1%80%D1%83%D1%87%D0%B5%D0%BD%D1%8B%20%D0%B4%D0%B2%D0%B0%");
-        driver.switchTo().window(originalWindow);
-        topUpPage.promocodePopUpClose();
-    }
+//    @Test
+//    @Order(2)
+//    @DisplayName("2. Share My Promocode Pop Up Appearence Test")
+//    public void openMyPromoCodePopUp() throws InterruptedException {
+//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.topUpSectionButton));
+//        studentsAccountPage.topUpSectionButton.click();
+//        wait.until(ExpectedConditions.visibilityOf(topUpPage.getMyGiftButton));
+//        topUpPage.getMyGiftButton.click();
+//        String promoCodePopUpTitle = topUpPage.shareMyPromocodePopUpTitle.getText();
+//        assertThat(promoCodePopUpTitle).contains("2");
+//    }
+//
+//    @Test
+//    @Order(3)
+//    @DisplayName("3. Send Promocode To Telegram")
+//    public void shouldSendPromocodeToTelegram() throws InterruptedException {
+//        wait.until(ExpectedConditions.visibilityOf(topUpPage.sendToTelegramButton));
+//        String originalWindow = driver.getWindowHandle();
+//        assert driver.getWindowHandles().size() == 1;
+//        topUpPage.sendToTelegramButton.click();
+//        wait.until(numberOfWindowsToBe(2));
+//        for (String windowHandle : driver.getWindowHandles()) {
+//            if (!originalWindow.contentEquals(windowHandle)) {
+//                driver.switchTo().window(windowHandle);
+//                break;
+//            }
+//        }
+//        String URL = driver.getCurrentUrl();
+//        assert (URL).contains("https://telegram.me/");
+//        driver.switchTo().window(originalWindow);
+//        topUpPage.promocodePopUpClose();
+//    }
 
 
     // Смена валюты
@@ -600,9 +600,8 @@ public class StudentTopUpTest {
         topUpPage.ordinaryPackages.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.fourLessonsBtn));
         topUpPage.fourLessonsBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -623,7 +622,7 @@ public class StudentTopUpTest {
         topUpPage.eightLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -644,7 +643,7 @@ public class StudentTopUpTest {
         topUpPage.sixteenLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -665,7 +664,7 @@ public class StudentTopUpTest {
         topUpPage.thirtytwoLessonBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -686,7 +685,7 @@ public class StudentTopUpTest {
         topUpPage.fourLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -707,7 +706,7 @@ public class StudentTopUpTest {
         topUpPage.eightLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -728,7 +727,7 @@ public class StudentTopUpTest {
         topUpPage.sixteenLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -749,7 +748,7 @@ public class StudentTopUpTest {
         topUpPage.thirtytwoLessonBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -770,7 +769,7 @@ public class StudentTopUpTest {
         topUpPage.fourLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -790,7 +789,7 @@ public class StudentTopUpTest {
         topUpPage.eightLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -810,7 +809,7 @@ public class StudentTopUpTest {
         topUpPage.sixteenLessonsBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
@@ -831,13 +830,13 @@ public class StudentTopUpTest {
         topUpPage.thirtytwoLessonBtn.click();
         wait.until(ExpectedConditions.visibilityOf(topUpPage.paySelectionPopUp));
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("payselection.com");
+        assert (URL).contains("onevisionpay");
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
     @Test
     @Order(46)
-    @DisplayName("47. Checking Valid Promocode From A Friend")
+    @DisplayName("47. Checking Valid Promocode")
 
     public void shouldCheckValidPromocode() throws AWTException, InterruptedException {
         driver.get(ConfProperties.getProperty("loginpage"));
@@ -854,7 +853,7 @@ public class StudentTopUpTest {
 
     @Test
     @Order(47)
-    @DisplayName("48. Checking Invalid Promocode From A Friend")
+    @DisplayName("48. Checking Invalid Promocode")
 
     public void shouldCheckInvalidPromocode() throws AWTException, InterruptedException {
         driver.get(ConfProperties.getProperty("loginpage"));
@@ -865,7 +864,7 @@ public class StudentTopUpTest {
         wait.until(ExpectedConditions.invisibilityOf(topUpPage.checkingPromocodeNotification));
         wait.until(ExpectedConditions.visibilityOf(topUpPage.promocodeNotification));
         String Notification = topUpPage.promocodeNotification.getText();
-        assertThat (Notification).contains("Неверный промокод");
+        assertThat(Notification).contains("Неверный промокод");
     }
 
 

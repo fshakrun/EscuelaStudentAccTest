@@ -38,6 +38,7 @@ public class StudentChatPageTest {
     }
 
     @Test
+    @Order(1)
     @DisplayName("1. Particular Chat Searching And Checking Its Presence Test")
     public void checkingParticularChatDisplaying() throws InterruptedException {
 
@@ -54,6 +55,7 @@ public class StudentChatPageTest {
     }
 
     @Test
+    @Order(2)
     @DisplayName("2. Particular Chat Searching And Checking Its Presence Test")
     public void checkingMessageSending() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(chatPage.searchField));

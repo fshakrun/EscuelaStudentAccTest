@@ -15,6 +15,7 @@ import pages.StudentsProfilePage;
 import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @TestMethodOrder(MethodOrderer.DisplayName.class)
 public class StudentAccLoginTest {
@@ -29,7 +30,7 @@ public class StudentAccLoginTest {
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--window-size=1920,1080");
+        options.addArguments("--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -41,7 +42,8 @@ public class StudentAccLoginTest {
     }
 
     @Test
-    @DisplayName("0. Valid Credential Account Log In Log Out Test")
+    @Order(1)
+    @DisplayName("1. Valid Credential Account Log In Log Out Test")
     public void enterAccWithValidCredTest() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
@@ -62,7 +64,8 @@ public class StudentAccLoginTest {
     }
 
     @Test
-    @DisplayName("1. Invalid Login Valid Password Test")
+    @Order(2)
+    @DisplayName("2. Invalid Login Valid Password Test")
     public void enterInvalidLoginTest() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
@@ -74,7 +77,8 @@ public class StudentAccLoginTest {
     }
 
     @Test
-    @DisplayName("2. Valid Login Invalid Password Test")
+    @Order(3)
+    @DisplayName("3. Valid Login Invalid Password Test")
     public void enterValidLoginInvalidTest() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
@@ -86,7 +90,8 @@ public class StudentAccLoginTest {
     }
 
     @Test
-    @DisplayName("3. Password Recovery Page Accessibility Test")
+    @Order(4)
+    @DisplayName("4. Password Recovery Page Accessibility Test")
     public void forgottenPasswordRecoveryTest() throws InterruptedException {
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
@@ -97,9 +102,20 @@ public class StudentAccLoginTest {
     }
 
     @Test
-    @DisplayName("4. Valid Login Enter Test")
-    public void enterValidEmailTest() throws InterruptedException {
+    @Order(5)
+    @DisplayName("5. Sign Up Using Existing Email")
+    public void shouldCheckExistingMail(){
+        loginPage.signingUpUsingExistingMail();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.existingMailNotification));
+        String Notification = loginPage.existingMailNotification.getText();
+        assertThat(Notification).contains("занят");
+    }
 
+    @Test
+    @Order(6)
+    @DisplayName("6. Valid Login Enter Test")
+    public void enterValidEmailTest() throws InterruptedException {
+        driver.get(ConfProperties.getProperty("loginpage"));
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailField.sendKeys("checktimezonete11st@gmail.com");
         String Email = loginPage.emailField.getAttribute("value");

@@ -45,7 +45,6 @@ public class TeacherStartsLessonTest {
     @Order(1)
     @DisplayName("1. Valid Credential Teacher Account Log In Log Out Test")
     public void enterAccWithValidCredTest() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("teacherEmail"));
         loginPage.passwordEnter(ConfProperties.getProperty("teacherPassword"));
