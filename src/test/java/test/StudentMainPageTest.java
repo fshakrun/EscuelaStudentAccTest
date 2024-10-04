@@ -186,8 +186,7 @@ public class StudentMainPageTest {
         driver.close();
         driver.switchTo().window(originalWindow);
     }
-
-<<<<<<< HEAD
+    
     // Проверка отправки сообщения техподдержке
     @Test
     @Order(9)
@@ -199,7 +198,7 @@ public class StudentMainPageTest {
         studentsAccountPage.sendMessageToTechSupp();
         assert (studentsAccountPage.dialogBubble).isDisplayed();
     }
-=======
+    
    @Test
    @Order(9)
    @DisplayName("9. Tech Support Help Test")
@@ -211,7 +210,6 @@ public class StudentMainPageTest {
        assert (studentsAccountPage.dialogBubble).isDisplayed();
 
    }
->>>>>>> 335d8fbc19900515e9ecb7903ff666241c5182e2
 
     // Проверка наличия Нетворкинг бота и открытие ссылки на него в Телеграм
     @Test
