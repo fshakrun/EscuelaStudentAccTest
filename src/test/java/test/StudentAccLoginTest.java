@@ -30,7 +30,7 @@ public class StudentAccLoginTest {
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -38,14 +38,12 @@ public class StudentAccLoginTest {
         studentsAccountPage = new StudentsAccountPage(driver);
         studentsProfilePage = new StudentsProfilePage(driver);
         driver.get(ConfProperties.getProperty("loginpage"));
-
     }
 
     @Test
     @Order(1)
     @DisplayName("1. Valid Credential Account Log In Log Out Test")
     public void enterAccWithValidCredTest() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
@@ -59,41 +57,34 @@ public class StudentAccLoginTest {
         studentsProfilePage.logOutButton.click();
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/login");
-
-
     }
 
     @Test
     @Order(2)
     @DisplayName("2. Invalid Login Valid Password Test")
     public void enterInvalidLoginTest() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailField.sendKeys("checktimezonete11st@gmail.com");
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
         assert (loginPage.invalidCredentialsNotification.isDisplayed());
-
     }
 
     @Test
     @Order(3)
     @DisplayName("3. Valid Login Invalid Password Test")
     public void enterValidLoginInvalidTest() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordField.sendKeys("11111");
         loginPage.enterClick();
         assert (loginPage.invalidCredentialsNotification.isDisplayed());
-
     }
 
     @Test
     @Order(4)
     @DisplayName("4. Password Recovery Page Accessibility Test")
     public void forgottenPasswordRecoveryTest() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.recoveryPasswordButton.click();
         String URL = driver.getCurrentUrl();
@@ -101,6 +92,7 @@ public class StudentAccLoginTest {
 
     }
 
+    // Проверка невозможности зарегистрироваться с уже использованной почтой
     @Test
     @Order(5)
     @DisplayName("5. Sign Up Using Existing Email")

@@ -31,7 +31,7 @@ public class TeacherAccountTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(120));
@@ -40,6 +40,7 @@ public class TeacherAccountTest {
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
+    // Проверка успешного входа в учительский аккаунт
     @Test
     @Order(1)
     @DisplayName("1. Valid Credential Teacher Account Log In Test")
@@ -54,6 +55,7 @@ public class TeacherAccountTest {
             assertEquals(URL, "https://escuela-stage.web.app/teacher");
     }
 
+    // Проверка уведомления о новых домашних работах от учеников
     @Test
     @Order(2)
     @DisplayName("2. Checking New Homework Notification")
@@ -65,7 +67,7 @@ public class TeacherAccountTest {
         assertEquals(URL, "https://escuela-stage.web.app/teacher/homework");
     }
 
-
+    // Проверка доступности раздела с историей уроков в личном кабинете учителя
     @Test
     @Order(4)
     @DisplayName("4. Lessons History Page Access")
@@ -76,6 +78,7 @@ public class TeacherAccountTest {
         assertEquals(URL, "https://escuela-stage.web.app/teacher/lesson/history");
     }
 
+    // Проверка доступности раздела Фабрики упражнений
     @Test
     @Order(5)
     @DisplayName("5. Exercise Factory Page Access")
@@ -86,6 +89,7 @@ public class TeacherAccountTest {
         assertEquals(URL, "https://escuela-stage.web.app/teacher/exercise-factory");
     }
 
+    // Проверка доступности раздела с домашними заданиями в личном кабинете учителя
     @Test
     @Order(6)
     @DisplayName("6. Homework Page Access")
@@ -96,6 +100,7 @@ public class TeacherAccountTest {
         assertEquals(URL, "https://escuela-stage.web.app/teacher/homework");
     }
 
+    // Проверка доступности чата в личном кабинете учителя
     @Test
     @Order(7)
     @DisplayName("7. Chat Page Access")
@@ -106,6 +111,7 @@ public class TeacherAccountTest {
         assertEquals(URL, "https://escuela-stage.web.app/teacher/chat");
     }
 
+    // Проверка доступности раздела библиотеки в личном кабинете учителя
     @Test
     @Order(8)
     @DisplayName("8. Library Page Access")
@@ -116,6 +122,7 @@ public class TeacherAccountTest {
         assertEquals(URL, "https://escuela-stage.web.app/teacher/library");
     }
 
+    // Проверка доступности раздела с конструктором уроков
     @Test
     @Order(9)
     @DisplayName("9. Course Builder Page Access")
@@ -126,6 +133,7 @@ public class TeacherAccountTest {
         assertEquals(URL, "https://escuela-stage.web.app/courses");
     }
 
+    // Проверка отображения регулярного урока в расписании учителя
     @Test
     @Order(10)
     @DisplayName("10. Checking Particular Regular Lesson Presence")
@@ -142,6 +150,7 @@ public class TeacherAccountTest {
         teacherAcc.closeLessonPopup();
     }
 
+    // У учителя отображается начатое учеником интерактивное упражнение
     @Test
     @Order(11)
     @DisplayName("11. Checking Interactive Homework In Progress Presence")
@@ -153,6 +162,7 @@ public class TeacherAccountTest {
         assert (teacherAcc.interactiveHomeworkInProgress).isDisplayed();
     }
 
+    // У учителя отображается домашка, которую ученик еще не начал
     @Test
     @Order(12)
     @DisplayName("12. Checking Assigned But Not Started Homework")
@@ -164,6 +174,7 @@ public class TeacherAccountTest {
         assert (teacherAcc.homeworkNotStarted).isDisplayed();
     }
 
+    // У учителя отображается коммент к выполенному сочинению
     @Test
     @Order(13)
     @DisplayName("13. Checking Comment Of Completed Homework Presence")
@@ -175,6 +186,7 @@ public class TeacherAccountTest {
         assert (teacherAcc.commentOfCheckedHomework).isDisplayed();
     }
 
+    // У учителя отображается выполненное учеником, но еще не проверенное сочинение
     @Test
     @Order(14)
     @DisplayName("14. Checking Completed But Not Checked Homework Presence")

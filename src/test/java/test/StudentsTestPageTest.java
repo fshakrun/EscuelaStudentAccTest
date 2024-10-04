@@ -7,28 +7,22 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.*;
-
 import java.time.Duration;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class StudentsTestPageTest {
-
     public static LoginPage loginPage;
-
     public static StudentTestsPage studentTestsPage;
     public static StudentsAccountPage studentsAccountPage;
-
-
     public static WebDriver driver;
     public static WebDriverWait wait;
 
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -36,9 +30,9 @@ public class StudentsTestPageTest {
         studentsAccountPage = new StudentsAccountPage(driver);
         studentTestsPage = new StudentTestsPage(driver);
         driver.get(ConfProperties.getProperty("loginpage"));
-
     }
 
+    // Проверка наличия назначенного ученику теста
     @Test
     @Order(1)
     @DisplayName("1. Checking Assigned Test Presence")
@@ -66,7 +60,6 @@ public class StudentsTestPageTest {
         wait.until(ExpectedConditions.visibilityOf(studentTestsPage.passToAssignedTest)).isDisplayed();
         studentTestsPage.passToAssignedTest.click();
         assert (studentTestsPage.testResultTab).isDisplayed();
-
     }
 
 

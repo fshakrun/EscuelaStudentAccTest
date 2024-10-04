@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentHomeworkPageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-08-20T13:09:37" hostname="X542U" time="10.099">
+<testsuite name="test.StudentHomeworkPageTest" tests="8" skipped="0" failures="2" errors="0" timestamp="2024-10-01T10:37:12" hostname="X542U" time="29.612">
   <properties/>
-  <testcase name="1. Checking Interactive Homework Is Present" classname="test.StudentHomeworkPageTest" time="9.236"/>
-  <testcase name="2. Checking Homework First Internal Page Opened" classname="test.StudentHomeworkPageTest" time="0.856"/>
-  <system-out><![CDATA[16:09:33.660 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
-16:09:33.680 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:45:57 20/08/2024 MSK)
-16:09:33.680 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.119 in cache (valid until 09:49:48 21/08/2024 MSK)
-16:09:33.680 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.119 (resolved driver for Chrome 127)
-16:09:33.701 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.119 found in cache
-16:09:33.706 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.119\chromedriver.exe
+  <testcase name="1. Checking Interactive Homework Is Present" classname="test.StudentHomeworkPageTest" time="17.538"/>
+  <testcase name="2. Checking Homework First Internal Page Opened" classname="test.StudentHomeworkPageTest" time="1.376"/>
+  <testcase name="3. Checking Incomplete Essay Presence" classname="test.StudentHomeworkPageTest" time="2.615"/>
+  <testcase name="4. Checking Essay Waiting For Verification" classname="test.StudentHomeworkPageTest" time="0.366"/>
+  <testcase name="5. Checking Completed Essay Presence" classname="test.StudentHomeworkPageTest" time="0.115"/>
+  <testcase name="6. Checking Teachers Comment About Completed Essay Presence" classname="test.StudentHomeworkPageTest" time="0.408">
+    <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[2]/div[2]/div&quot;}&#10;  (Session info: chrome=129.0.6668.71)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [db7d41f20c91611bb7b7ed52659efb6c, findElement {using=xpath, value=//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[2]/div[2]/div}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57394/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: db7d41f20c91611bb7b7ed52659efb6c" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[2]/div[2]/div&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [db7d41f20c91611bb7b7ed52659efb6c, findElement {using=xpath, value=//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[2]/div[2]/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57394/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db7d41f20c91611bb7b7ed52659efb6c
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//test.StudentHomeworkPageTest.shouldFindTeachersComment(StudentHomeworkPageTest.java:112)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="7. Checking Homework Counter Is On" classname="test.StudentHomeworkPageTest" time="5.147">
+    <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[1]/div[1]/div/div[1]/div[1]/a[3]/div&quot;}&#10;  (Session info: chrome=129.0.6668.71)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [db7d41f20c91611bb7b7ed52659efb6c, findElement {using=xpath, value=/html/body/div[1]/div[1]/div[1]/div/div[1]/div[1]/a[3]/div}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57394/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: db7d41f20c91611bb7b7ed52659efb6c" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[1]/div[1]/div/div[1]/div[1]/a[3]/div&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [db7d41f20c91611bb7b7ed52659efb6c, findElement {using=xpath, value=/html/body/div[1]/div[1]/div[1]/div/div[1]/div[1]/a[3]/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57394/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db7d41f20c91611bb7b7ed52659efb6c
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//test.StudentHomeworkPageTest.shouldShowNewHomeWorks(StudentHomeworkPageTest.java:125)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="8. Checking Homework Counter Is Off" classname="test.StudentHomeworkPageTest" time="1.906"/>
+  <system-out><![CDATA[13:37:09.464 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+13:37:09.495 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=129 in cache (valid until 14:35:38 01/10/2024 MSK)
+13:37:09.497 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome129=129.0.6668.70 in cache (valid until 13:35:38 02/10/2024 MSK)
+13:37:09.498 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 129.0.6668.70 (resolved driver for Chrome 129)
+13:37:09.525 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 129.0.6668.70 found in cache
+13:37:09.526 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\129.0.6668.70\chromedriver.exe
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[окт. 01, 2024 1:37:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 129
+]]></system-err>
 </testsuite>

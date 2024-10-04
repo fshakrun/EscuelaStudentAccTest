@@ -22,7 +22,6 @@ public class StudentChatPageTest {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
@@ -34,9 +33,9 @@ public class StudentChatPageTest {
         chatPage = new ChatPage(driver);
         studentsAccountPage = new StudentsAccountPage(driver);
         driver.get(ConfProperties.getProperty("loginpage"));
-
     }
 
+    // Проверка наличия определенного чата с определенным учителем
     @Test
     @Order(1)
     @DisplayName("1. Particular Chat Searching And Checking Its Presence Test")
@@ -54,6 +53,7 @@ public class StudentChatPageTest {
         assert(chatPage.chatSearchResult).isDisplayed();
     }
 
+    // Проверка отправки сообщения учителю в разделе "Сообщения"
     @Test
     @Order(2)
     @DisplayName("2. Particular Chat Searching And Checking Its Presence Test")

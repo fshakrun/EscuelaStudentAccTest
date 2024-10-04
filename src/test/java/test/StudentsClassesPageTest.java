@@ -2,18 +2,19 @@ package test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.*;
+import pages.ConfProperties;
+import pages.LoginPage;
+import pages.StudentClassesPage;
 
 import java.awt.*;
 import java.time.Duration;
+
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.testng.Assert.assertEquals;
 
 // Для запуска тестов согласно названию
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -26,7 +27,7 @@ public class StudentsClassesPageTest {
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments( "--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -35,6 +36,7 @@ public class StudentsClassesPageTest {
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
+    // Проверка наличия текущего курса в разделе "Мои классы"
     @Test
     @Order(1)
     @DisplayName("1. Current Course Presence Test")
@@ -52,31 +54,33 @@ public class StudentsClassesPageTest {
         wait.until(ExpectedConditions.visibilityOf(studentClassesPage.currentCourseTitle));
         String courseTitle = studentClassesPage.currentCourseTitle.getText();
         assertThat(courseTitle).contains("Curso A0");
-
     }
 
+    // Проверка наличия уроков в разделе "Мои классы"
     @Test
     @Order(2)
     @DisplayName("2. My Classes Presence Test")
     public void shouldCheckMyClassesPresence() throws InterruptedException, AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentClassesPage.myClassesTab));
         studentClassesPage.myClassesTab.click();
-        assert( studentClassesPage.firstOfMyClasses).isDisplayed();
+        assert (studentClassesPage.firstOfMyClasses).isDisplayed();
     }
 
+    // Проверка наличия всех курсов в в разделе "Мои классы"
     @Test
     @Order(3)
     @DisplayName("3. All Courses Presence Test")
     public void shouldCheckAllCoursesPresence() throws InterruptedException, AWTException {
         wait.until(ExpectedConditions.visibilityOf(studentClassesPage.myClassesTab));
         studentClassesPage.allCoursesTab.click();
-        assert( studentClassesPage.firstOfAllCourses).isDisplayed();
+        assert (studentClassesPage.firstOfAllCourses).isDisplayed();
     }
 
+    // Проверка отображения контента в открытом уроке текущего курса
     @Test
     @Order(4)
     @DisplayName("4. Passed Lesson Content Displaying")
-    public void shouldCheckPassedLessonDisplaying(){
+    public void shouldCheckPassedLessonDisplaying() {
         wait.until(ExpectedConditions.visibilityOf(studentClassesPage.currentCourse));
         studentClassesPage.currentCourse.click();
         wait.until(ExpectedConditions.visibilityOf(studentClassesPage.firstLesson));

@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentsAccAccessibilityTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-08-20T13:11:42" hostname="X542U" time="14.935">
+<testsuite name="test.StudentsAccAccessibilityTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-10-01T11:29:19" hostname="X542U" time="19.551">
   <properties/>
-  <testcase name="0. Login Page Availablility Test" classname="test.StudentsAccAccessibilityTest" time="0.808"/>
-  <testcase name="1. Valid Credential Authentification Passed Test" classname="test.StudentsAccAccessibilityTest" time="8.257"/>
-  <testcase name="10. Tests Page Access" classname="test.StudentsAccAccessibilityTest" time="0.229"/>
-  <testcase name="11. Top Up Page Access" classname="test.StudentsAccAccessibilityTest" time="0.644"/>
-  <testcase name="2. Chat Page Access" classname="test.StudentsAccAccessibilityTest" time="0.728"/>
-  <testcase name="3. Dictionary Page Access" classname="test.StudentsAccAccessibilityTest" time="0.834"/>
-  <testcase name="4. Notes Page Access" classname="test.StudentsAccAccessibilityTest" time="0.164"/>
-  <testcase name="5. Mini-courses Page Access" classname="test.StudentsAccAccessibilityTest" time="1.255"/>
-  <testcase name="6. Classes Page Access" classname="test.StudentsAccAccessibilityTest" time="0.133"/>
-  <testcase name="7. Homework Page Access" classname="test.StudentsAccAccessibilityTest" time="0.177"/>
-  <testcase name="8. Student Account Page Access" classname="test.StudentsAccAccessibilityTest" time="0.388"/>
-  <testcase name="9. Student Profile Page Access" classname="test.StudentsAccAccessibilityTest" time="1.202"/>
-  <system-out><![CDATA[16:11:38.515 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
-16:11:38.525 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:45:57 20/08/2024 MSK)
-16:11:38.530 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.119 in cache (valid until 09:49:48 21/08/2024 MSK)
-16:11:38.530 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.119 (resolved driver for Chrome 127)
-16:11:38.541 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.119 found in cache
-16:11:38.545 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.119\chromedriver.exe
+  <testcase name="1. Login Page Availablility Test" classname="test.StudentsAccAccessibilityTest" time="0.972"/>
+  <testcase name="2. Valid Credential Authentification Passed Test" classname="test.StudentsAccAccessibilityTest" time="9.964"/>
+  <testcase name="3. Chat Page Access" classname="test.StudentsAccAccessibilityTest" time="0.99"/>
+  <testcase name="4. Dictionary Page Access" classname="test.StudentsAccAccessibilityTest" time="1.921"/>
+  <testcase name="5. Notes Page Access" classname="test.StudentsAccAccessibilityTest" time="0.235"/>
+  <testcase name="6. Mini-courses Page Access" classname="test.StudentsAccAccessibilityTest" time="1.357"/>
+  <testcase name="7. Classes Page Access" classname="test.StudentsAccAccessibilityTest" time="0.177"/>
+  <testcase name="8. Homework Page Access" classname="test.StudentsAccAccessibilityTest" time="0.206"/>
+  <testcase name="9. Student Account Page Access" classname="test.StudentsAccAccessibilityTest" time="1.091"/>
+  <testcase name="10. Student Profile Page Access" classname="test.StudentsAccAccessibilityTest" time="1.552"/>
+  <testcase name="11. Tests Page Access" classname="test.StudentsAccAccessibilityTest" time="0.184"/>
+  <testcase name="12. Top Up Page Access" classname="test.StudentsAccAccessibilityTest" time="0.759"/>
+  <system-out><![CDATA[14:29:04.911 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+14:29:04.930 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=129 in cache (valid until 14:35:38 01/10/2024 MSK)
+14:29:04.931 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome129=129.0.6668.70 in cache (valid until 13:35:38 02/10/2024 MSK)
+14:29:04.931 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 129.0.6668.70 (resolved driver for Chrome 129)
+14:29:04.947 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 129.0.6668.70 found in cache
+14:29:04.948 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\129.0.6668.70\chromedriver.exe
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[окт. 01, 2024 2:29:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 129
+]]></system-err>
 </testsuite>

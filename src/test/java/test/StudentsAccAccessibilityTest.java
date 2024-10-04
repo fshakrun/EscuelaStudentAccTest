@@ -8,9 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.*;
-
 import java.time.Duration;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 
@@ -72,7 +70,6 @@ public class StudentsAccAccessibilityTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-
         //wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
         //loginPage.friendPromoBanner.click();
         // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));

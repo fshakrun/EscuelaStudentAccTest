@@ -23,11 +23,10 @@ public class StudentMiniCourseTest {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless", "--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -36,20 +35,19 @@ public class StudentMiniCourseTest {
         miniCoursesPage = new MiniCoursesPage(driver);
         topUpPage = new TopUpPage(driver);
         driver.get(ConfProperties.getProperty("loginpage"));
-
     }
 
+    // Проверка наличия бесплатного миникурса
     @Test
     @Order(1)
     @DisplayName("1.Check A Minicourse Is On Page")
     public void checkMinicoursePresent() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-//        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-//        loginPage.friendPromoBanner.click();
+         //  wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+         // loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.minicoursesSection));
@@ -62,6 +60,7 @@ public class StudentMiniCourseTest {
         miniCoursesPage.allCourseButton.click();
     }
 
+    // Проверка открытия платного миникурса
     @Test
     @Order(2)
     @DisplayName("2.Check A Paid MiniCourse Opens")
@@ -73,6 +72,7 @@ public class StudentMiniCourseTest {
         assertThat(buyButton).contains("Купить");
     }
 
+    // Выбор оплаты в рублях и отображение корректной цены
     @Test
     @Order(3)
     @DisplayName("3.Check Rub Currency")
@@ -85,6 +85,7 @@ public class StudentMiniCourseTest {
         assertThat(buyButton).contains("руб");
     }
 
+    // Выбор оплаты в евро и отображение корректной цены
     @Test
     @Order(4)
     @DisplayName("4.Check Euro Currency")
@@ -97,6 +98,7 @@ public class StudentMiniCourseTest {
         assertThat(buyButton).contains("евро");
     }
 
+    // Выбор оплаты в тенге и отображение корректной цены
     @Test
     @Order(5)
     @DisplayName("5.Check Tenge Currency")
@@ -109,6 +111,7 @@ public class StudentMiniCourseTest {
         assertThat(buyButton).contains("тенге");
     }
 
+    // Переход на платежную систему при выборе евро из миникурсов
     @Test
     @Order(6)
     @DisplayName("6.Should Proceed To Payment In Euro")
@@ -124,6 +127,7 @@ public class StudentMiniCourseTest {
         driver.get("https://escuela-stage.web.app/student/minicourses/5d4ElPi0pTQ6RPU8Wamm/");
     }
 
+    // Переход на платежную систему при выборе рублей из миникурсов
     @Test
     @Order(7)
     @DisplayName("7.Should Proceed To Payment In Rub")
@@ -138,6 +142,7 @@ public class StudentMiniCourseTest {
         driver.get("https://escuela-stage.web.app/student/minicourses/5d4ElPi0pTQ6RPU8Wamm/");
     }
 
+    // Переход на платежную систему при выборе тенге из миникурсов
     @Test
     @Order(8)
     @DisplayName("8.Should Proceed To Payment In Tenge")
@@ -152,6 +157,7 @@ public class StudentMiniCourseTest {
         driver.get("https://escuela-stage.web.app/student/minicourses");
     }
 
+    // Ввод валидного промокода в разделе миникурсов
     @Test
     @Order(9)
     @DisplayName("9.Should Check Valid Promocode For Practicamos")
@@ -164,6 +170,7 @@ public class StudentMiniCourseTest {
         assertThat(Notification).contains("подтвержден");
     }
 
+    // Ввод невалидного промокода в разделе миникурсов
     @Test
     @Order(10)
     @DisplayName("10.Should Check Ivalid Promocode For Practicamos")

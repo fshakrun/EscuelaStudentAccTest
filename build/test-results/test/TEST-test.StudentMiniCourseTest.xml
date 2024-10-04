@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.StudentMiniCourseTest" tests="10" skipped="0" failures="4" errors="0" timestamp="2024-10-01T10:38:47" hostname="X542U" time="179.696">
+  <properties/>
+  <testcase name="1.Check A Minicourse Is On Page" classname="test.StudentMiniCourseTest" time="21.548"/>
+  <testcase name="2.Check A Paid MiniCourse Opens" classname="test.StudentMiniCourseTest" time="2.472"/>
+  <testcase name="3.Check Rub Currency" classname="test.StudentMiniCourseTest" time="0.56"/>
+  <testcase name="4.Check Euro Currency" classname="test.StudentMiniCourseTest" time="0.764"/>
+  <testcase name="5.Check Tenge Currency" classname="test.StudentMiniCourseTest" time="0.586">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expecting actual:&#13;&#10;  &quot;Купить курс за 167.5$&quot;&#13;&#10;to contain:&#13;&#10;  &quot;тенге&quot; " type="java.lang.AssertionError">java.lang.AssertionError: 
+Expecting actual:
+  &quot;Купить курс за 167.5$&quot;
+to contain:
+  &quot;тенге&quot; 
+	at test.StudentMiniCourseTest.shouldSelectTengeCurrency(StudentMiniCourseTest.java:109)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="6.Should Proceed To Payment In Euro" classname="test.StudentMiniCourseTest" time="12.747"/>
+  <testcase name="7.Should Proceed To Payment In Rub" classname="test.StudentMiniCourseTest" time="13.804"/>
+  <testcase name="8.Should Proceed To Payment In Tenge" classname="test.StudentMiniCourseTest" time="6.455">
+    <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
+	at test.StudentMiniCourseTest.shouldProceedToTengePayment(StudentMiniCourseTest.java:151)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="9.Should Check Valid Promocode For Practicamos" classname="test.StudentMiniCourseTest" time="60.376">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input' (tried for 60 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input' (tried for 60 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentMiniCourseTest.shouldEnterValidPromocode(StudentMiniCourseTest.java:159)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d4f3770697a4810d63e6ec2add16ec8, findElement {using=xpath, value=/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57576}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57576/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d4f3770697a4810d63e6ec2add16ec8
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</failure>
+  </testcase>
+  <testcase name="10.Should Check Ivalid Promocode For Practicamos" classname="test.StudentMiniCourseTest" time="60.038">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input' (tried for 60 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input' (tried for 60 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentMiniCourseTest.shouldEnterInvalidPromocode(StudentMiniCourseTest.java:171)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d4f3770697a4810d63e6ec2add16ec8, findElement {using=xpath, value=/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57576}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57576/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d4f3770697a4810d63e6ec2add16ec8
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[13:38:45.225 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+13:38:45.253 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=129 in cache (valid until 14:35:38 01/10/2024 MSK)
+13:38:45.254 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome129=129.0.6668.70 in cache (valid until 13:35:38 02/10/2024 MSK)
+13:38:45.254 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 129.0.6668.70 (resolved driver for Chrome 129)
+13:38:45.279 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 129.0.6668.70 found in cache
+13:38:45.280 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\129.0.6668.70\chromedriver.exe
+]]></system-out>
+  <system-err><![CDATA[окт. 01, 2024 1:38:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 129
+]]></system-err>
+</testsuite>

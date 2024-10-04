@@ -48,18 +48,14 @@ public class StudentProfileTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-
          // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
         // loginPage.friendPromoBanner.click();
         // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
         // loginPage.friendPromoBanner.click();
-
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         studentsProfilePage.studentsProfileClick();
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/profile");
-
-
     }
 
     // Редактирование имени ученика и сохранение изменений
@@ -86,7 +82,6 @@ public class StudentProfileTest {
         wait.until(ExpectedConditions.visibilityOf(studentsProfilePage.saveButton));
         studentsProfilePage.saveButtonProfile();
         assert (studentsProfilePage.nameNotification.isDisplayed());
-
     }
 
     @Test
@@ -99,7 +94,6 @@ public class StudentProfileTest {
         studentsProfilePage.studentFirstNameField.sendKeys("И");
         wait.until((ExpectedConditions.visibilityOf((studentsProfilePage.nameNotification))));
         assert (studentsProfilePage.nameNotification.isDisplayed());
-
     }
 
     @Test
@@ -155,7 +149,6 @@ public class StudentProfileTest {
         studentsProfilePage.saveButtonProfile();
         String lastName = studentsProfilePage.studentFirstNameField.getAttribute("value");
         assertEquals(lastName, "Anna");
-
     }
 
     // Редактирование фамилии ученика и сохранение изменений
@@ -216,7 +209,6 @@ public class StudentProfileTest {
         studentsProfilePage.studentLastNameField.click();
         studentsProfilePage.studentLastNameField.sendKeys(" ");
         assert (studentsProfilePage.nameNotification.isDisplayed());
-
     }
 
     @Test
@@ -479,7 +471,5 @@ public class StudentProfileTest {
         String schedule = studentsProfilePage.scheduleTitle.getText();
         assertThat(schedule).contains("Расписание");
     }
-
-
 }
 

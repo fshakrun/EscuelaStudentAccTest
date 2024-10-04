@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">11</div>
+<div class="counter">10</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">2</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">53.945s</div>
+<div class="counter">56.378s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">81%</div>
+<div class="percent">90%</div>
 <p>successful</p>
 </div>
 </td>
@@ -69,12 +69,15 @@
 <li>
 <a href="#tab2">Standard output</a>
 </li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
 <a name="shouldCheckTuesdayRegularLesson()"></a>
-<h3 class="failures">4. Tuesday Regular Lesson Checking</h3>
+<h3 class="failures">5. Tuesday Regular Lesson Checking</h3>
 <span class="code">
 <pre>java.lang.AssertionError: 
 Expecting actual:
@@ -86,44 +89,6 @@ Testov Anton.&quot;
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="shouldOpenEscuelaBlog()"></a>
-<h3 class="failures">9. Blog Opening Test</h3>
-<span class="code">
-<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a color=&quot;#3D4667&quot; href=&quot;https://escuela.pro/blog&quot; target=&quot;_blank&quot; display=&quot;large&quot; class=&quot;sc-eBMEME bkeuEj&quot; style=&quot;opacity: 0.5;&quot;&gt;...&lt;/a&gt; is not clickable at point (1332, 498). Other element would receive the click: &lt;textarea class=&quot;compose-input form-control&quot; placeholder=&quot;Ask your question&quot; style=&quot;height: 100px; border-radius: 50px;&quot;&gt;&lt;/textarea&gt;
-  (Session info: chrome=127.0.6533.120)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [838901e420213352a70b33a29fb8fc62, clickElement {id=f.ECABC0FF6BB9BA009992A3CF40F10A02.d.002CE2CA106E26CA14F5E45C372F3897.e.114}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51736/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (838901e420213352a70b33a29fb8fc62)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/a]
-Session ID: 838901e420213352a70b33a29fb8fc62
-	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at jdk.internal.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
-	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at app//com.sun.proxy.$Proxy18.click(Unknown Source)
-	at app//test.StudentMainPageTest.shouldOpenEscuelaBlog(StudentMainPageTest.java:241)
-	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
 </pre>
 </span>
 </div>
@@ -140,69 +105,63 @@ Session ID: 838901e420213352a70b33a29fb8fc62
 </tr>
 </thead>
 <tr>
-<td class="success">0. Valid Credential Account Log In Test</td>
+<td class="success">1. Valid Credential Account Log In Test</td>
 <td class="success">enterAccWithValidCredTest()</td>
-<td class="success">9.551s</td>
+<td class="success">11.056s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">2. App Store Button Test</td>
+<td class="success">3. App Store Button Test</td>
 <td class="success">goToAppStore()</td>
-<td class="success">3.485s</td>
+<td class="success">3.861s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">7. Facebook Button Test</td>
+<td class="success">8. Facebook Button Test</td>
 <td class="success">goToFacebook()</td>
-<td class="success">0.865s</td>
+<td class="success">1.387s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">1. Google Play Button Test</td>
+<td class="success">2. Google Play Button Test</td>
 <td class="success">goToGooglePlay()</td>
-<td class="success">0.995s</td>
+<td class="success">3.486s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">6. Instagram Button Test</td>
+<td class="success">7. Instagram Button Test</td>
 <td class="success">goToInstagram()</td>
-<td class="success">21.638s</td>
+<td class="success">21.954s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">3. VK Button Test</td>
+<td class="success">4. VK Button Test</td>
 <td class="success">goToVk()</td>
-<td class="success">13.482s</td>
+<td class="success">8.310s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">8. Networking Bot Test</td>
+<td class="success">10. Networking Bot Test</td>
 <td class="success">shouldCheckNetworkingBot()</td>
-<td class="success">1.141s</td>
+<td class="success">1.512s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">5. Next Lesson Notification Checking</td>
+<td class="success">6. Next Lesson Notification Checking</td>
 <td class="success">shouldCheckNextLessonNotification()</td>
-<td class="success">0.106s</td>
+<td class="success">0.099s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">4. Tuesday Regular Lesson Checking</td>
+<td class="failures">5. Tuesday Regular Lesson Checking</td>
 <td class="failures">shouldCheckTuesdayRegularLesson()</td>
-<td class="failures">0.323s</td>
+<td class="failures">0.184s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">9. Blog Opening Test</td>
-<td class="failures">shouldOpenEscuelaBlog()</td>
-<td class="failures">1.180s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">8. Tech Support Help Test</td>
-<td class="success">shouldSendMessageToSupport()</td>
-<td class="success">1.179s</td>
+<td class="success">11. Blog Opening Test</td>
+<td class="success">shouldOpenEscuelaBlog()</td>
+<td class="success">4.529s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -210,12 +169,20 @@ Session ID: 838901e420213352a70b33a29fb8fc62
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>16:09:47.842 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
-16:09:47.855 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:45:57 20/08/2024 MSK)
-16:09:47.859 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.119 in cache (valid until 09:49:48 21/08/2024 MSK)
-16:09:47.859 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.119 (resolved driver for Chrome 127)
-16:09:47.859 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.119 found in cache
-16:09:47.874 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.119\chromedriver.exe
+<pre>13:37:41.886 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+13:37:41.921 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=129 in cache (valid until 14:35:38 01/10/2024 MSK)
+13:37:41.923 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome129=129.0.6668.70 in cache (valid until 13:35:38 02/10/2024 MSK)
+13:37:41.923 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 129.0.6668.70 (resolved driver for Chrome 129)
+13:37:42.004 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 129.0.6668.70 found in cache
+13:37:42.006 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\129.0.6668.70\chromedriver.exe
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>окт. 01, 2024 1:37:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 129
 </pre>
 </span>
 </div>
@@ -227,7 +194,7 @@ Session ID: 838901e420213352a70b33a29fb8fc62
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 20 авг. 2024 г., 16:12:47</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 1 окт. 2024 г., 14:32:43</p>
 </div>
 </div>
 </body>

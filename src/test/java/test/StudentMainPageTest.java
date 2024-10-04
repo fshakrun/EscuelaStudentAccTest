@@ -39,34 +39,29 @@ public class StudentMainPageTest {
         loginPage = new LoginPage(driver);
         studentsAccountPage = new StudentsAccountPage(driver);
         driver.get(ConfProperties.getProperty("loginpage"));
-
     }
 
     @Test
     @Order(1)
     @DisplayName("1. Valid Credential Account Log In Test")
     public void enterAccWithValidCredTest() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-//        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-//        loginPage.friendPromoBanner.click();
+        //  wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        //  loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student");
-
     }
 
     @Test
     @Order(2)
     @DisplayName("2. Google Play Button Test")
     public void goToGooglePlay() throws InterruptedException, AWTException {
-
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.googlePlayButton));
-
         String originalWindow = driver.getWindowHandle();
         assert driver.getWindowHandles().size() == 1;
         studentsAccountPage.googlePlayButton.click();
@@ -81,19 +76,15 @@ public class StudentMainPageTest {
         assertEquals(URL, "https://play.google.com/store/apps/details?id=com.escuela.pro");
         driver.close();
         driver.switchTo().window(originalWindow);
-
     }
 
     @Test
     @Order(3)
     @DisplayName("3. App Store Button Test")
     public void goToAppStore() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.appStoreButton));
-
         String originalWindow = driver.getWindowHandle();
         assert driver.getWindowHandles().size() == 1;
-
         studentsAccountPage.appStoreButton.click();
         wait.until(numberOfWindowsToBe(2));
         for (String windowHandle : driver.getWindowHandles()) {
@@ -112,9 +103,7 @@ public class StudentMainPageTest {
     @Order(4)
     @DisplayName("4. VK Button Test")
     public void goToVk() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.vkButton));
-
         String originalWindow = driver.getWindowHandle();
         assert driver.getWindowHandles().size() == 1;
         studentsAccountPage.vkButton.click();
@@ -132,7 +121,7 @@ public class StudentMainPageTest {
 
 
     }
-
+    // Проверка что назначенный в расписание урок не слетел
     @Test
     @Order(5)
     @DisplayName("5. Tuesday Regular Lesson Checking")
@@ -143,6 +132,7 @@ public class StudentMainPageTest {
                 "Testov Anton.");
     }
 
+    // Проверка что плашка следующего урока отображается
     @Test
     @Order(6)
     @DisplayName("6. Next Lesson Notification Checking")
@@ -152,12 +142,11 @@ public class StudentMainPageTest {
         assertThat(NextLesson).contains("Вторник");
     }
 
-
+    // Проверка перехода в Инстаграм
     @Test
     @Order(7)
     @DisplayName("7. Instagram Button Test")
     public void goToInstagram() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.instButton));
         String originalWindow = driver.getWindowHandle();
         assert driver.getWindowHandles().size() == 1;
@@ -176,11 +165,11 @@ public class StudentMainPageTest {
 
     }
 
+    // Проверка перехода в Фейсбук
     @Test
     @Order(8)
     @DisplayName("8. Facebook Button Test")
     public void goToFacebook() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.fbButton));
         String originalWindow = driver.getWindowHandle();
         assert driver.getWindowHandles().size() == 1;
@@ -196,21 +185,21 @@ public class StudentMainPageTest {
         assertEquals(URL, "https://www.facebook.com/esp.escuela/");
         driver.close();
         driver.switchTo().window(originalWindow);
-
     }
 
-//    @Test
-//    @Order(9)
-//    @DisplayName("9. Tech Support Help Test")
-//    public void shouldSendMessageToSupport() throws InterruptedException {
-//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
-//        studentsAccountPage.techSuppButton.click();
-//        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
-//        studentsAccountPage.sendMessageToTechSupp();
-//        assert (studentsAccountPage.dialogBubble).isDisplayed();
-//
-//    }
+    // Проверка отправки сообщения техподдержке
+    @Test
+    @Order(9)
+    @DisplayName("9. Tech Support Help Test")
+    public void shouldSendMessageToSupport() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
+        studentsAccountPage.techSuppButton.click();
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
+        studentsAccountPage.sendMessageToTechSupp();
+        assert (studentsAccountPage.dialogBubble).isDisplayed();
+    }
 
+    // Проверка наличия Нетворкинг бота и открытие ссылки на него в Телеграм
     @Test
     @Order(10)
     @DisplayName("10. Networking Bot Test")
@@ -230,9 +219,9 @@ public class StudentMainPageTest {
         assert (URL).contains("Escuela_Networking_Bot");
         driver.close();
         driver.switchTo().window(originalWindow);
-
     }
 
+    // Проверка доступности блога
     @Test
     @Order(11)
     @DisplayName("11. Blog Opening Test")

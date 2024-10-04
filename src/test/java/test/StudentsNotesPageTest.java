@@ -11,9 +11,7 @@ import pages.ConfProperties;
 import pages.LoginPage;
 import pages.NotesPage;
 import pages.StudentsAccountPage;
-
 import java.time.Duration;
-
 import static org.testng.Assert.assertEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -37,7 +35,6 @@ public class StudentsNotesPageTest {
         notesPage = new NotesPage(driver);
         studentsAccountPage = new StudentsAccountPage(driver);
         driver.get(ConfProperties.getProperty("loginpage"));
-
     }
 
     @Test
@@ -50,28 +47,24 @@ public class StudentsNotesPageTest {
         loginPage.enterClick();
        // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
         // loginPage.friendPromoBanner.click();
-
         // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
         // loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student");
-
     }
 
     @Test
     @Order(2)
     @DisplayName("2. Notes Page Access")
     public void shouldOpeNotesPage() throws InterruptedException {
-
         notesPage.notesSectionClick();
         wait.until(ExpectedConditions.visibilityOf(notesPage.notesPageLogo));
         String URL = driver.getCurrentUrl();
         assertEquals(URL, "https://escuela-stage.web.app/student/notes");
-
     }
-
+    // Проверка наличия заметки
     @Test
     @Order(3)
     @DisplayName("3. Check If One Note Is Present")
@@ -79,9 +72,9 @@ public class StudentsNotesPageTest {
         wait.until(ExpectedConditions.visibilityOf(notesPage.oneParticularNote));
         notesPage.oneParticularNote.click();
         assert (notesPage.storyGenerateButton).isDisplayed();
-
     }
 
+    // Проверка наличия поп-апа с информацией по озвучке заметок
     @Test
     @Order(4)
     @DisplayName("4. Notes Voiceover Instruction Pop-Up Checking")

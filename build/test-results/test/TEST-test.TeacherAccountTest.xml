@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.TeacherAccountTest" tests="13" skipped="0" failures="4" errors="0" timestamp="2024-10-01T11:31:57" hostname="X542U" time="22.124">
+  <properties/>
+  <testcase name="1. Valid Credential Teacher Account Log In Test" classname="test.TeacherAccountTest" time="9.661"/>
+  <testcase name="2. Checking New Homework Notification" classname="test.TeacherAccountTest" time="0.413"/>
+  <testcase name="4. Lessons History Page Access" classname="test.TeacherAccountTest" time="0.207"/>
+  <testcase name="5. Exercise Factory Page Access" classname="test.TeacherAccountTest" time="0.43"/>
+  <testcase name="6. Homework Page Access" classname="test.TeacherAccountTest" time="0.425"/>
+  <testcase name="7. Chat Page Access" classname="test.TeacherAccountTest" time="0.48"/>
+  <testcase name="8. Library Page Access" classname="test.TeacherAccountTest" time="0.366"/>
+  <testcase name="9. Course Builder Page Access" classname="test.TeacherAccountTest" time="0.576"/>
+  <testcase name="10. Checking Particular Regular Lesson Presence" classname="test.TeacherAccountTest" time="4.721"/>
+  <testcase name="11. Checking Interactive Homework In Progress Presence" classname="test.TeacherAccountTest" time="1.19">
+    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=129.0.6668.71)&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]&#10;Session ID: 4e861f9ff98ba01a762157cb359c722c" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]
+Session ID: 4e861f9ff98ba01a762157cb359c722c
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.TeacherAccountTest.shouldCheckInteractiveHomework(TeacherAccountTest.java:150)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="12. Checking Assigned But Not Started Homework" classname="test.TeacherAccountTest" time="1.143">
+    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=129.0.6668.71)&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]&#10;Session ID: 4e861f9ff98ba01a762157cb359c722c" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]
+Session ID: 4e861f9ff98ba01a762157cb359c722c
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.TeacherAccountTest.shouldCheckNotStartedHomework(TeacherAccountTest.java:161)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="13. Checking Comment Of Completed Homework Presence" classname="test.TeacherAccountTest" time="1.137">
+    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=129.0.6668.71)&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]&#10;Session ID: 4e861f9ff98ba01a762157cb359c722c" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]
+Session ID: 4e861f9ff98ba01a762157cb359c722c
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.TeacherAccountTest.shouldCheckHomeworkComment(TeacherAccountTest.java:172)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="14. Checking Completed But Not Checked Homework Presence" classname="test.TeacherAccountTest" time="1.189">
+    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=129.0.6668.71)&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]&#10;Session ID: 4e861f9ff98ba01a762157cb359c722c" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-dfzyxB hjmTyz&quot; href=&quot;/teacher/homework&quot; style=&quot;position: relative;&quot;&gt;...&lt;/a&gt; is not clickable at point (35, 414). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e861f9ff98ba01a762157cb359c722c, clickElement {id=f.A125837036FD22E5664F6CAA4C27D006.d.07E863014A2B6BB124CA0AD66308CD46.e.107}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59715/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e861f9ff98ba01a762157cb359c722c)] -&gt; xpath: //a[@href='/teacher/homework']]
+Session ID: 4e861f9ff98ba01a762157cb359c722c
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.TeacherAccountTest.shouldCheckCompletedHomework(TeacherAccountTest.java:183)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <system-out><![CDATA[14:31:43.792 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+14:31:43.822 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=129 in cache (valid until 14:35:38 01/10/2024 MSK)
+14:31:43.823 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome129=129.0.6668.70 in cache (valid until 13:35:38 02/10/2024 MSK)
+14:31:43.823 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 129.0.6668.70 (resolved driver for Chrome 129)
+14:31:43.908 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 129.0.6668.70 found in cache
+14:31:43.911 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\129.0.6668.70\chromedriver.exe
+]]></system-out>
+  <system-err><![CDATA[окт. 01, 2024 2:31:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 129
+]]></system-err>
+</testsuite>

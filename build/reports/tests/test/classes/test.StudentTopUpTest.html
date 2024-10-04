@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">43</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">6m17.54s</div>
+<div class="counter">45m38.13s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">6%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,1655 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="shouldChangeEuroCurrency()"></a>
+<h3 class="failures">20. Changing Currency To Euro</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldChangeEuroCurrency(StudentTopUpTest.java:344)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldChangeTengeCurrency()"></a>
+<h3 class="failures">34. Changing Currency To Tenge</h3>
+<span class="code">
+<pre>java.lang.AssertionError
+	at test.StudentTopUpTest.shouldChangeTengeCurrency(StudentTopUpTest.java:584)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldChangeToEuroFamilyPack()"></a>
+<h3 class="failures">21. Change Package To Familial In Euro</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldChangeToEuroFamilyPack(StudentTopUpTest.java:358)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldChangeToNativePackage()"></a>
+<h3 class="failures">10. Changing Package To Spanish-speaking teacher</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldChangeToNativePackage(StudentTopUpTest.java:189)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldChangeToOrdinaryPackage()"></a>
+<h3 class="failures">15. Changing Package To Ordinary Teacher</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldChangeToOrdinaryPackage(StudentTopUpTest.java:268)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldCheckInvalidPromocode()"></a>
+<h3 class="failures">48. Checking Invalid Promocode</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expecting actual:
+  &quot;Секундочку! Проверяем промокод...&quot;
+to contain:
+  &quot;Неверный промокод&quot; 
+	at test.StudentTopUpTest.shouldCheckInvalidPromocode(StudentTopUpTest.java:867)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldCheckValidPromocode()"></a>
+<h3 class="failures">47. Checking Valid Promocode</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expecting actual:
+  &quot;Секундочку! Проверяем промокод...&quot;
+to contain:
+  &quot;активирован&quot; 
+	at test.StudentTopUpTest.shouldCheckValidPromocode(StudentTopUpTest.java:850)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment16FamilialLessons()"></a>
+<h3 class="failures">24. 16 Lessons Euro Familial Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment16FamilialLessons(StudentTopUpTest.java:411)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment16NativeLessons()"></a>
+<h3 class="failures">28. 16 Lessons Euro Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment16NativeLessons(StudentTopUpTest.java:478)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment16OrdinaryLessons()"></a>
+<h3 class="failures">32. 16 Lessons Euro Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment16OrdinaryLessons(StudentTopUpTest.java:549)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment32FamilialLessons()"></a>
+<h3 class="failures">25. 32 Lessons Euro Familial Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment32FamilialLessons(StudentTopUpTest.java:429)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment32NativeLessons()"></a>
+<h3 class="failures">29. 32 Lessons Euro Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment32NativeLessons(StudentTopUpTest.java:496)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment32OrdinaryLessons()"></a>
+<h3 class="failures">33. 32 Lessons Euro Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment32OrdinaryLessons(StudentTopUpTest.java:567)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment4FamilialLessons()"></a>
+<h3 class="failures">22. 4 Lessons Euro Familial Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;sc-cHHTbD gCDnOa&quot;&gt;...&lt;/div&gt; is not clickable at point (831, 234). Other element would receive the click: &lt;span&gt;...&lt;/span&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.88}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[4]/div[2]/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment4FamilialLessons(StudentTopUpTest.java:373)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment4NativeLessons()"></a>
+<h3 class="failures">26. 4 Lessons Euro Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment4NativeLessons(StudentTopUpTest.java:446)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment4OrdinaryLessons()"></a>
+<h3 class="failures">30. 4 Lessons Euro Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment4OrdinaryLessons(StudentTopUpTest.java:514)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment8FamilialLessons()"></a>
+<h3 class="failures">23. 8 Lessons Euro Familial Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment8FamilialLessons(StudentTopUpTest.java:393)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment8NativeLessons()"></a>
+<h3 class="failures">27. 8 Lessons Euro Native Package Payment Page</h3>
+<span class="code">
+<pre>java.lang.AssertionError
+	at test.StudentTopUpTest.shouldProceedToEuroPayment8NativeLessons(StudentTopUpTest.java:463)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToEuroPayment8OrdinaryLessons()"></a>
+<h3 class="failures">31. 8 Lessons Euro Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToEuroPayment8OrdinaryLessons(StudentTopUpTest.java:531)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment16FamilialLessons()"></a>
+<h3 class="failures">8. 16 Lessons Familial Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment16FamilialLessons(StudentTopUpTest.java:158)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment16NativelLessons()"></a>
+<h3 class="failures">13. 16 Lessons Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment16NativelLessons(StudentTopUpTest.java:237)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment16OrdinarylLessons()"></a>
+<h3 class="failures">18. 16 Lessons Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment16OrdinarylLessons(StudentTopUpTest.java:314)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment32FamilialLessons()"></a>
+<h3 class="failures">9. 32 Lessons Familial Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment32FamilialLessons(StudentTopUpTest.java:174)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment32NativelLessons()"></a>
+<h3 class="failures">14. 32 Lessons Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment32NativelLessons(StudentTopUpTest.java:253)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment32OrdinarylLessons()"></a>
+<h3 class="failures">19. 32 Lessons Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment32OrdinarylLessons(StudentTopUpTest.java:330)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment4FamilialLessons()"></a>
+<h3 class="failures">6. 4 Lessons Rub Familial Package Payment Page</h3>
+<span class="code">
+<pre>java.lang.AssertionError
+	at test.StudentTopUpTest.shouldProceedToPayment4FamilialLessons(StudentTopUpTest.java:131)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment4NativelLessons()"></a>
+<h3 class="failures">11. 4 Lessons Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment4NativelLessons(StudentTopUpTest.java:204)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment4OrdinarylLessons()"></a>
+<h3 class="failures">16. 4 Lessons Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment4OrdinarylLessons(StudentTopUpTest.java:282)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment8FamilialLessons()"></a>
+<h3 class="failures">7. 8 Lessons Familial Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment8FamilialLessons(StudentTopUpTest.java:142)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment8NativelLessons()"></a>
+<h3 class="failures">12. 8 Lessons Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment8NativelLessons(StudentTopUpTest.java:221)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToPayment8OrdinarylLessons()"></a>
+<h3 class="failures">17. 8 Lessons Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div color=&quot;#4D6084&quot; display=&quot;studentButton&quot; class=&quot;sc-tagGq iUBsIb&quot;&gt;...&lt;/div&gt; is not clickable at point (151, 513). Other element would receive the click: &lt;div class=&quot;modal-overlay custom-modal-class&quot; style=&quot;position: fixed; inset: 0px; background: rgba(48, 72, 89, 0.73); display: flex; justify-content: center; align-items: center; z-index: 1001;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.71)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, clickElement {id=f.B59058370CDA1762114C834732901A2D.d.FF068AE402925DDA3B751EC189858157.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (341fd7a92a72dc5bedebee81c2654103)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div/div[1]/div[3]/div[3]/a/button/div]
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at app//com.sun.proxy.$Proxy20.click(Unknown Source)
+	at app//test.StudentTopUpTest.shouldProceedToPayment8OrdinarylLessons(StudentTopUpTest.java:298)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment16FamilyLessons()"></a>
+<h3 class="failures">41. 16 Lessons Tenge Family Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment16FamilyLessons(StudentTopUpTest.java:728)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment16NativeLessons()"></a>
+<h3 class="failures">45. 16 Lessons Tenge Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment16NativeLessons(StudentTopUpTest.java:810)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment16OrdinaryLessons()"></a>
+<h3 class="failures">37. 16 Lessons Tenge Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment16OrdinaryLessons(StudentTopUpTest.java:644)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment32FamilyLessons()"></a>
+<h3 class="failures">42. 32 Lessons Tenge Family Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment32FamilyLessons(StudentTopUpTest.java:749)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment32NativeLessons()"></a>
+<h3 class="failures">46. 32 Lessons Tenge Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment32NativeLessons(StudentTopUpTest.java:831)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment32OrdinaryLessons()"></a>
+<h3 class="failures">38. 32 Lessons Tenge Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment32OrdinaryLessons(StudentTopUpTest.java:665)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment4FamilyLessons()"></a>
+<h3 class="failures">39. 4 Lessons Tenge Family Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment4FamilyLessons(StudentTopUpTest.java:686)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment4NativeLessons()"></a>
+<h3 class="failures">43. 4 Lessons Tenge Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment4NativeLessons(StudentTopUpTest.java:770)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment4OrdinaryLessons()"></a>
+<h3 class="failures">35. 4 Lessons Tenge Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>java.lang.AssertionError
+	at test.StudentTopUpTest.shouldProceedToTengePayment4OrdinaryLessons(StudentTopUpTest.java:604)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment8FamilyLessons()"></a>
+<h3 class="failures">40. 8 Lessons Tenge Family Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment8FamilyLessons(StudentTopUpTest.java:707)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment8NativeLessons()"></a>
+<h3 class="failures">44. 8 Lessons Tenge Native Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment8NativeLessons(StudentTopUpTest.java:790)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldProceedToTengePayment8OrdinaryLessons()"></a>
+<h3 class="failures">36. 8 Lessons Tenge Ordinary Package Payment Page</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[text() = 'Ссылка на оплату']' (tried for 120 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//test.StudentTopUpTest.shouldProceedToTengePayment8OrdinaryLessons(StudentTopUpTest.java:623)
+	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() = 'Ссылка на оплату']&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341fd7a92a72dc5bedebee81c2654103, findElement {using=xpath, value=//*[text() = 'Ссылка на оплату']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57946/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341fd7a92a72dc5bedebee81c2654103
+	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app//com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 4 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,290 +1723,298 @@
 <tr>
 <td class="success">1. Enter Top Up Section Test</td>
 <td class="success">enterTopUpSection()</td>
-<td class="success">9.897s</td>
+<td class="success">10.438s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">2. Share My Promocode Pop Up Appearence Test</td>
-<td class="success">openMyPromoCodePopUp()</td>
-<td class="success">3.671s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">20. Changing Currency To Euro</td>
-<td class="success">shouldChangeEuroCurrency()</td>
-<td class="success">5.934s</td>
-<td class="success">passed</td>
+<td class="failures">20. Changing Currency To Euro</td>
+<td class="failures">shouldChangeEuroCurrency()</td>
+<td class="failures">1.153s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">4. Changing Currency To Rub</td>
 <td class="success">shouldChangeRubCurrency()</td>
-<td class="success">0.675s</td>
+<td class="success">1.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">34. Changing Currency To Tenge</td>
-<td class="success">shouldChangeTengeCurrency()</td>
-<td class="success">6.213s</td>
-<td class="success">passed</td>
+<td class="failures">34. Changing Currency To Tenge</td>
+<td class="failures">shouldChangeTengeCurrency()</td>
+<td class="failures">5.200s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">21. Change Package To Familial In Euro</td>
-<td class="success">shouldChangeToEuroFamilyPack()</td>
-<td class="success">0.383s</td>
-<td class="success">passed</td>
+<td class="failures">21. Change Package To Familial In Euro</td>
+<td class="failures">shouldChangeToEuroFamilyPack()</td>
+<td class="failures">1.148s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">5. Changing Package To Rub Familial</td>
 <td class="success">shouldChangeToFamilyPackage()</td>
-<td class="success">0.351s</td>
+<td class="success">0.322s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">10. Changing Package To Spanish-speaking teacher</td>
-<td class="success">shouldChangeToNativePackage()</td>
-<td class="success">4.495s</td>
-<td class="success">passed</td>
+<td class="failures">10. Changing Package To Spanish-speaking teacher</td>
+<td class="failures">shouldChangeToNativePackage()</td>
+<td class="failures">1.166s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">15. Changing Package To Ordinary Teacher</td>
-<td class="success">shouldChangeToOrdinaryPackage()</td>
-<td class="success">5.664s</td>
-<td class="success">passed</td>
+<td class="failures">15. Changing Package To Ordinary Teacher</td>
+<td class="failures">shouldChangeToOrdinaryPackage()</td>
+<td class="failures">1.140s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">24. 16 Lessons Euro Familial Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment16FamilialLessons()</td>
-<td class="success">9.699s</td>
-<td class="success">passed</td>
+<td class="failures">48. Checking Invalid Promocode</td>
+<td class="failures">shouldCheckInvalidPromocode()</td>
+<td class="failures">7.889s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">28. 16 Lessons Euro Native Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment16NativeLessons()</td>
-<td class="success">8.445s</td>
-<td class="success">passed</td>
+<td class="failures">47. Checking Valid Promocode</td>
+<td class="failures">shouldCheckValidPromocode()</td>
+<td class="failures">8.264s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">32. 16 Lessons Euro Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment16OrdinaryLessons()</td>
-<td class="success">8.653s</td>
-<td class="success">passed</td>
+<td class="failures">24. 16 Lessons Euro Familial Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment16FamilialLessons()</td>
+<td class="failures">2m6.63s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">25. 32 Lessons Euro Familial Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment32FamilialLessons()</td>
-<td class="success">9.849s</td>
-<td class="success">passed</td>
+<td class="failures">28. 16 Lessons Euro Native Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment16NativeLessons()</td>
+<td class="failures">2m6.67s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">29. 32 Lessons Euro Native Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment32NativeLessons()</td>
-<td class="success">11.419s</td>
-<td class="success">passed</td>
+<td class="failures">32. 16 Lessons Euro Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment16OrdinaryLessons()</td>
+<td class="failures">2m7.86s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">33. 32 Lessons Euro Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment32OrdinaryLessons()</td>
-<td class="success">9.380s</td>
-<td class="success">passed</td>
+<td class="failures">25. 32 Lessons Euro Familial Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment32FamilialLessons()</td>
+<td class="failures">2m6.69s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">22. 4 Lessons Euro Familial Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment4FamilialLessons()</td>
-<td class="success">7.275s</td>
-<td class="success">passed</td>
+<td class="failures">29. 32 Lessons Euro Native Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment32NativeLessons()</td>
+<td class="failures">2m8.43s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">26. 4 Lessons Euro Native Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment4NativeLessons()</td>
-<td class="success">9.783s</td>
-<td class="success">passed</td>
+<td class="failures">33. 32 Lessons Euro Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment32OrdinaryLessons()</td>
+<td class="failures">2m6.62s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">30. 4 Lessons Euro Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment4OrdinaryLessons()</td>
-<td class="success">9.681s</td>
-<td class="success">passed</td>
+<td class="failures">22. 4 Lessons Euro Familial Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment4FamilialLessons()</td>
+<td class="failures">1.132s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">23. 8 Lessons Euro Familial Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment8FamilialLessons()</td>
-<td class="success">11.467s</td>
-<td class="success">passed</td>
+<td class="failures">26. 4 Lessons Euro Native Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment4NativeLessons()</td>
+<td class="failures">2m6.34s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">27. 8 Lessons Euro Native Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment8NativeLessons()</td>
-<td class="success">8.998s</td>
-<td class="success">passed</td>
+<td class="failures">30. 4 Lessons Euro Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment4OrdinaryLessons()</td>
+<td class="failures">2m6.03s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">31. 8 Lessons Euro Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToEuroPayment8OrdinaryLessons()</td>
-<td class="success">9.545s</td>
-<td class="success">passed</td>
+<td class="failures">23. 8 Lessons Euro Familial Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment8FamilialLessons()</td>
+<td class="failures">2m8.45s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">8. 16 Lessons Familial Package Payment Page</td>
-<td class="success">shouldProceedToPayment16FamilialLessons()</td>
-<td class="success">10.878s</td>
-<td class="success">passed</td>
+<td class="failures">27. 8 Lessons Euro Native Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment8NativeLessons()</td>
+<td class="failures">6.111s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">13. 16 Lessons Native Package Payment Page</td>
-<td class="success">shouldProceedToPayment16NativelLessons()</td>
-<td class="success">10.521s</td>
-<td class="success">passed</td>
+<td class="failures">31. 8 Lessons Euro Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToEuroPayment8OrdinaryLessons()</td>
+<td class="failures">2m8.09s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">18. 16 Lessons Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToPayment16OrdinarylLessons()</td>
-<td class="success">10.249s</td>
-<td class="success">passed</td>
+<td class="failures">8. 16 Lessons Familial Package Payment Page</td>
+<td class="failures">shouldProceedToPayment16FamilialLessons()</td>
+<td class="failures">1.107s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">9. 32 Lessons Familial Package Payment Page</td>
-<td class="success">shouldProceedToPayment32FamilialLessons()</td>
-<td class="success">8.908s</td>
-<td class="success">passed</td>
+<td class="failures">13. 16 Lessons Native Package Payment Page</td>
+<td class="failures">shouldProceedToPayment16NativelLessons()</td>
+<td class="failures">1.109s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">14. 32 Lessons Native Package Payment Page</td>
-<td class="success">shouldProceedToPayment32NativelLessons()</td>
-<td class="success">9.501s</td>
-<td class="success">passed</td>
+<td class="failures">18. 16 Lessons Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToPayment16OrdinarylLessons()</td>
+<td class="failures">1.217s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">19. 32 Lessons Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToPayment32OrdinarylLessons()</td>
-<td class="success">8.916s</td>
-<td class="success">passed</td>
+<td class="failures">9. 32 Lessons Familial Package Payment Page</td>
+<td class="failures">shouldProceedToPayment32FamilialLessons()</td>
+<td class="failures">1.147s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">6. 4 Lessons Rub Familial Package Payment Page</td>
-<td class="success">shouldProceedToPayment4FamilialLessons()</td>
-<td class="success">8.842s</td>
-<td class="success">passed</td>
+<td class="failures">14. 32 Lessons Native Package Payment Page</td>
+<td class="failures">shouldProceedToPayment32NativelLessons()</td>
+<td class="failures">1.119s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">11. 4 Lessons Native Package Payment Page</td>
-<td class="success">shouldProceedToPayment4NativelLessons()</td>
-<td class="success">4.541s</td>
-<td class="success">passed</td>
+<td class="failures">19. 32 Lessons Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToPayment32OrdinarylLessons()</td>
+<td class="failures">1.168s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">16. 4 Lessons Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToPayment4OrdinarylLessons()</td>
-<td class="success">4.615s</td>
-<td class="success">passed</td>
+<td class="failures">6. 4 Lessons Rub Familial Package Payment Page</td>
+<td class="failures">shouldProceedToPayment4FamilialLessons()</td>
+<td class="failures">0.314s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">7. 8 Lessons Familial Package Payment Page</td>
-<td class="success">shouldProceedToPayment8FamilialLessons()</td>
-<td class="success">11.964s</td>
-<td class="success">passed</td>
+<td class="failures">11. 4 Lessons Native Package Payment Page</td>
+<td class="failures">shouldProceedToPayment4NativelLessons()</td>
+<td class="failures">1.101s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">12. 8 Lessons Native Package Payment Page</td>
-<td class="success">shouldProceedToPayment8NativelLessons()</td>
-<td class="success">8.643s</td>
-<td class="success">passed</td>
+<td class="failures">16. 4 Lessons Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToPayment4OrdinarylLessons()</td>
+<td class="failures">1.430s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">17. 8 Lessons Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToPayment8OrdinarylLessons()</td>
-<td class="success">10.561s</td>
-<td class="success">passed</td>
+<td class="failures">7. 8 Lessons Familial Package Payment Page</td>
+<td class="failures">shouldProceedToPayment8FamilialLessons()</td>
+<td class="failures">1.144s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">41. 16 Lessons Tenge Family Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment16FamilyLessons()</td>
-<td class="success">8.660s</td>
-<td class="success">passed</td>
+<td class="failures">12. 8 Lessons Native Package Payment Page</td>
+<td class="failures">shouldProceedToPayment8NativelLessons()</td>
+<td class="failures">1.138s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">45. 16 Lessons Tenge Native Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment16NativeLessons()</td>
-<td class="success">9.946s</td>
-<td class="success">passed</td>
+<td class="failures">17. 8 Lessons Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToPayment8OrdinarylLessons()</td>
+<td class="failures">1.259s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">37. 16 Lessons Tenge Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment16OrdinaryLessons()</td>
-<td class="success">9.670s</td>
-<td class="success">passed</td>
+<td class="failures">41. 16 Lessons Tenge Family Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment16FamilyLessons()</td>
+<td class="failures">2m6.80s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">42. 32 Lessons Tenge Family Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment32FamilyLessons()</td>
-<td class="success">9.467s</td>
-<td class="success">passed</td>
+<td class="failures">45. 16 Lessons Tenge Native Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment16NativeLessons()</td>
+<td class="failures">2m5.59s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">46. 32 Lessons Tenge Native Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment32NativeLessons()</td>
-<td class="success">10.171s</td>
-<td class="success">passed</td>
+<td class="failures">37. 16 Lessons Tenge Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment16OrdinaryLessons()</td>
+<td class="failures">2m12.19s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">38. 32 Lessons Tenge Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment32OrdinaryLessons()</td>
-<td class="success">7.794s</td>
-<td class="success">passed</td>
+<td class="failures">42. 32 Lessons Tenge Family Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment32FamilyLessons()</td>
+<td class="failures">2m6.90s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">39. 4 Lessons Tenge Family Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment4FamilyLessons()</td>
-<td class="success">10.165s</td>
-<td class="success">passed</td>
+<td class="failures">46. 32 Lessons Tenge Native Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment32NativeLessons()</td>
+<td class="failures">2m6.77s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">43. 4 Lessons Tenge Native Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment4NativeLessons()</td>
-<td class="success">10.746s</td>
-<td class="success">passed</td>
+<td class="failures">38. 32 Lessons Tenge Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment32OrdinaryLessons()</td>
+<td class="failures">2m8.49s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">35. 4 Lessons Tenge Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment4OrdinaryLessons()</td>
-<td class="success">9.450s</td>
-<td class="success">passed</td>
+<td class="failures">39. 4 Lessons Tenge Family Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment4FamilyLessons()</td>
+<td class="failures">2m5.50s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">40. 8 Lessons Tenge Family Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment8FamilyLessons()</td>
-<td class="success">9.584s</td>
-<td class="success">passed</td>
+<td class="failures">43. 4 Lessons Tenge Native Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment4NativeLessons()</td>
+<td class="failures">2m8.11s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">44. 8 Lessons Tenge Native Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment8NativeLessons()</td>
-<td class="success">10.036s</td>
-<td class="success">passed</td>
+<td class="failures">35. 4 Lessons Tenge Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment4OrdinaryLessons()</td>
+<td class="failures">6.200s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">36. 8 Lessons Tenge Ordinary Package Payment Page</td>
-<td class="success">shouldProceedToTengePayment8OrdinaryLessons()</td>
-<td class="success">8.947s</td>
-<td class="success">passed</td>
+<td class="failures">40. 8 Lessons Tenge Family Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment8FamilyLessons()</td>
+<td class="failures">2m6.76s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">3. Send Promocode To Telegram</td>
-<td class="success">shouldSendPromocodeToTelegram()</td>
-<td class="success">3.286s</td>
-<td class="success">passed</td>
+<td class="failures">44. 8 Lessons Tenge Native Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment8NativeLessons()</td>
+<td class="failures">2m6.32s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">36. 8 Lessons Tenge Ordinary Package Payment Page</td>
+<td class="failures">shouldProceedToTengePayment8OrdinaryLessons()</td>
+<td class="failures">2m8.48s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>16:03:10.142 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
-16:03:10.158 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:45:57 20/08/2024 MSK)
-16:03:10.173 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.119 in cache (valid until 09:49:48 21/08/2024 MSK)
-16:03:10.173 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.119 (resolved driver for Chrome 127)
-16:03:10.189 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.119 found in cache
-16:03:10.189 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.119\chromedriver.exe
+<pre>13:43:20.808 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+13:43:20.828 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=129 in cache (valid until 14:35:38 01/10/2024 MSK)
+13:43:20.830 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome129=129.0.6668.70 in cache (valid until 13:35:38 02/10/2024 MSK)
+13:43:20.830 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 129.0.6668.70 (resolved driver for Chrome 129)
+13:43:20.844 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 129.0.6668.70 found in cache
+13:43:20.845 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\129.0.6668.70\chromedriver.exe
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>окт. 01, 2024 1:43:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 129
 </pre>
 </span>
 </div>
@@ -376,7 +2026,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 20 авг. 2024 г., 16:12:47</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 1 окт. 2024 г., 14:32:43</p>
 </div>
 </div>
 </body>

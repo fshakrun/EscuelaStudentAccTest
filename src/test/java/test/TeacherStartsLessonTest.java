@@ -59,7 +59,6 @@ public class TeacherStartsLessonTest {
     @Order(2)
     @DisplayName("2. Teacher Starts Lesson")
     public void startLesson() throws InterruptedException, AWTException, StaleElementReferenceException {
-
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.teacherClasses));
         teacherAcc.teacherClasses.click();
         wait.until(ExpectedConditions.visibilityOf(teacherAcc.particularStudentChoice));

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.StudentMainPageTest" tests="11" skipped="0" failures="2" errors="0" timestamp="2024-08-20T13:09:52" hostname="X542U" time="54.319">
+<testsuite name="test.StudentMainPageTest" tests="10" skipped="0" failures="1" errors="0" timestamp="2024-10-01T10:37:48" hostname="X542U" time="56.664">
   <properties/>
-  <testcase name="0. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="9.551"/>
-  <testcase name="1. Google Play Button Test" classname="test.StudentMainPageTest" time="0.995"/>
-  <testcase name="2. App Store Button Test" classname="test.StudentMainPageTest" time="3.485"/>
-  <testcase name="3. VK Button Test" classname="test.StudentMainPageTest" time="13.482"/>
-  <testcase name="4. Tuesday Regular Lesson Checking" classname="test.StudentMainPageTest" time="0.323">
+  <testcase name="1. Valid Credential Account Log In Test" classname="test.StudentMainPageTest" time="11.056"/>
+  <testcase name="2. Google Play Button Test" classname="test.StudentMainPageTest" time="3.486"/>
+  <testcase name="3. App Store Button Test" classname="test.StudentMainPageTest" time="3.861"/>
+  <testcase name="4. VK Button Test" classname="test.StudentMainPageTest" time="8.31"/>
+  <testcase name="5. Tuesday Regular Lesson Checking" classname="test.StudentMainPageTest" time="0.184">
     <failure message="java.lang.AssertionError: &#13;&#10;Expecting actual:&#13;&#10;  &quot;&quot;&#13;&#10;to contain:&#13;&#10;  &quot;03:00&#10;Testov Anton.&quot; " type="java.lang.AssertionError">java.lang.AssertionError: 
 Expecting actual:
   &quot;&quot;
@@ -18,51 +18,19 @@ Testov Anton.&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 </failure>
   </testcase>
-  <testcase name="5. Next Lesson Notification Checking" classname="test.StudentMainPageTest" time="0.106"/>
-  <testcase name="6. Instagram Button Test" classname="test.StudentMainPageTest" time="21.638"/>
-  <testcase name="7. Facebook Button Test" classname="test.StudentMainPageTest" time="0.865"/>
-  <testcase name="8. Networking Bot Test" classname="test.StudentMainPageTest" time="1.141"/>
-  <testcase name="8. Tech Support Help Test" classname="test.StudentMainPageTest" time="1.179"/>
-  <testcase name="9. Blog Opening Test" classname="test.StudentMainPageTest" time="1.18">
-    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a color=&quot;#3D4667&quot; href=&quot;https://escuela.pro/blog&quot; target=&quot;_blank&quot; display=&quot;large&quot; class=&quot;sc-eBMEME bkeuEj&quot; style=&quot;opacity: 0.5;&quot;&gt;...&lt;/a&gt; is not clickable at point (1332, 498). Other element would receive the click: &lt;textarea class=&quot;compose-input form-control&quot; placeholder=&quot;Ask your question&quot; style=&quot;height: 100px; border-radius: 50px;&quot;&gt;&lt;/textarea&gt;&#10;  (Session info: chrome=127.0.6533.120)&#10;Build info: version: '4.23.0', revision: '4df0a231af'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [838901e420213352a70b33a29fb8fc62, clickElement {id=f.ECABC0FF6BB9BA009992A3CF40F10A02.d.002CE2CA106E26CA14F5E45C372F3897.e.114}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51736/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (838901e420213352a70b33a29fb8fc62)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/a]&#10;Session ID: 838901e420213352a70b33a29fb8fc62" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a color=&quot;#3D4667&quot; href=&quot;https://escuela.pro/blog&quot; target=&quot;_blank&quot; display=&quot;large&quot; class=&quot;sc-eBMEME bkeuEj&quot; style=&quot;opacity: 0.5;&quot;&gt;...&lt;/a&gt; is not clickable at point (1332, 498). Other element would receive the click: &lt;textarea class=&quot;compose-input form-control&quot; placeholder=&quot;Ask your question&quot; style=&quot;height: 100px; border-radius: 50px;&quot;&gt;&lt;/textarea&gt;
-  (Session info: chrome=127.0.6533.120)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [838901e420213352a70b33a29fb8fc62, clickElement {id=f.ECABC0FF6BB9BA009992A3CF40F10A02.d.002CE2CA106E26CA14F5E45C372F3897.e.114}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51736/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (838901e420213352a70b33a29fb8fc62)] -&gt; xpath: //*[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/a]
-Session ID: 838901e420213352a70b33a29fb8fc62
-	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at jdk.internal.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
-	at java.base@11.0.24/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at app//com.sun.proxy.$Proxy18.click(Unknown Source)
-	at app//test.StudentMainPageTest.shouldOpenEscuelaBlog(StudentMainPageTest.java:241)
-	at java.base@11.0.24/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.24/java.util.ArrayList.forEach(ArrayList.java:1541)
-</failure>
-  </testcase>
-  <system-out><![CDATA[16:09:47.842 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
-16:09:47.855 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=127 in cache (valid until 16:45:57 20/08/2024 MSK)
-16:09:47.859 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome127=127.0.6533.119 in cache (valid until 09:49:48 21/08/2024 MSK)
-16:09:47.859 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 127.0.6533.119 (resolved driver for Chrome 127)
-16:09:47.859 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 127.0.6533.119 found in cache
-16:09:47.874 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\127.0.6533.119\chromedriver.exe
+  <testcase name="6. Next Lesson Notification Checking" classname="test.StudentMainPageTest" time="0.099"/>
+  <testcase name="7. Instagram Button Test" classname="test.StudentMainPageTest" time="21.954"/>
+  <testcase name="8. Facebook Button Test" classname="test.StudentMainPageTest" time="1.387"/>
+  <testcase name="10. Networking Bot Test" classname="test.StudentMainPageTest" time="1.512"/>
+  <testcase name="11. Blog Opening Test" classname="test.StudentMainPageTest" time="4.529"/>
+  <system-out><![CDATA[13:37:41.886 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+13:37:41.921 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=129 in cache (valid until 14:35:38 01/10/2024 MSK)
+13:37:41.923 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome129=129.0.6668.70 in cache (valid until 13:35:38 02/10/2024 MSK)
+13:37:41.923 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 129.0.6668.70 (resolved driver for Chrome 129)
+13:37:42.004 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 129.0.6668.70 found in cache
+13:37:42.006 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\admin\.cache\selenium\chromedriver\win64\129.0.6668.70\chromedriver.exe
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[окт. 01, 2024 1:37:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 129
+]]></system-err>
 </testsuite>

@@ -10,23 +10,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ConfProperties;
 import pages.LoginPage;
 import pages.DictionaryPage;
-
 import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class StudentDictionaryPageTest {
-
-
     public static WebDriver driver;
-
     public static LoginPage loginPage;
-
     public static DictionaryPage dictionaryPage;
-
     public static WebDriverWait wait;
-
 
     @BeforeAll
     public static void setup() throws Exception {
@@ -40,6 +33,7 @@ public class StudentDictionaryPageTest {
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
+    // Проверка открытия вкладки словаря со словами за сегодняшний день
     @Test
     @Order(1)
     @DisplayName("1. Checking Todays Words Tab Opens")
@@ -48,8 +42,6 @@ public class StudentDictionaryPageTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-//        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-//        loginPage.friendPromoBanner.click();
         wait.until(ExpectedConditions.visibilityOf(dictionaryPage.dictSection));
         dictionaryPage.dictSectionClick();
         wait.until(ExpectedConditions.visibilityOf(dictionaryPage.todaysWords));
@@ -57,6 +49,7 @@ public class StudentDictionaryPageTest {
         assert(dictionaryPage.pictureWhenEmpty).isDisplayed();
     }
 
+    // Проверка открытия вкладки словаря со словами за неделю
     @Test
     @Order(2)
     @DisplayName("2. Checking Words Of The Week Tab Opens")
@@ -68,6 +61,7 @@ public class StudentDictionaryPageTest {
         assert(dictionaryPage.pictureWhenEmpty).isDisplayed();
     }
 
+    // Проверка открытия вкладки словаря со словами за месяц
     @Test
     @Order(3)
     @DisplayName("3. Checking Words Of The Months Tab Opens")
@@ -79,6 +73,7 @@ public class StudentDictionaryPageTest {
         assert(dictionaryPage.pictureWhenEmpty).isDisplayed();
     }
 
+    // Проверка открытия вкладки словаря со словами за 3 месяц
     @Test
     @Order(4)
     @DisplayName("4. Checking Words Of 3 Months Tab Opens")
@@ -90,6 +85,7 @@ public class StudentDictionaryPageTest {
         assert(dictionaryPage.pictureWhenEmpty).isDisplayed();
     }
 
+    // Проверка открытия вкладки словаря со всеми словами
     @Test
     @Order(5)
     @DisplayName("5. Checking All Words Tab Opens")
