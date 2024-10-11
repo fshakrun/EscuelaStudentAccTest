@@ -119,7 +119,6 @@ public class StudentMainPageTest {
         driver.close();
         driver.switchTo().window(originalWindow);
 
-
     }
     // Проверка что назначенный в расписание урок не слетел
     @Test
@@ -184,7 +183,6 @@ public class StudentMainPageTest {
         driver.close();
         driver.switchTo().window(originalWindow);
     }
-<<<<<<< HEAD
 
     // Проверка отправки сообщения техподдержке
 //   @Test
@@ -197,7 +195,6 @@ public class StudentMainPageTest {
 //       studentsAccountPage.sendMessageToTechSupp();
 //       assert (studentsAccountPage.dialogBubble).isDisplayed();
 //   }
-=======
     
     // Проверка отправки сообщения техподдержке
     @Test
@@ -222,7 +219,6 @@ public class StudentMainPageTest {
        assert (studentsAccountPage.dialogBubble).isDisplayed();
 
    }
->>>>>>> 8433dcabae4e39a0616813400f189c77b26084cd
 
     // Проверка наличия Нетворкинг бота и открытие ссылки на него в Телеграм
     @Test
