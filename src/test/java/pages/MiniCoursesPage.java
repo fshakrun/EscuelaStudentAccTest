@@ -47,7 +47,7 @@ public class MiniCoursesPage {
     public WebElement euroCurrencySelect;
 
     @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]/button/div[2]/div[3]/div/div/div[2]/div[3]")
-    public WebElement tengeCurrencySelect;
+    public WebElement usdCurrencySelect;
 
     @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/input")
     public WebElement practicamosPromocodeField;

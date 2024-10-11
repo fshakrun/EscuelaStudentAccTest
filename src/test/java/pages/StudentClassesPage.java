@@ -22,16 +22,16 @@ public class StudentClassesPage {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[1]/div[1]/a[2]")
     public WebElement classesSection;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[1]")
     public WebElement currentCourse;
 
-    @FindBy(css = "#app > div.sc-jMakVo.kQxfEz > div.sc-iMTnTL.kzNFp > div > div.sc-jaXxmE.kyEfQS > div.sc-ibQAlb.sc-hLLwan.fOjcKx > div.sc-hwfkaJ.kIkgXG > div:nth-child(1)")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[1]")
     public WebElement currentCourseTitle;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[2]")
     public WebElement myClassesTab;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[3]")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div[3]")
     public WebElement allCoursesTab;
 
     @FindBy(xpath = "//*[text() = 'Anton Testov']")

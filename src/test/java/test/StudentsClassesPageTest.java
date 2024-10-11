@@ -27,7 +27,7 @@ public class StudentsClassesPageTest {
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -45,10 +45,8 @@ public class StudentsClassesPageTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-        // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-        //loginPage.friendPromoBanner.click();
-        // wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-        // loginPage.friendPromoBanner.click();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         wait.until(ExpectedConditions.visibilityOf(studentClassesPage.classesSection));
         studentClassesPage.classesSection.click();
         wait.until(ExpectedConditions.visibilityOf(studentClassesPage.currentCourseTitle));

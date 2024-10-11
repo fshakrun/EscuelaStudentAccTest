@@ -29,7 +29,7 @@ public class LoginPage {
     @FindBy(css = "[type=submit]")
     private WebElement enterButton;
 
-    @FindBy(xpath = "/html/body/div[8]/div/div/div/div/img[1]")
+    @FindBy(xpath = "/html/body/div[7]/div/div/div/div/img[1]")
     public WebElement friendPromoBanner;
 
     @FindBy(xpath = "/html/body/div[10]/div/div/div/div/div[2]")
@@ -56,7 +56,6 @@ public class LoginPage {
     public WebElement signUpButton;
 
 
-
     public void emailEnter(String email) {
         emailField.sendKeys(email);
     }
@@ -71,13 +70,13 @@ public class LoginPage {
 
     }
 
-    public void lessonsGiftPopupClose(){
+    public void lessonsGiftPopupClose() {
         WebElement element = lessonsGiftPopup;
         Actions action = new Actions(driver);
         action.moveToElement(element, 100, 100).click().build().perform();
     }
 
-    public void signingUpUsingExistingMail(){
+    public void signingUpUsingExistingMail() {
         driver.get("https://escuela-stage.web.app/register");
         nameFieldSignUp.sendKeys("Test");
         lastnameFieldSignUp.sendKeys("Test");
@@ -87,7 +86,6 @@ public class LoginPage {
         signUpButton.click();
 
     }
-
 
 
 }

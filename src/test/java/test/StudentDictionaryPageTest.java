@@ -21,6 +21,7 @@ public class StudentDictionaryPageTest {
     public static DictionaryPage dictionaryPage;
     public static WebDriverWait wait;
 
+    // "--headless",
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
@@ -42,6 +43,8 @@ public class StudentDictionaryPageTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         wait.until(ExpectedConditions.visibilityOf(dictionaryPage.dictSection));
         dictionaryPage.dictSectionClick();
         wait.until(ExpectedConditions.visibilityOf(dictionaryPage.todaysWords));

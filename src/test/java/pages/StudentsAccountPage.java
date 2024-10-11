@@ -46,7 +46,7 @@ public class StudentsAccountPage {
     @FindBy(xpath = "/html/body/div[11]/div/div/div/div")
     public WebElement friendspromoBanner;
 
-    @FindBy(className = "calender-time")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[8]/div[3]/div/span[1]")
     public WebElement calendarTime;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]")
@@ -72,7 +72,6 @@ public class StudentsAccountPage {
 
     @FindBy(xpath = "//a[@href='https://escuela.pro/blog']")
     public WebElement blogArticlesShow;
-
 
     public void studentsAccountClick() {
         studentsAccount.click();

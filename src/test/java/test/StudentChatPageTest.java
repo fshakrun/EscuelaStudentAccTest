@@ -40,11 +40,12 @@ public class StudentChatPageTest {
     @Order(1)
     @DisplayName("1. Particular Chat Searching And Checking Its Presence Test")
     public void checkingParticularChatDisplaying() throws InterruptedException {
-
         wait.until(ExpectedConditions.visibilityOf(loginPage.emailField));
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         chatPage.chatSectionClick();

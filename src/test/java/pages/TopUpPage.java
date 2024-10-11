@@ -53,7 +53,7 @@ public class TopUpPage {
     public WebElement euroCurrencyChoice;
 
     @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[3]")
-    public WebElement usdCurrencyChoice;
+    public WebElement tengeCurrencyChoice;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/div/div[2]/div[2]/div[6]/div/div[1]/span[3]/span")
     public WebElement firstPackagePrice;
@@ -97,12 +97,14 @@ public class TopUpPage {
     @FindBy(xpath = "/html/body/div[7]/div/div/div/div")
     public WebElement termsOfUsePopUp;
 
-    @FindBy(xpath = "/html/body/div[7]/div/div/div/div/div[3]/button")
+    @FindBy(xpath = "/html/body/div[8]/div/div/div/div/div[3]/button")
     public WebElement proceedToPayment;
+
+    @FindBy(className = "checkbox__tip")
+    public WebElement termsOfUseCheckBox;
 
     @FindBy(xpath = "/html/body/div[7]/div/div/div/div/div[3]/div")
     public WebElement closeTermsOfUse;
-
 
     public void sendValidPromocode(String validPromoCode){
         promocodeField.click();

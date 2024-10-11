@@ -75,7 +75,7 @@ public class TeacherAcc {
     @FindBy(xpath = "/html/body/div[5]/div/div/div/form/header/div[2]/div/div/div[1]/div")
     public WebElement particularRegularLessonTime;
 
-    @FindBy(xpath = "//*[text() = 'Anna']")
+    @FindBy(xpath = "/html/body/div[7]/div/div/div/div/div[1]")
     public WebElement particularStudentChoice;
 
     @FindBy(xpath = "//*[@id='app']/div[1]/main/div[2]/button/span[1]")

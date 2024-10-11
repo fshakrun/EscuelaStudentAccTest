@@ -26,7 +26,7 @@ public class StudentMiniCourseTest {
     @BeforeAll
     public static void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -46,8 +46,8 @@ public class StudentMiniCourseTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-         //  wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-         // loginPage.friendPromoBanner.click();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.minicoursesSection));
@@ -105,10 +105,10 @@ public class StudentMiniCourseTest {
     public void shouldSelectTengeCurrency() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.currencySelectButton));
         miniCoursesPage.currencySelectButton.click();
-        wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.tengeCurrencySelect));
-        miniCoursesPage.tengeCurrencySelect.click();
+        wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.usdCurrencySelect));
+        miniCoursesPage.usdCurrencySelect.click();
         String buyButton = miniCoursesPage.buyPracticamosButton.getText();
-        assertThat(buyButton).contains("тенге");
+        assertThat(buyButton).contains("$");
     }
 
     // Переход на платежную систему при выборе евро из миникурсов
@@ -145,15 +145,15 @@ public class StudentMiniCourseTest {
     // Переход на платежную систему при выборе тенге из миникурсов
     @Test
     @Order(8)
-    @DisplayName("8.Should Proceed To Payment In Tenge")
+    @DisplayName("8.Should Proceed To Payment In Usd")
     public void shouldProceedToTengePayment() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.currencySelectButton));
         miniCoursesPage.currencySelectButton.click();
-        wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.tengeCurrencySelect));
-        miniCoursesPage.tengeCurrencySelect.click();
+        wait.until(ExpectedConditions.visibilityOf(miniCoursesPage.usdCurrencySelect));
+        miniCoursesPage.usdCurrencySelect.click();
         miniCoursesPage.buyPracticamosButton.click();
         String URL = driver.getCurrentUrl();
-        assert (URL).contains("onevisionpay");
+        assert (URL).contains("payselection");
         driver.get("https://escuela-stage.web.app/student/minicourses");
     }
 

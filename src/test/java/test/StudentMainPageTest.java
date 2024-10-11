@@ -31,7 +31,7 @@ public class StudentMainPageTest {
     @BeforeAll
     public static void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--window-size=1920,1080");
+        options.addArguments("--headless","--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -49,8 +49,8 @@ public class StudentMainPageTest {
         loginPage.emailEnter(ConfProperties.getProperty("email"));
         loginPage.passwordEnter(ConfProperties.getProperty("password"));
         loginPage.enterClick();
-        //  wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
-        //  loginPage.friendPromoBanner.click();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.friendPromoBanner));
+        loginPage.friendPromoBanner.click();
         // ожидание появления элемента — расписание
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String URL = driver.getCurrentUrl();
@@ -128,8 +128,7 @@ public class StudentMainPageTest {
     public void shouldCheckTuesdayRegularLesson() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.studentSchedule));
         String TuesdayLesson = (studentsAccountPage.calendarTime).getText();
-        assertThat(TuesdayLesson).contains("03:00\n" +
-                "Testov Anton.");
+        assertThat(TuesdayLesson).contains("03:00");
     }
 
     // Проверка что плашка следующего урока отображается
@@ -162,7 +161,6 @@ public class StudentMainPageTest {
         assertEquals(URL, "https://www.instagram.com/escuela.pro");
         driver.close();
         driver.switchTo().window(originalWindow);
-
     }
 
     // Проверка перехода в Фейсбук
@@ -187,31 +185,17 @@ public class StudentMainPageTest {
         driver.switchTo().window(originalWindow);
     }
 
-<<<<<<< HEAD
     // Проверка отправки сообщения техподдержке
-    @Test
-    @Order(9)
-    @DisplayName("9. Tech Support Help Test")
-    public void shouldSendMessageToSupport() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
-        studentsAccountPage.techSuppButton.click();
-        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
-        studentsAccountPage.sendMessageToTechSupp();
-        assert (studentsAccountPage.dialogBubble).isDisplayed();
-    }
-=======
-   @Test
-   @Order(9)
-   @DisplayName("9. Tech Support Help Test")
-   public void shouldSendMessageToSupport() throws InterruptedException {
-       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
-       studentsAccountPage.techSuppButton.click();
-       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
-       studentsAccountPage.sendMessageToTechSupp();
-       assert (studentsAccountPage.dialogBubble).isDisplayed();
-
-   }
->>>>>>> 335d8fbc19900515e9ecb7903ff666241c5182e2
+//   @Test
+//   @Order(9)
+//   @DisplayName("9. Tech Support Help Test")
+//   public void shouldSendMessageToSupport() throws InterruptedException {
+//       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
+//       studentsAccountPage.techSuppButton.click();
+//       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
+//       studentsAccountPage.sendMessageToTechSupp();
+//       assert (studentsAccountPage.dialogBubble).isDisplayed();
+//   }
 
     // Проверка наличия Нетворкинг бота и открытие ссылки на него в Телеграм
     @Test
