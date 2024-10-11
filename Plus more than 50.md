@@ -108,4 +108,9 @@
 56. [У учителя отображается выполненное учеником, но еще не проверенное сочинение](https://github.com/fshakrun/EscuelaStudentAccTest/blob/335d8fbc19900515e9ecb7903ff666241c5182e2/src/test/java/test/TeacherAccountTest.java#L181)
 
 57. [Проверка наличия всплывающего окна с условиями приобретения пакетов уроков](https://github.com/fshakrun/EscuelaStudentAccTest/blob/7c4ec7abcfe2a20bfe94b3f6af996ea881be7092/src/test/java/test/StudentTopUpTest.java#L124)
+    
+58. [Проверка того что кнопка перехода на платежную систему неактивна если не отмечен пункт о согласии с политикой и условиями](https://github.com/fshakrun/EscuelaStudentAccTest/blob/ed658972e0e025c52b298f56bf4d250728d07401/src/test/java/test/StudentTopUpTest.java#L138)
+    
+59.  [Проверка того что кнопка перехода на платежную систему активна когда отмечен пункт о согласии с политикой и условиями](https://github.com/fshakrun/EscuelaStudentAccTest/blob/ed658972e0e025c52b298f56bf4d250728d07401/src/test/java/test/StudentTopUpTest.java#L147)
+    
 
