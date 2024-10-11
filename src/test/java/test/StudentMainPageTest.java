@@ -184,6 +184,7 @@ public class StudentMainPageTest {
         driver.close();
         driver.switchTo().window(originalWindow);
     }
+<<<<<<< HEAD
 
     // Проверка отправки сообщения техподдержке
 //   @Test
@@ -196,6 +197,32 @@ public class StudentMainPageTest {
 //       studentsAccountPage.sendMessageToTechSupp();
 //       assert (studentsAccountPage.dialogBubble).isDisplayed();
 //   }
+=======
+    
+    // Проверка отправки сообщения техподдержке
+    @Test
+    @Order(9)
+    @DisplayName("9. Tech Support Help Test")
+    public void shouldSendMessageToSupport() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
+        studentsAccountPage.techSuppButton.click();
+        wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
+        studentsAccountPage.sendMessageToTechSupp();
+        assert (studentsAccountPage.dialogBubble).isDisplayed();
+    }
+    
+   @Test
+   @Order(9)
+   @DisplayName("9. Tech Support Help Test")
+   public void shouldSendMessageToSupport() throws InterruptedException {
+       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.techSuppButton));
+       studentsAccountPage.techSuppButton.click();
+       wait.until(ExpectedConditions.visibilityOf(studentsAccountPage.supportWindow));
+       studentsAccountPage.sendMessageToTechSupp();
+       assert (studentsAccountPage.dialogBubble).isDisplayed();
+
+   }
+>>>>>>> 8433dcabae4e39a0616813400f189c77b26084cd
 
     // Проверка наличия Нетворкинг бота и открытие ссылки на него в Телеграм
     @Test
